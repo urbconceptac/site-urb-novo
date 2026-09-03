@@ -62,7 +62,7 @@
 <body class="bg-[#0c0d10] text-zinc-100 min-h-screen antialiased">
 
   <!-- Elemento de Áudio Nativo para o Spot 01 -->
-  <audio id="audioPlayer" src="spot1-marvel.mp3" preload="auto"></audio>
+  <audio id="audioPlayer" src="/spot1-marvel.mp3" preload="auto"></audio>
 
   <!-- ==================== HEADER ==================== -->
   <header id="mainHeader" class="sticky top-0 z-50 bg-[#0c0d10]/95 backdrop-blur-md border-b border-white/10 transition-all duration-300">
@@ -73,7 +73,7 @@
         <a href="#hero" class="flex items-center group py-1" aria-label="Início">
           <img
             id="headerLogo"
-            src="logo-urb.png"
+            src="/logo-urb.png"
             alt="URB"
             class="h-20 w-auto object-contain transition-all duration-300 ease-out group-hover:opacity-90"
             onerror="this.style.display='none'"
@@ -113,7 +113,7 @@
     <!-- Background Imagem de Estúdio P&B -->
     <div class="absolute inset-0 z-0 pointer-events-none overflow-hidden">
       <img
-        src="studio_microphone_classic.jpg"
+        src="/studio_microphone_classic.jpg"
         alt="Studio"
         class="w-full h-full object-cover object-center grayscale contrast-125 brightness-90 opacity-40 mix-blend-screen scale-105"
         onerror="this.style.display='none'"
@@ -145,7 +145,8 @@
         </h1>
         <p class="text-base sm:text-lg text-zinc-300 max-w-2xl mx-auto font-normal leading-relaxed">
           5 spots de 30 segundos e 1 spot master de 1 minuto. Material produzido em estúdio profissional, pronto para rodar durante todo o mês no rádio e em todas as mídias da sua loja.
-        </p>
+        
+      </p>
       </div>
 
       <!-- 3 Blocos de Destaque -->
@@ -194,7 +195,7 @@
           </div>
           <p class="text-xs sm:text-sm text-zinc-400 leading-relaxed">
             Ideais para rádio diário e stories rápidos. Cada spot foca em um pilar: Edições Marvel, Facilidade de Financiamento, Troca com Avaliação Justa, Linha Urbana (Factor/Fazer) e Força Off-Road (Lander/Crosser).
-          </p>
+        </p>
         </div>
 
         <div class="bg-[#111318] border border-white/10 p-6 rounded-2xl space-y-3">
@@ -451,7 +452,7 @@
   <footer class="py-12 border-t border-white/10 bg-[#0c0d10] text-zinc-500">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-6">
       <div class="flex items-center">
-        <img src="logo-urb.png" alt="URB" class="h-8 w-auto object-contain" onerror="this.style.display='none'" />
+        <img src="/logo-urb.png" alt="URB" class="h-8 w-auto object-contain" onerror="this.style.display='none'" />
       </div>
 
       <div class="text-center sm:text-right space-y-1">
@@ -478,320 +479,9 @@
         duration: "30 segundos",
         durationSec: 30,
         hasAudio: true,
-        audioUrl: "spot1-marvel.mp3",
+        audioUrl: "/spot1-marvel.mp3",
         script: "Atenção, Cruzeiro do Sul! A força da Marvel invadiu a Cruzeiro Motors Center Yamaha! Chegaram as edições exclusivas FZ15 ABS Deadpool e Crosser Z ABS Wolverine! Estilo lendário, parceria com a Iron Studios e alta performance. Motos à pronta entrega e com frete grátis! Corra para uma de nossas lojas no Centro, na Praça ou no Aeroporto Velho. Cruzeiro Motors Yamaha: o seu próximo nível sobre duas rodas!"
       },
       {
         id: 2,
-        title: "Spot 02 • Facilidade, Financiamento & Consórcio",
-        duration: "30 segundos",
-        durationSec: 30,
-        hasAudio: false,
-        script: "No Mês do Cliente da Cruzeiro Motors Yamaha, o seu sonho da moto zero quilômetro acontece de verdade! Taxas especiais pelo Banco Yamaha, aprovação rápida e as menores parcelas no Consórcio Nacional Yamaha. Não deixe para depois: passe hoje mesmo em uma de nossas unidades no Centro, Praça ou Aeroporto Velho e garanta a sua com frete grátis! Cruzeiro Motors Yamaha: facilidade que acelera sua vida!"
-      },
-      {
-        id: 3,
-        title: "Spot 03 • Troca Fácil & Avaliação Justa",
-        duration: "30 segundos",
-        durationSec: 30,
-        hasAudio: false,
-        script: "Quer trocar de moto e sair de Yamaha zero hoje mesmo? Na Cruzeiro Motors Center, sua moto usada vale muito mais na troca! Aceitamos seu veículo com a melhor avaliação de Cruzeiro do Sul e as melhores condições de financiamento do mercado. Venha tomar um café conosco no Centro, na Praça ou no Aeroporto Velho! Cruzeiro Motors Yamaha: respeito ao cliente e negócio fechado!"
-      },
-      {
-        id: 4,
-        title: "Spot 04 • Linha Urbana & Economia Diária",
-        duration: "30 segundos",
-        durationSec: 30,
-        hasAudio: false,
-        script: "Economia no combustível e durabilidade para o seu dia a dia é com a Linha Street da Cruzeiro Motors Yamaha! Factor 150 e Fazer FZ15 com pronta entrega, 3 anos de garantia e frete totalmente grátis para toda a região! Visite nossas lojas no Centro, Praça ou Aeroporto Velho e faça o melhor investimento para o seu trabalho e lazer. Cruzeiro Motors Yamaha: quem compara, compra Yamaha!"
-      },
-      {
-        id: 5,
-        title: "Spot 05 • Aventura & Versatilidade Off-Road",
-        duration: "30 segundos",
-        durationSec: 30,
-        hasAudio: false,
-        script: "Na cidade ou na terra, quem manda é você! Chegou a hora de acelerar a lendária Lander 250 ou a versátil Crosser 150 com freio ABS e conforto incomparável! Ofertas imperdíveis no Mês do Cliente Cruzeiro Motors Yamaha. Venha fazer um test ride nas lojas do Centro, Praça ou Aeroporto Velho! Cruzeiro Motors Yamaha: liberdade e potência em qualquer caminho!"
-      },
-      {
-        id: 6,
-        title: "Spot Master (60s) • Campanha Completa Mês do Cliente",
-        duration: "60 segundos (1 minuto)",
-        durationSec: 60,
-        hasAudio: false,
-        isMaster: true,
-        script: "Cruzeiro do Sul, setembro é o Mês do Cliente na Cruzeiro Motors Center Yamaha, e preparamos a maior celebração em duas rodas que você já viu! Chegaram as edições especiais Marvel: FZ15 Deadpool e Crosser Wolverine, com design exclusivo e desempenho de cinema! E tem mais: toda a linha Yamaha com taxas reduzidas pelo Banco Yamaha, parcelas imperdíveis no Consórcio, a melhor avaliação da sua moto usada e frete grátis garantido! São 3 lojas completas prontas para te atender: no Centro, na Praça e no Aeroporto Velho. Venha tomar um café com nossa equipe e saia pilotando sua Yamaha zero quilômetro com 3 anos de garantia! Mês do Cliente é na Cruzeiro Motors Yamaha: a sua concessionária de confiança no Vale do Juruá!"
-      }
-    ];
-
-    let currentSpotIndex = 0;
-    const audio = document.getElementById('audioPlayer');
-    const btnPlay = document.getElementById('btnPlay');
-    const iconPlay = document.getElementById('iconPlay');
-    const iconPause = document.getElementById('iconPause');
-    const playerSpotTitle = document.getElementById('playerSpotTitle');
-    const playerSpotBadge = document.getElementById('playerSpotBadge');
-    const playerSpotStatusText = document.getElementById('playerSpotStatusText');
-    const playerTimeDisplay = document.getElementById('playerTimeDisplay');
-    const progressBarFill = document.getElementById('progressBarFill');
-    const progressBarContainer = document.getElementById('progressBarContainer');
-    const scriptTextContent = document.getElementById('scriptTextContent');
-    const scriptSectionHeader = document.getElementById('scriptSectionHeader');
-    const paginationText = document.getElementById('paginationText');
-    const btnPrevSpot = document.getElementById('btnPrevSpot');
-    const btnNextSpot = document.getElementById('btnNextSpot');
-    const btnCopyScript = document.getElementById('btnCopyScript');
-    const copyTextLabel = document.getElementById('copyTextLabel');
-    const btnDownload = document.getElementById('btnDownload');
-    const btnDownloadLabel = document.getElementById('btnDownloadLabel');
-    const btnMute = document.getElementById('btnMute');
-    const equalizer = document.getElementById('equalizer');
-    const spotsTabsContainer = document.getElementById('spotsTabsContainer');
-
-    function formatTime(secs) {
-      const m = Math.floor(secs / 60);
-      const s = Math.floor(secs % 60);
-      return `${m.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')}`;
-    }
-
-    function renderTabs() {
-      spotsTabsContainer.innerHTML = '';
-      SPOTS.forEach((spot, idx) => {
-        const isActive = idx === currentSpotIndex;
-        const btn = document.createElement('button');
-        btn.className = `p-3 rounded-xl text-left transition-all border relative cursor-pointer ${
-          isActive
-            ? 'bg-white text-black border-white shadow-lg'
-            : 'bg-white/[0.02] hover:bg-white/[0.06] text-zinc-300 border-white/10'
-        }`;
-        btn.onclick = () => selectSpot(idx);
-
-        btn.innerHTML = `
-          <div class="flex items-center justify-between">
-            <span class="text-[10px] font-mono font-bold ${isActive ? 'text-[#e60012]' : 'text-zinc-500'}">
-              0${spot.id}
-            </span>
-            ${spot.hasAudio ? `
-              <span class="text-[9px] font-mono font-bold bg-[#e60012] text-white px-1.5 py-0.5 rounded flex items-center gap-1">
-                <span class="w-1 h-1 rounded-full bg-white animate-ping"></span>
-                ÁUDIO
-              </span>
-            ` : `
-              <span class="text-[9px] font-mono ${isActive ? 'text-black/60' : 'text-zinc-600'}">
-                ${spot.durationSec}s
-              </span>
-            `}
-          </div>
-          <p class="text-xs font-bold mt-1.5 truncate ${isActive ? 'text-black' : 'text-zinc-200'}">
-            ${spot.isMaster ? 'Master 60s' : `Spot 0${spot.id}`}
-          </p>
-          <span class="text-[10px] block mt-0.5 font-mono ${isActive ? 'text-zinc-600' : 'text-zinc-500'}">
-            ${spot.hasAudio ? 'Demonstração' : 'Roteiro'}
-          </span>
-        `;
-        spotsTabsContainer.appendChild(btn);
-      });
-    }
-
-    function selectSpot(index) {
-      audio.pause();
-      audio.currentTime = 0;
-      currentSpotIndex = index;
-      updateUI();
-      renderTabs();
-    }
-
-    function updateUI() {
-      const spot = SPOTS[currentSpotIndex];
-      playerSpotTitle.textContent = spot.title;
-      scriptTextContent.textContent = `"${spot.script}"`;
-      scriptSectionHeader.innerHTML = `
-        <svg class="w-3.5 h-3.5 text-zinc-400 fill-none stroke-current stroke-2" viewBox="0 0 24 24">
-          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-          <polyline points="14 2 14 8 20 8"></polyline>
-          <line x1="16" y1="13" x2="8" y2="13"></line>
-          <line x1="16" y1="17" x2="8" y2="17"></line>
-          <polyline points="10 9 9 9 8 9"></polyline>
-        </svg>
-        Texto do Roteiro (${spot.duration})
-      `;
-      paginationText.textContent = `${currentSpotIndex + 1} de ${SPOTS.length}`;
-
-      // Botões de navegação anterior/próximo
-      if (currentSpotIndex === 0) {
-        btnPrevSpot.className = "font-mono text-zinc-600 cursor-not-allowed";
-        btnPrevSpot.onclick = null;
-      } else {
-        btnPrevSpot.className = "font-mono hover:text-white transition-colors cursor-pointer";
-        btnPrevSpot.onclick = () => selectSpot(currentSpotIndex - 1);
-      }
-
-      if (currentSpotIndex === SPOTS.length - 1) {
-        btnNextSpot.className = "font-mono text-zinc-600 cursor-not-allowed";
-        btnNextSpot.onclick = null;
-      } else {
-        btnNextSpot.className = "font-mono hover:text-white transition-colors cursor-pointer";
-        btnNextSpot.onclick = () => selectSpot(currentSpotIndex + 1);
-      }
-
-      // Audio state
-      if (spot.hasAudio) {
-        btnPlay.className = "w-12 h-12 rounded-full bg-[#e60012] hover:bg-[#ff1a2b] text-white flex items-center justify-center shrink-0 transition-transform active:scale-95 shadow-md shadow-[#e60012]/30 cursor-pointer";
-        btnPlay.title = "Ouvir Spot 01";
-        playerSpotBadge.className = "text-[10px] font-mono bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 px-2 py-0.5 rounded flex items-center gap-1 font-bold";
-        playerSpotBadge.innerHTML = `<span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> Áudio Disponível`;
-        playerSpotStatusText.textContent = "Clique no play para ouvir o áudio produzido";
-        btnDownload.className = "p-2 rounded-lg text-xs font-mono border bg-[#e60012]/15 hover:bg-[#e60012]/25 border-[#e60012]/30 text-red-400 active:scale-95 transition-all flex items-center gap-1 cursor-pointer";
-        btnDownloadLabel.textContent = "MP3";
-        btnDownload.title = "Baixar arquivo de áudio SPOT 1 LANÇAMENTOS MARVEL.mp3";
-        playerTimeDisplay.textContent = `00:00 / 00:30`;
-        progressBarFill.style.width = '0%';
-      } else {
-        btnPlay.className = "w-12 h-12 rounded-full bg-zinc-800/60 border border-white/5 text-zinc-600 flex items-center justify-center shrink-0 cursor-not-allowed";
-        btnPlay.title = "Áudio aguardando aprovação";
-        playerSpotBadge.className = "text-[10px] font-mono bg-zinc-800 text-zinc-400 border border-white/10 px-2 py-0.5 rounded";
-        playerSpotBadge.innerHTML = `Roteiro (Produção Pendente)`;
-        playerSpotStatusText.textContent = "Play desativado • Áudio será produzido após aprovação da proposta";
-        btnDownload.className = "p-2 rounded-lg text-xs font-mono border bg-white/5 hover:bg-white/10 border-white/10 text-zinc-400 active:scale-95 transition-all flex items-center gap-1 cursor-pointer";
-        btnDownloadLabel.textContent = "TXT";
-        btnDownload.title = "Baixar texto do roteiro (.txt)";
-        playerTimeDisplay.textContent = `00:00 / ${formatTime(spot.durationSec)}`;
-        progressBarFill.style.width = '0%';
-        iconPlay.classList.remove('hidden');
-        iconPause.classList.add('hidden');
-      }
-    }
-
-    // Play/Pause
-    btnPlay.onclick = () => {
-      const spot = SPOTS[currentSpotIndex];
-      if (!spot.hasAudio) return;
-      if (audio.paused) {
-        audio.play().catch(e => console.warn(e));
-      } else {
-        audio.pause();
-      }
-    };
-
-    audio.onplay = () => {
-      iconPlay.classList.add('hidden');
-      iconPause.classList.remove('hidden');
-      playerSpotStatusText.textContent = "Reproduzindo áudio oficial de demonstração...";
-      Array.from(equalizer.children).forEach((bar, i) => {
-        bar.className = "w-1 bg-[#e60012] rounded-full animate-pulse";
-        bar.style.height = `${(i + 1) * 4}px`;
-      });
-    };
-
-    audio.onpause = () => {
-      iconPlay.classList.remove('hidden');
-      iconPause.classList.add('hidden');
-      playerSpotStatusText.textContent = "Clique no play para ouvir o áudio produzido";
-      Array.from(equalizer.children).forEach(bar => {
-        bar.className = "w-1 h-1 bg-zinc-700 rounded-full";
-        bar.style.height = '4px';
-      });
-    };
-
-    audio.ontimeupdate = () => {
-      const cur = audio.currentTime;
-      const dur = audio.duration || 30;
-      playerTimeDisplay.textContent = `${formatTime(cur)} / ${formatTime(dur)}`;
-      progressBarFill.style.width = `${(cur / dur) * 100}%`;
-    };
-
-    audio.onended = () => {
-      audio.currentTime = 0;
-      iconPlay.classList.remove('hidden');
-      iconPause.classList.add('hidden');
-      progressBarFill.style.width = '0%';
-      playerTimeDisplay.textContent = `00:00 / 00:30`;
-    };
-
-    // Barra de progresso interativa
-    progressBarContainer.onclick = (e) => {
-      const spot = SPOTS[currentSpotIndex];
-      if (!spot.hasAudio) return;
-      const rect = progressBarContainer.getBoundingClientRect();
-      const clickX = e.clientX - rect.left;
-      const ratio = Math.max(0, Math.min(1, clickX / rect.width));
-      const targetTime = ratio * (audio.duration || 30);
-      audio.currentTime = targetTime;
-    };
-
-    // Botão de Copiar Texto
-    btnCopyScript.onclick = () => {
-      const spot = SPOTS[currentSpotIndex];
-      navigator.clipboard.writeText(spot.script);
-      copyTextLabel.textContent = "Texto Copiado!";
-      setTimeout(() => {
-        copyTextLabel.textContent = "Copiar Texto";
-      }, 2000);
-    };
-
-    // Botão de Download
-    btnDownload.onclick = () => {
-      const spot = SPOTS[currentSpotIndex];
-      if (spot.hasAudio) {
-        const link = document.createElement('a');
-        link.href = "spot1-marvel.mp3";
-        link.download = "spot1-marvel.mp3";
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-      } else {
-        const blob = new Blob([spot.script], { type: 'text/plain;charset=utf-8' });
-        const url = URL.createObjectURL(blob);
-        const link = document.createElement('a');
-        link.href = url;
-        link.download = `Spot_0${spot.id}_Roteiro_Yamaha.txt`;
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-        URL.revokeObjectURL(url);
-      }
-    };
-
-    // Mute/Unmute
-    btnMute.onclick = () => {
-      audio.muted = !audio.muted;
-      if (audio.muted) {
-        btnMute.classList.add('opacity-50');
-      } else {
-        btnMute.classList.remove('opacity-50');
-      }
-    };
-
-    // Redimensionamento dinâmico da Logo no Scroll
-    const mainHeader = document.getElementById('mainHeader');
-    const headerContainer = document.getElementById('headerContainer');
-    const headerLogo = document.getElementById('headerLogo');
-
-    function handleHeaderScroll() {
-      const scrollY = window.scrollY || window.pageYOffset || 0;
-      if (scrollY > 30) {
-        // Reduz para o tamanho atual quando rola para baixo
-        headerContainer.classList.remove('h-24', 'sm:h-28');
-        headerContainer.classList.add('h-16', 'sm:h-20');
-        headerLogo.classList.remove('h-20');
-        headerLogo.classList.add('h-10');
-        mainHeader.classList.add('shadow-xl', 'bg-[#0c0d10]/98');
-      } else {
-        // 100% maior no topo da página
-        headerContainer.classList.add('h-24', 'sm:h-28');
-        headerContainer.classList.remove('h-16', 'sm:h-20');
-        headerLogo.classList.add('h-20');
-        headerLogo.classList.remove('h-10');
-        mainHeader.classList.remove('shadow-xl', 'bg-[#0c0d10]/98');
-      }
-    }
-
-    window.addEventListener('scroll', handleHeaderScroll, { passive: true });
-    handleHeaderScroll();
-
-    // Inicialização
-    renderTabs();
-    updateUI();
-  </script>
-</body>
-</html>
+        title: "Spot 02 • Facilidade, Financiamento

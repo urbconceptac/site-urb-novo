@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Proposta Comercial de Áudio • Cruzeiro Motors Yamaha</title>
+  <meta name="description" content="Proposta comercial estratégica de spots de rádio para a Cruzeiro Motors Center Yamaha no Mês do Cliente." />
+  <meta property="og:title" content="Proposta Comercial de Áudio • Cruzeiro Motors Yamaha" />
+  <meta property="og:description" content="Proposta comercial estratégica de spots de rádio para a Cruzeiro Motors Center Yamaha no Mês do Cliente." />
+  <meta property="og:type" content="website" />
+  
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          },
+          colors: {
+            brand: '#e60012',
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      background-color: #0c0d10;
+      color: #f4f4f5;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    ::selection {
+      background-color: #e60012;
+      color: #ffffff;
+    }
+    /* Custom scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #0c0d10;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #27272a;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #3f3f46;
+    }
+  </style>
+</head>
+<body class="bg-[#0c0d10] text-zinc-100 min-h-screen antialiased">
+
+  <!-- Elemento de Áudio Nativo para o Spot 01 -->
+  <audio id="audioPlayer" src="SPOT 1 LANÇAMENTOS MARVEL.mp3" preload="auto"></audio>
+
+  <!-- ==================== HEADER ==================== -->
+  <header id="mainHeader" class="sticky top-0 z-50 bg-[#0c0d10]/95 backdrop-blur-md border-b border-white/10 transition-all duration-300">
+    <div id="headerContainer" class="max-w-6xl mx-auto px-4 sm:px-6 h-24 sm:h-28 flex items-center justify-between gap-4 transition-all duration-300">
+      
+      <!-- Lado Esquerdo: Logotipo da Produtora ampliado em 100% no topo -->
+      <div class="flex items-center">
+        <a href="#hero" class="flex items-center group py-1" aria-label="Início">
+          <img
+            id="headerLogo"
+            src="logo-urb.png"
+            alt="URB"
+            class="h-20 w-auto object-contain transition-all duration-300 ease-out group-hover:opacity-90"
+            onerror="this.style.display='none'"
+          />
+        </a>
+      </div>
+
+      <!-- Navegação Interna -->
+      <nav class="hidden lg:flex items-center gap-6 text-xs font-medium text-zinc-400">
+        <a href="#hero" class="hover:text-white transition-colors">Início</a>
+        <a href="#proposta" class="hover:text-white transition-colors">Proposta</a>
+        <a href="#roteiros" class="hover:text-white transition-colors">Roteiros & Áudio</a>
+        <a href="#investimento" class="hover:text-white transition-colors">Investimento</a>
+      </nav>
+
+      <!-- Botão WhatsApp Topo -->
+      <div class="flex items-center gap-3">
+        <a
+          id="btnHeaderWhatsapp"
+          href="https://wa.me/5568999977094?text=Ol%C3%A1!%20Gostaria%20de%20aprovar%20a%20proposta%20comercial%20da%20Cruzeiro%20Motors%20Yamaha."
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-2 bg-[#e60012] hover:bg-[#ff1a2b] text-white text-xs font-bold px-4 py-2.5 rounded-xl transition-all active:scale-95 shadow-md shadow-[#e60012]/25 uppercase tracking-wider"
+        >
+          <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
+            <path d="M12 2C6.48 2 2 6.48 2 12C2 13.85 2.5 15.58 3.38 17.07L2 22L7.07 20.66C8.52 21.51 10.2 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM16.63 16.27C16.44 16.8 15.51 17.26 15.04 17.31C14.65 17.35 14.15 17.36 12.38 16.63C10.13 15.69 8.68 13.4 8.56 13.25C8.45 13.1 7.63 12.01 7.63 10.88C7.63 9.75 8.2 9.2 8.43 8.96C8.63 8.75 8.94 8.66 9.23 8.66C9.33 8.66 9.42 8.66 9.5 8.67C9.74 8.68 9.86 8.7 10.02 9.08C10.22 9.56 10.71 10.75 10.77 10.87C10.83 10.99 10.89 11.14 10.81 11.3C10.74 11.46 10.68 11.53 10.56 11.66C10.44 11.8 10.33 11.9 10.2 12.06C10.07 12.21 9.94 12.36 10.09 12.62C10.24 12.87 10.76 13.72 11.53 14.4C12.52 15.28 13.33 15.56 13.62 15.68C13.86 15.78 14.07 15.75 14.23 15.57C14.43 15.34 14.7 14.95 14.93 14.62C15.11 14.36 15.34 14.4 15.58 14.49C15.82 14.58 17.11 15.22 17.37 15.35C17.63 15.48 17.8 15.54 17.86 15.65C17.92 15.76 17.92 16.27 16.63 16.27Z"/>
+          </svg>
+          <span class="hidden sm:inline">Aprovar Proposta</span>
+          <span class="sm:hidden">Aprovar</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==================== HERO SECTION ==================== -->
+  <section id="hero" class="relative py-20 sm:py-28 border-b border-white/10 overflow-hidden bg-[#0c0d10]">
+    <!-- Background Imagem de Estúdio P&B -->
+    <div class="absolute inset-0 z-0 pointer-events-none overflow-hidden">
+      <img
+        src="studio_microphone_classic.jpg"
+        alt="Studio"
+        class="w-full h-full object-cover object-center grayscale contrast-125 brightness-90 opacity-40 mix-blend-screen scale-105"
+        onerror="this.style.display='none'"
+      />
+      <div class="absolute inset-0 bg-gradient-to-b from-[#0c0d10]/80 via-[#0c0d10]/60 to-[#0c0d10]"></div>
+      <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_20%,#0c0d10_90%)]"></div>
+    </div>
+
+    <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 text-center space-y-10">
+      
+      <!-- Tag / Badge -->
+      <div class="inline-flex flex-wrap items-center justify-center gap-2 sm:gap-3 px-4 py-1.5 rounded-full border border-white/15 bg-black/60 backdrop-blur-md text-[11px] font-mono tracking-widest uppercase">
+        <span class="text-zinc-400">Proposta Comercial de Áudio</span>
+        <span class="text-zinc-600">•</span>
+        <span class="text-white font-bold">
+          Cruzeiro Motors <span class="text-[#e60012]">Yamaha</span>
+        </span>
+        <span class="text-zinc-600 hidden sm:inline">•</span>
+        <span class="text-zinc-400 hidden sm:inline font-mono">
+          Mês do Cliente 2026
+        </span>
+      </div>
+
+      <!-- Título Principal -->
+      <div class="space-y-4">
+        <h1 class="text-3xl sm:text-5xl md:text-6xl font-black text-white tracking-tight leading-[1.1]">
+          Criação & Produção de <br class="hidden sm:inline" />
+          <span class="text-[#e60012]">6 Textos de Áudio</span>
+        </h1>
+        <p class="text-base sm:text-lg text-zinc-300 max-w-2xl mx-auto font-normal leading-relaxed">
+          5 spots de 30 segundos e 1 spot master de 1 minuto. Material produzido em estúdio profissional, pronto para rodar durante todo o mês no rádio e em todas as mídias da sua loja.
+        </p>
+      </div>
+
+      <!-- 3 Blocos de Destaque -->
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-6 text-left">
+        <div class="bg-[#111318]/80 backdrop-blur-sm border border-white/10 p-5 rounded-2xl space-y-1 shadow-lg">
+          <span class="text-xs font-mono uppercase tracking-widest text-zinc-500">Volume</span>
+          <p class="text-xl font-bold text-white">6 Roteiros Inéditos</p>
+          <p class="text-xs text-zinc-400">5 de 30 segundos + 1 Master de 60 segundos.</p>
+        </div>
+
+        <div class="bg-[#111318]/80 backdrop-blur-sm border border-white/10 p-5 rounded-2xl space-y-1 shadow-lg">
+          <span class="text-xs font-mono uppercase tracking-widest text-zinc-500">Uso & Mídias</span>
+          <p class="text-xl font-bold text-white">100% Livre</p>
+          <p class="text-xs text-zinc-400">Rádio, carros de som, Instagram, TikTok e loja.</p>
+        </div>
+
+        <div class="bg-[#111318]/80 backdrop-blur-sm border border-white/10 p-5 rounded-2xl space-y-1 shadow-lg">
+          <span class="text-xs font-mono uppercase tracking-widest text-zinc-500">Investimento</span>
+          <p class="text-xl font-bold text-[#e60012]">R$ 750,00</p>
+          <p class="text-xs text-zinc-400">Pacote completo com texto, voz e masterização.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== PROPOSTA ESTRATÉGICA ==================== -->
+  <section id="proposta" class="py-16 sm:py-20 border-b border-white/10 bg-[#0c0d10]">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 space-y-10">
+      <div class="space-y-3">
+        <span class="text-[11px] font-mono font-bold tracking-widest text-[#e60012] uppercase">
+          01 • Estrutura da Campanha
+        </span>
+        <h2 class="text-2xl sm:text-4xl font-bold text-white tracking-tight">
+          Por que 6 Roteiros Diferentes?
+        </h2>
+        <p class="text-sm sm:text-base text-zinc-400 max-w-2xl">
+          Evita o cansaço do ouvinte com a repetição da mesma mensagem, cobrindo todos os públicos e modelos estratégicos da Yamaha ao longo do mês.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div class="bg-[#111318] border border-white/10 p-6 rounded-2xl space-y-3">
+          <div class="flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-[#e60012]"></span>
+            <h3 class="text-lg font-bold text-white">5 Spots Rápidos (30s)</h3>
+          </div>
+          <p class="text-xs sm:text-sm text-zinc-400 leading-relaxed">
+            Ideais para rádio diário e stories rápidos. Cada spot foca em um pilar: Edições Marvel, Facilidade de Financiamento, Troca com Avaliação Justa, Linha Urbana (Factor/Fazer) e Força Off-Road (Lander/Crosser).
+          </p>
+        </div>
+
+        <div class="bg-[#111318] border border-white/10 p-6 rounded-2xl space-y-3">
+          <div class="flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-[#e60012]"></span>
+            <h3 class="text-lg font-bold text-white">1 Spot Master (60s)</h3>
+          </div>
+          <p class="text-xs sm:text-sm text-zinc-400 leading-relaxed">
+            O comercial âncora de 1 minuto completo. Reúne todas as vantagens do Mês do Cliente, as 3 lojas de Cruzeiro do Sul, condições bancárias e a grandiosidade da Yamaha.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== ROTEIROS & PLAYER INTERATIVO ==================== -->
+  <section id="roteiros" class="py-16 sm:py-20 border-b border-white/10">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 space-y-10">
+      
+      <!-- Cabeçalho Roteiros -->
+      <div class="space-y-3">
+        <span class="text-[11px] font-mono font-bold tracking-widest text-[#e60012] uppercase">
+          02 • Roteiros Escritos & Audição
+        </span>
+        <h2 class="text-2xl sm:text-4xl font-bold text-white tracking-tight">
+          Os 6 Textos Publicitários
+        </h2>
+        <p class="text-sm sm:text-base text-zinc-400 max-w-2xl">
+          Spot 01 produzido e disponível para audição e download. Os spots 02 a 06 com roteiros completos, prontos para produção em estúdio após aprovação.
+        </p>
+      </div>
+
+      <!-- Abas dos 6 Spots -->
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-2" id="spotsTabsContainer">
+        <!-- Renderizado dinamicamente via JS -->
+      </div>
+
+      <!-- Caixa Principal do Player e do Roteiro -->
+      <div class="bg-[#111318] border border-white/10 rounded-2xl overflow-hidden shadow-2xl">
+        
+        <!-- Player Integrado -->
+        <div class="bg-[#171922] p-4 sm:p-5 border-b border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
+          
+          <!-- Botão Play / Info -->
+          <div class="flex items-center gap-4 w-full sm:w-auto">
+            <button
+              id="btnPlay"
+              class="w-12 h-12 rounded-full bg-[#e60012] hover:bg-[#ff1a2b] text-white flex items-center justify-center shrink-0 transition-transform active:scale-95 shadow-md shadow-[#e60012]/30 cursor-pointer"
+              title="Tocar áudio"
+            >
+              <svg id="iconPlay" class="w-5 h-5 fill-current ml-0.5" viewBox="0 0 24 24">
+                <path d="M8 5v14l11-7z"/>
+              </svg>
+              <svg id="iconPause" class="w-5 h-5 fill-current hidden" viewBox="0 0 24 24">
+                <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>
+              </svg>
+            </button>
+
+            <div>
+              <div class="flex items-center gap-2">
+                <span id="playerSpotTitle" class="text-xs font-mono font-bold text-white uppercase">
+                  Spot 01 • Lançamentos Marvel & Exclusividade
+                </span>
+                <span id="playerSpotBadge" class="text-[10px] font-mono bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 px-2 py-0.5 rounded flex items-center gap-1 font-bold">
+                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+                  Áudio Disponível
+                </span>
+              </div>
+              <p id="playerSpotStatusText" class="text-xs text-zinc-400 font-mono mt-0.5">
+                Clique no play para ouvir o áudio produzido
+              </p>
+            </div>
+          </div>
+
+          <!-- Equalizador, Tempo, Mudo e Download -->
+          <div class="flex items-center gap-3 w-full sm:w-auto justify-between sm:justify-end">
+            <!-- Equalizador -->
+            <div id="equalizer" class="flex items-end gap-1 h-5">
+              <span class="w-1 h-1 bg-zinc-700 rounded-full transition-all duration-150"></span>
+              <span class="w-1 h-1 bg-zinc-700 rounded-full transition-all duration-150"></span>
+              <span class="w-1 h-1 bg-zinc-700 rounded-full transition-all duration-150"></span>
+              <span class="w-1 h-1 bg-zinc-700 rounded-full transition-all duration-150"></span>
+              <span class="w-1 h-1 bg-zinc-700 rounded-full transition-all duration-150"></span>
+            </div>
+
+            <!-- Timer -->
+            <span id="playerTimeDisplay" class="text-xs font-mono font-bold text-zinc-400">
+              00:00 / 00:30
+            </span>
+
+            <!-- Mute Toggle -->
+            <button
+              id="btnMute"
+              class="p-2 rounded-lg text-xs font-mono border bg-white/5 border-white/15 text-zinc-200 hover:bg-white/10 transition-all"
+              title="Ativar/desativar som"
+            >
+              <svg id="iconVolume" class="w-4 h-4 text-zinc-300 fill-none stroke-current stroke-2" viewBox="0 0 24 24">
+                <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+              </svg>
+            </button>
+
+            <!-- Download Button -->
+            <button
+              id="btnDownload"
+              class="p-2 rounded-lg text-xs font-mono border bg-[#e60012]/15 hover:bg-[#e60012]/25 border-[#e60012]/30 text-red-400 active:scale-95 transition-all flex items-center gap-1 cursor-pointer"
+              title="Baixar arquivo de áudio SPOT 1 LANÇAMENTOS MARVEL.mp3"
+            >
+              <svg class="w-4 h-4 fill-none stroke-current stroke-2" viewBox="0 0 24 24">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
+              <span id="btnDownloadLabel" class="text-[10px] hidden sm:inline font-bold uppercase">MP3</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Barra de Progresso Interativa -->
+        <div id="progressBarContainer" class="w-full bg-white/5 h-1.5 cursor-pointer relative">
+          <div id="progressBarFill" class="h-full bg-[#e60012] transition-all duration-100" style="width: 0%;"></div>
+        </div>
+
+        <!-- Conteúdo do Roteiro -->
+        <div class="p-6 sm:p-10 space-y-6">
+          <div class="flex items-center justify-between border-b border-white/5 pb-4">
+            <span id="scriptSectionHeader" class="text-[11px] font-mono text-zinc-500 uppercase tracking-widest flex items-center gap-2">
+              <svg class="w-3.5 h-3.5 text-zinc-400 fill-none stroke-current stroke-2" viewBox="0 0 24 24">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
+                <polyline points="10 9 9 9 8 9"></polyline>
+              </svg>
+              Texto do Roteiro (30 segundos)
+            </span>
+
+            <button
+              id="btnCopyScript"
+              class="inline-flex items-center gap-1.5 text-xs font-mono text-zinc-400 hover:text-white transition-colors bg-white/5 hover:bg-white/10 px-3 py-1.5 rounded-lg border border-white/10 active:scale-95 cursor-pointer"
+            >
+              <svg class="w-3.5 h-3.5 fill-none stroke-current stroke-2" viewBox="0 0 24 24">
+                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+              </svg>
+              <span id="copyTextLabel">Copiar Texto</span>
+            </button>
+          </div>
+
+          <!-- Texto do Roteiro Ativo -->
+          <div class="max-w-2xl mx-auto py-2">
+            <p id="scriptTextContent" class="text-base sm:text-xl text-zinc-100 font-sans leading-relaxed tracking-normal selection:bg-[#e60012]">
+              "Atenção, Cruzeiro do Sul! A força da Marvel invadiu a Cruzeiro Motors Center Yamaha! Chegaram as edições exclusivas FZ15 ABS Deadpool e Crosser Z ABS Wolverine! Estilo lendário, parceria com a Iron Studios e alta performance. Motos à pronta entrega e com frete grátis! Corra para uma de nossas lojas no Centro, na Praça ou no Aeroporto Velho. Cruzeiro Motors Yamaha: o seu próximo nível sobre duas rodas!"
+            </p>
+          </div>
+
+          <!-- Navegação Anterior / Próximo -->
+          <div class="flex items-center justify-between pt-6 border-t border-white/5 text-xs text-zinc-400">
+            <button id="btnPrevSpot" class="font-mono text-zinc-600 cursor-not-allowed">
+              ← Anterior
+            </button>
+            <span id="paginationText" class="font-mono text-zinc-600">
+              1 de 6
+            </span>
+            <button id="btnNextSpot" class="font-mono hover:text-white transition-colors cursor-pointer">
+              Próximo (Spot 02) →
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== INVESTIMENTO ==================== -->
+  <section id="investimento" class="py-16 sm:py-24">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 space-y-10">
+      
+      <div class="text-center space-y-3">
+        <span class="text-[11px] font-mono font-bold tracking-widest text-[#e60012] uppercase">
+          03 • Proposta Comercial & Fechamento
+        </span>
+        <h2 class="text-2xl sm:text-4xl font-bold text-white tracking-tight">
+          Investimento Total do Pacote
+        </h2>
+        <p class="text-sm sm:text-base text-zinc-400 max-w-xl mx-auto">
+          Criação e produção completa dos 6 textos de áudio para o Mês do Cliente.
+        </p>
+      </div>
+
+      <!-- Card de Fechamento -->
+      <div class="bg-[#111318] border border-white/15 rounded-3xl p-8 sm:p-12 text-center space-y-8 shadow-2xl relative overflow-hidden">
+        <div class="absolute -top-32 left-1/2 -translate-x-1/2 w-80 h-80 bg-[#e60012]/10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="space-y-2 relative z-10">
+          <span class="text-xs font-mono uppercase tracking-widest text-zinc-400">
+            Valor Total da Criação & Produção
+          </span>
+          <div class="text-5xl sm:text-7xl font-black text-white tracking-tight">
+            R$ 750,00
+          </div>
+          <p class="text-xs text-zinc-400 font-mono">
+            Pagamento único • Sem mensalidades adicionais
+          </p>
+        </div>
+
+        <div class="max-w-md mx-auto bg-white/[0.02] border border-white/10 rounded-2xl p-6 text-left space-y-3.5 text-xs sm:text-sm text-zinc-200 relative z-10">
+          <div class="flex items-center gap-3">
+            <svg class="w-4 h-4 text-[#e60012] shrink-0 fill-none stroke-current stroke-2" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <span><strong>5 Spots de 30 Segundos</strong> (Giro temático diário)</span>
+          </div>
+          <div class="flex items-center gap-3">
+            <svg class="w-4 h-4 text-[#e60012] shrink-0 fill-none stroke-current stroke-2" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <span><strong>1 Spot Master de 60 Segundos</strong> (1 minuto completo)</span>
+          </div>
+          <div class="flex items-center gap-3">
+            <svg class="w-4 h-4 text-[#e60012] shrink-0 fill-none stroke-current stroke-2" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <span><strong>Produção e Masterização</strong> em estúdio profissional</span>
+          </div>
+          <div class="flex items-center gap-3">
+            <svg class="w-4 h-4 text-[#e60012] shrink-0 fill-none stroke-current stroke-2" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <span><strong>Uso 100% livre</strong> durante todo o mês em todas as mídias</span>
+          </div>
+          <div class="flex items-center gap-3">
+            <svg class="w-4 h-4 text-[#e60012] shrink-0 fill-none stroke-current stroke-2" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <span><strong>Entrega imediata dos arquivos MP3</strong> (320kbps)</span>
+          </div>
+        </div>
+
+        <!-- Botão WhatsApp Grande -->
+        <div class="pt-2 relative z-10 flex flex-col items-center gap-3">
+          <a
+            id="btnInvestmentWhatsapp"
+            href="https://wa.me/5568999977094?text=Ol%C3%A1!%20Gostaria%20de%20aprovar%20a%20proposta%20comercial%20da%20Cruzeiro%20Motors%20Yamaha."
+            target="_blank"
+            rel="noopener noreferrer"
+            class="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-[#e60012] hover:bg-[#ff1a2b] text-white font-bold px-10 py-4.5 rounded-xl text-sm sm:text-base uppercase tracking-wider transition-all active:scale-95 shadow-xl shadow-[#e60012]/30"
+          >
+            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+              <path d="M12 2C6.48 2 2 6.48 2 12C2 13.85 2.5 15.58 3.38 17.07L2 22L7.07 20.66C8.52 21.51 10.2 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM16.63 16.27C16.44 16.8 15.51 17.26 15.04 17.31C14.65 17.35 14.15 17.36 12.38 16.63C10.13 15.69 8.68 13.4 8.56 13.25C8.45 13.1 7.63 12.01 7.63 10.88C7.63 9.75 8.2 9.2 8.43 8.96C8.63 8.75 8.94 8.66 9.23 8.66C9.33 8.66 9.42 8.66 9.5 8.67C9.74 8.68 9.86 8.7 10.02 9.08C10.22 9.56 10.71 10.75 10.77 10.87C10.83 10.99 10.89 11.14 10.81 11.3C10.74 11.46 10.68 11.53 10.56 11.66C10.44 11.8 10.33 11.9 10.2 12.06C10.07 12.21 9.94 12.36 10.09 12.62C10.24 12.87 10.76 13.72 11.53 14.4C12.52 15.28 13.33 15.56 13.62 15.68C13.86 15.78 14.07 15.75 14.23 15.57C14.43 15.34 14.7 14.95 14.93 14.62C15.11 14.36 15.34 14.4 15.58 14.49C15.82 14.58 17.11 15.22 17.37 15.35C17.63 15.48 17.8 15.54 17.86 15.65C17.92 15.76 17.92 16.27 16.63 16.27Z"/>
+            </svg>
+            <span>Aprovar Proposta no WhatsApp</span>
+            <svg class="w-4 h-4 fill-none stroke-current stroke-2" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </a>
+
+          <p class="text-xs text-zinc-500 font-mono">
+            Clique para abrir o WhatsApp e confirmar a aprovação imediata (+55 68 99997-7094).
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="py-12 border-t border-white/10 bg-[#0c0d10] text-zinc-500">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-6">
+      <div class="flex items-center gap-3 text-center sm:text-left">
+        <img src="logo-urb.png" alt="URB" class="h-8 w-auto object-contain" onerror="this.style.display='none'" />
+        <div>
+          <span class="font-mono font-bold text-sm text-white uppercase tracking-wider block">
+            Produtora de Áudio
+          </span>
+          <span class="text-[11px] font-mono text-zinc-500">
+            Criação & Produção Publicitária
+          </span>
+        </div>
+      </div>
+
+      <div class="text-center sm:text-right space-y-1">
+        <div class="flex items-center justify-center sm:justify-end gap-2">
+          <span class="w-1.5 h-1.5 rounded-full bg-[#e60012]"></span>
+          <span class="font-mono text-xs font-bold text-zinc-300 uppercase tracking-wider">
+            Cruzeiro Motors Yamaha
+          </span>
+        </div>
+        <p class="text-[11px] font-mono text-zinc-600">
+          Proposta Comercial • 6 Textos de Áudio • Mês do Cliente 2026
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== JAVASCRIPT LOCAL ==================== -->
+  <script>
+    // DADOS DOS 6 SPOTS
+    const SPOTS = [
+      {
+        id: 1,
+        title: "Spot 01 • Lançamentos Marvel & Exclusividade",
+        duration: "30 segundos",
+        durationSec: 30,
+        hasAudio: true,
+        audioUrl: "SPOT 1 LANÇAMENTOS MARVEL.mp3",
+        script: "Atenção, Cruzeiro do Sul! A força da Marvel invadiu a Cruzeiro Motors Center Yamaha! Chegaram as edições exclusivas FZ15 ABS Deadpool e Crosser Z ABS Wolverine! Estilo lendário, parceria com a Iron Studios e alta performance. Motos à pronta entrega e com frete grátis! Corra para uma de nossas lojas no Centro, na Praça ou no Aeroporto Velho. Cruzeiro Motors Yamaha: o seu próximo nível sobre duas rodas!"
+      },
+      {
+        id: 2,
+        title: "Spot 02 • Facilidade, Financiamento & Consórcio",
+        duration: "30 segundos",
+        durationSec: 30,
+        hasAudio: false,
+        script: "No Mês do Cliente da Cruzeiro Motors Yamaha, o seu sonho da moto zero quilômetro acontece de verdade! Taxas especiais pelo Banco Yamaha, aprovação rápida e as menores parcelas no Consórcio Nacional Yamaha. Não deixe para depois: passe hoje mesmo em uma de nossas unidades no Centro, Praça ou Aeroporto Velho e garanta a sua com frete grátis! Cruzeiro Motors Yamaha: facilidade que acelera sua vida!"
+      },
+      {
+        id: 3,
+        title: "Spot 03 • Troca Fácil & Avaliação Justa",
+        duration: "30 segundos",
+        durationSec: 30,
+        hasAudio: false,
+        script: "Quer trocar de moto e sair de Yamaha zero hoje mesmo? Na Cruzeiro Motors Center, sua moto usada vale muito mais na troca! Aceitamos seu veículo com a melhor avaliação de Cruzeiro do Sul e as melhores condições de financiamento do mercado. Venha tomar um café conosco no Centro, na Praça ou no Aeroporto Velho! Cruzeiro Motors Yamaha: respeito ao cliente e negócio fechado!"
+      },
+      {
+        id: 4,
+        title: "Spot 04 • Linha Urbana & Economia Diária",
+        duration: "30 segundos",
+        durationSec: 30,
+        hasAudio: false,
+        script: "Economia no combustível e durabilidade para o seu dia a dia é com a Linha Street da Cruzeiro Motors Yamaha! Factor 150 e Fazer FZ15 com pronta entrega, 3 anos de garantia e frete totalmente grátis para toda a região! Visite nossas lojas no Centro, Praça ou Aeroporto Velho e faça o melhor investimento para o seu trabalho e lazer. Cruzeiro Motors Yamaha: quem compara, compra Yamaha!"
+      },
+      {
+        id: 5,
+        title: "Spot 05 • Aventura & Versatilidade Off-Road",
+        duration: "30 segundos",
+        durationSec: 30,
+        hasAudio: false,
+        script: "Na cidade ou na terra, quem manda é você! Chegou a hora de acelerar a lendária Lander 250 ou a versátil Crosser 150 com freio ABS e conforto incomparável! Ofertas imperdíveis no Mês do Cliente Cruzeiro Motors Yamaha. Venha fazer um test ride nas lojas do Centro, Praça ou Aeroporto Velho! Cruzeiro Motors Yamaha: liberdade e potência em qualquer caminho!"
+      },
+      {
+        id: 6,
+        title: "Spot Master (60s) • Campanha Completa Mês do Cliente",
+        duration: "60 segundos (1 minuto)",
+        durationSec: 60,
+        hasAudio: false,
+        isMaster: true,
+        script: "Cruzeiro do Sul, setembro é o Mês do Cliente na Cruzeiro Motors Center Yamaha, e preparamos a maior celebração em duas rodas que você já viu! Chegaram as edições especiais Marvel: FZ15 Deadpool e Crosser Wolverine, com design exclusivo e desempenho de cinema! E tem mais: toda a linha Yamaha com taxas reduzidas pelo Banco Yamaha, parcelas imperdíveis no Consórcio, a melhor avaliação da sua moto usada e frete grátis garantido! São 3 lojas completas prontas para te atender: no Centro, na Praça e no Aeroporto Velho. Venha tomar um café com nossa equipe e saia pilotando sua Yamaha zero quilômetro com 3 anos de garantia! Mês do Cliente é na Cruzeiro Motors Yamaha: a sua concessionária de confiança no Vale do Juruá!"
+      }
+    ];
+
+    let currentSpotIndex = 0;
+    const audio = document.getElementById('audioPlayer');
+    const btnPlay = document.getElementById('btnPlay');
+    const iconPlay = document.getElementById('iconPlay');
+    const iconPause = document.getElementById('iconPause');
+    const playerSpotTitle = document.getElementById('playerSpotTitle');
+    const playerSpotBadge = document.getElementById('playerSpotBadge');
+    const playerSpotStatusText = document.getElementById('playerSpotStatusText');
+    const playerTimeDisplay = document.getElementById('playerTimeDisplay');
+    const progressBarFill = document.getElementById('progressBarFill');
+    const progressBarContainer = document.getElementById('progressBarContainer');
+    const scriptTextContent = document.getElementById('scriptTextContent');
+    const scriptSectionHeader = document.getElementById('scriptSectionHeader');
+    const paginationText = document.getElementById('paginationText');
+    const btnPrevSpot = document.getElementById('btnPrevSpot');
+    const btnNextSpot = document.getElementById('btnNextSpot');
+    const btnCopyScript = document.getElementById('btnCopyScript');
+    const copyTextLabel = document.getElementById('copyTextLabel');
+    const btnDownload = document.getElementById('btnDownload');
+    const btnDownloadLabel = document.getElementById('btnDownloadLabel');
+    const btnMute = document.getElementById('btnMute');
+    const equalizer = document.getElementById('equalizer');
+    const spotsTabsContainer = document.getElementById('spotsTabsContainer');
+
+    function formatTime(secs) {
+      const m = Math.floor(secs / 60);
+      const s = Math.floor(secs % 60);
+      return `${m.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')}`;
+    }
+
+    function renderTabs() {
+      spotsTabsContainer.innerHTML = '';
+      SPOTS.forEach((spot, idx) => {
+        const isActive = idx === currentSpotIndex;
+        const btn = document.createElement('button');
+        btn.className = `p-3 rounded-xl text-left transition-all border relative cursor-pointer ${
+          isActive
+            ? 'bg-white text-black border-white shadow-lg'
+            : 'bg-white/[0.02] hover:bg-white/[0.06] text-zinc-300 border-white/10'
+        }`;
+        btn.onclick = () => selectSpot(idx);
+
+        btn.innerHTML = `
+          <div class="flex items-center justify-between">
+            <span class="text-[10px] font-mono font-bold ${isActive ? 'text-[#e60012]' : 'text-zinc-500'}">
+              0${spot.id}
+            </span>
+            ${spot.hasAudio ? `
+              <span class="text-[9px] font-mono font-bold bg-[#e60012] text-white px-1.5 py-0.5 rounded flex items-center gap-1">
+                <span class="w-1 h-1 rounded-full bg-white animate-ping"></span>
+                ÁUDIO
+              </span>
+            ` : `
+              <span class="text-[9px] font-mono ${isActive ? 'text-black/60' : 'text-zinc-600'}">
+                ${spot.durationSec}s
+              </span>
+            `}
+          </div>
+          <p class="text-xs font-bold mt-1.5 truncate ${isActive ? 'text-black' : 'text-zinc-200'}">
+            ${spot.isMaster ? 'Master 60s' : `Spot 0${spot.id}`}
+          </p>
+          <span class="text-[10px] block mt-0.5 font-mono ${isActive ? 'text-zinc-600' : 'text-zinc-500'}">
+            ${spot.hasAudio ? 'Demonstração' : 'Roteiro'}
+          </span>
+        `;
+        spotsTabsContainer.appendChild(btn);
+      });
+    }
+
+    function selectSpot(index) {
+      audio.pause();
+      audio.currentTime = 0;
+      currentSpotIndex = index;
+      updateUI();
+      renderTabs();
+    }
+
+    function updateUI() {
+      const spot = SPOTS[currentSpotIndex];
+      playerSpotTitle.textContent = spot.title;
+      scriptTextContent.textContent = `"${spot.script}"`;
+      scriptSectionHeader.innerHTML = `
+        <svg class="w-3.5 h-3.5 text-zinc-400 fill-none stroke-current stroke-2" viewBox="0 0 24 24">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+          <polyline points="14 2 14 8 20 8"></polyline>
+          <line x1="16" y1="13" x2="8" y2="13"></line>
+          <line x1="16" y1="17" x2="8" y2="17"></line>
+          <polyline points="10 9 9 9 8 9"></polyline>
+        </svg>
+        Texto do Roteiro (${spot.duration})
+      `;
+      paginationText.textContent = `${currentSpotIndex + 1} de ${SPOTS.length}`;
+
+      // Botões de navegação anterior/próximo
+      if (currentSpotIndex === 0) {
+        btnPrevSpot.className = "font-mono text-zinc-600 cursor-not-allowed";
+        btnPrevSpot.onclick = null;
+      } else {
+        btnPrevSpot.className = "font-mono hover:text-white transition-colors cursor-pointer";
+        btnPrevSpot.onclick = () => selectSpot(currentSpotIndex - 1);
+      }
+
+      if (currentSpotIndex === SPOTS.length - 1) {
+        btnNextSpot.className = "font-mono text-zinc-600 cursor-not-allowed";
+        btnNextSpot.onclick = null;
+      } else {
+        btnNextSpot.className = "font-mono hover:text-white transition-colors cursor-pointer";
+        btnNextSpot.onclick = () => selectSpot(currentSpotIndex + 1);
+      }
+
+      // Audio state
+      if (spot.hasAudio) {
+        btnPlay.className = "w-12 h-12 rounded-full bg-[#e60012] hover:bg-[#ff1a2b] text-white flex items-center justify-center shrink-0 transition-transform active:scale-95 shadow-md shadow-[#e60012]/30 cursor-pointer";
+        btnPlay.title = "Ouvir Spot 01";
+        playerSpotBadge.className = "text-[10px] font-mono bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 px-2 py-0.5 rounded flex items-center gap-1 font-bold";
+        playerSpotBadge.innerHTML = `<span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> Áudio Disponível`;
+        playerSpotStatusText.textContent = "Clique no play para ouvir o áudio produzido";
+        btnDownload.className = "p-2 rounded-lg text-xs font-mono border bg-[#e60012]/15 hover:bg-[#e60012]/25 border-[#e60012]/30 text-red-400 active:scale-95 transition-all flex items-center gap-1 cursor-pointer";
+        btnDownloadLabel.textContent = "MP3";
+        btnDownload.title = "Baixar arquivo de áudio SPOT 1 LANÇAMENTOS MARVEL.mp3";
+        playerTimeDisplay.textContent = `00:00 / 00:30`;
+        progressBarFill.style.width = '0%';
+      } else {
+        btnPlay.className = "w-12 h-12 rounded-full bg-zinc-800/60 border border-white/5 text-zinc-600 flex items-center justify-center shrink-0 cursor-not-allowed";
+        btnPlay.title = "Áudio aguardando aprovação";
+        playerSpotBadge.className = "text-[10px] font-mono bg-zinc-800 text-zinc-400 border border-white/10 px-2 py-0.5 rounded";
+        playerSpotBadge.innerHTML = `Roteiro (Produção Pendente)`;
+        playerSpotStatusText.textContent = "Play desativado • Áudio será produzido após aprovação da proposta";
+        btnDownload.className = "p-2 rounded-lg text-xs font-mono border bg-white/5 hover:bg-white/10 border-white/10 text-zinc-400 active:scale-95 transition-all flex items-center gap-1 cursor-pointer";
+        btnDownloadLabel.textContent = "TXT";
+        btnDownload.title = "Baixar texto do roteiro (.txt)";
+        playerTimeDisplay.textContent = `00:00 / ${formatTime(spot.durationSec)}`;
+        progressBarFill.style.width = '0%';
+        iconPlay.classList.remove('hidden');
+        iconPause.classList.add('hidden');
+      }
+    }
+
+    // Play/Pause
+    btnPlay.onclick = () => {
+      const spot = SPOTS[currentSpotIndex];
+      if (!spot.hasAudio) return;
+      if (audio.paused) {
+        audio.play().catch(e => console.warn(e));
+      } else {
+        audio.pause();
+      }
+    };
+
+    audio.onplay = () => {
+      iconPlay.classList.add('hidden');
+      iconPause.classList.remove('hidden');
+      playerSpotStatusText.textContent = "Reproduzindo áudio oficial de demonstração...";
+      Array.from(equalizer.children).forEach((bar, i) => {
+        bar.className = "w-1 bg-[#e60012] rounded-full animate-pulse";
+        bar.style.height = `${(i + 1) * 4}px`;
+      });
+    };
+
+    audio.onpause = () => {
+      iconPlay.classList.remove('hidden');
+      iconPause.classList.add('hidden');
+      playerSpotStatusText.textContent = "Clique no play para ouvir o áudio produzido";
+      Array.from(equalizer.children).forEach(bar => {
+        bar.className = "w-1 h-1 bg-zinc-700 rounded-full";
+        bar.style.height = '4px';
+      });
+    };
+
+    audio.ontimeupdate = () => {
+      const cur = audio.currentTime;
+      const dur = audio.duration || 30;
+      playerTimeDisplay.textContent = `${formatTime(cur)} / ${formatTime(dur)}`;
+      progressBarFill.style.width = `${(cur / dur) * 100}%`;
+    };
+
+    audio.onended = () => {
+      audio.currentTime = 0;
+      iconPlay.classList.remove('hidden');
+      iconPause.classList.add('hidden');
+      progressBarFill.style.width = '0%';
+      playerTimeDisplay.textContent = `00:00 / 00:30`;
+    };
+
+    // Barra de progresso interativa
+    progressBarContainer.onclick = (e) => {
+      const spot = SPOTS[currentSpotIndex];
+      if (!spot.hasAudio) return;
+      const rect = progressBarContainer.getBoundingClientRect();
+      const clickX = e.clientX - rect.left;
+      const ratio = Math.max(0, Math.min(1, clickX / rect.width));
+      const targetTime = ratio * (audio.duration || 30);
+      audio.currentTime = targetTime;
+    };
+
+    // Botão de Copiar Texto
+    btnCopyScript.onclick = () => {
+      const spot = SPOTS[currentSpotIndex];
+      navigator.clipboard.writeText(spot.script);
+      copyTextLabel.textContent = "Texto Copiado!";
+      setTimeout(() => {
+        copyTextLabel.textContent = "Copiar Texto";
+      }, 2000);
+    };
+
+    // Botão de Download
+    btnDownload.onclick = () => {
+      const spot = SPOTS[currentSpotIndex];
+      if (spot.hasAudio) {
+        const link = document.createElement('a');
+        link.href = "SPOT 1 LANÇAMENTOS MARVEL.mp3";
+        link.download = "SPOT 1 LANÇAMENTOS MARVEL.mp3";
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+      } else {
+        const blob = new Blob([spot.script], { type: 'text/plain;charset=utf-8' });
+        const url = URL.createObjectURL(blob);
+        const link = document.createElement('a');
+        link.href = url;
+        link.download = `Spot_0${spot.id}_Roteiro_Yamaha.txt`;
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        URL.revokeObjectURL(url);
+      }
+    };
+
+    // Mute/Unmute
+    btnMute.onclick = () => {
+      audio.muted = !audio.muted;
+      if (audio.muted) {
+        btnMute.classList.add('opacity-50');
+      } else {
+        btnMute.classList.remove('opacity-50');
+      }
+    };
+
+    // Redimensionamento dinâmico da Logo no Scroll
+    const mainHeader = document.getElementById('mainHeader');
+    const headerContainer = document.getElementById('headerContainer');
+    const headerLogo = document.getElementById('headerLogo');
+
+    function handleHeaderScroll() {
+      const scrollY = window.scrollY || window.pageYOffset || 0;
+      if (scrollY > 30) {
+        // Reduz para o tamanho atual quando rola para baixo
+        headerContainer.classList.remove('h-24', 'sm:h-28');
+        headerContainer.classList.add('h-16', 'sm:h-20');
+        headerLogo.classList.remove('h-20');
+        headerLogo.classList.add('h-10');
+        mainHeader.classList.add('shadow-xl', 'bg-[#0c0d10]/98');
+      } else {
+        // 100% maior no topo da página
+        headerContainer.classList.add('h-24', 'sm:h-28');
+        headerContainer.classList.remove('h-16', 'sm:h-20');
+        headerLogo.classList.add('h-20');
+        headerLogo.classList.remove('h-10');
+        mainHeader.classList.remove('shadow-xl', 'bg-[#0c0d10]/98');
+      }
+    }
+
+    window.addEventListener('scroll', handleHeaderScroll, { passive: true });
+    handleHeaderScroll();
+
+    // Inicialização
+    renderTabs();
+    updateUI();
+  </script>
+</body>
+</html>

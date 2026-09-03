@@ -1,0 +1,21 @@
+URB CONCEPT — site estático (arquivo único)
+===========================================
+
+1. Mantenha TODOS os arquivos desta pasta juntos, no mesmo diretório.
+2. Dê dois cliques em "index.html" para abrir em qualquer navegador.
+3. Para publicar: envie o conteúdo desta pasta para qualquer hospedagem
+   (Hostinger, cPanel, Netlify, Vercel, GitHub Pages, S3...). Não precisa
+   de Node.js, npm, build ou servidor especial.
+
+Observações
+-----------
+- Tailwind CSS e as fontes (Inter / Space Grotesk / Roboto Mono) são
+  carregados por CDN no <head>, então a primeira abertura pede internet.
+- WhatsApp: para trocar o número, edite em index.html a linha
+  var WHATSAPP_NUMBER = "5511991573413";
+  (e também os links https://wa.me/... no rodapé).
+- Instagram: link no rodapé -> instagram.com/urbconceptac
+- Textos, capacidades, metodologia e cases ficam nas listas
+  "capacidades", "processo" e "cases" dentro do <script> no fim do index.html.
+  Para adicionar um novo case, copie um bloco da lista "cases", troque os
+  textos e aponte "logo"/"gallery"/"audio" para arquivos desta mesma pasta.

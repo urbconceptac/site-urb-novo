@@ -1,0 +1,6 @@
+{
+  "name": "Proposta Comercial — Cruzeiro Motors Center Yamaha",
+  "description": "Proposta comercial estratégica de spots de rádio para a Cruzeiro Motors Center Yamaha no Mês do Cliente.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -468,7 +468,7 @@
     </div>
   </footer>
 
-  <!-- ==================== JAVASCRIPT LOCAL ==================== -->
+ <!-- ==================== JAVASCRIPT LOCAL ==================== -->
   <script>
     // DADOS DOS 6 SPOTS
     const SPOTS = [
@@ -478,7 +478,7 @@
         duration: "30 segundos",
         durationSec: 30,
         hasAudio: true,
-        audioUrl: "/proposta-yamaha/spot1-marvel.mp3",
+        audioUrl: "./spot1-marvel.mp3",
         script: "Atenção, Cruzeiro do Sul! A força da Marvel invadiu a Cruzeiro Motors Center Yamaha! Chegaram as edições exclusivas FZ15 ABS Deadpool e Crosser Z ABS Wolverine! Estilo lendário, parceria com a Iron Studios e alta performance. Motos à pronta entrega e com frete grátis! Corra para uma de nossas lojas no Centro, na Praça ou no Aeroporto Velho. Cruzeiro Motors Yamaha: o seu próximo nível sobre duas rodas!"
       },
       {
@@ -527,6 +527,174 @@
         script: "Atenção Cruzeiro do Sul! O Mês do Cliente na Cruzeiro Motors Center Yamaha chegou com tudo! Condições imperdíveis em toda a linha de motos zero quilômetro, edições especiais Marvel com frete grátis, além da melhor avaliação da cidade na sua moto usada. Venha conferir em nossas três lojas: no Centro, na Praça e no Aeroporto Velho. Cruzeiro Motors Yamaha, a sua concessionária de confiança!"
       }
     ];
+
+    let activeSpotIndex = 0;
+    const audio = document.getElementById('audioPlayer');
+    const btnPlay = document.getElementById('btnPlay');
+    const iconPlay = document.getElementById('iconPlay');
+    const iconPause = document.getElementById('iconPause');
+    const progressBarFill = document.getElementById('progressBarFill');
+    const progressBarContainer = document.getElementById('progressBarContainer');
+    const playerTimeDisplay = document.getElementById('playerTimeDisplay');
+    const playerSpotTitle = document.getElementById('playerSpotTitle');
+    const playerSpotBadge = document.getElementById('playerSpotBadge');
+    const playerSpotStatusText = document.getElementById('playerSpotStatusText');
+    const scriptTextContent = document.getElementById('scriptTextContent');
+    const spotsTabsContainer = document.getElementById('spotsTabsContainer');
+    const btnPrevSpot = document.getElementById('btnPrevSpot');
+    const btnNextSpot = document.getElementById('btnNextSpot');
+    const paginationText = document.getElementById('paginationText');
+    const btnCopyScript = document.getElementById('btnCopyScript');
+    const copyTextLabel = document.getElementById('copyTextLabel');
+    const btnMute = document.getElementById('btnMute');
+    const btnDownload = document.getElementById('btnDownload');
+
+    function formatTime(seconds) {
+      const min = Math.floor(seconds / 60);
+      const sec = Math.floor(seconds % 60);
+      return `${min.toString().padStart(2, '0')}:${sec.toString().padStart(2, '0')}`;
+    }
+
+    function renderTabs() {
+      spotsTabsContainer.innerHTML = '';
+      SPOTS.forEach((spot, idx) => {
+        const isActive = idx === activeSpotIndex;
+        const btn = document.createElement('button');
+        btn.className = `p-3 rounded-xl border text-left transition-all cursor-pointer ${
+          isActive 
+            ? 'bg-[#e60012]/15 border-[#e60012] text-white' 
+            : 'bg-white/5 border-white/10 text-zinc-400 hover:bg-white/10'
+        }`;
+        btn.innerHTML = `
+          <div class="text-[10px] font-mono uppercase text-zinc-400">Spot 0${spot.id}</div>
+          <div class="text-xs font-bold ${isActive ? 'text-white' : 'text-zinc-300'} truncate">${spot.duration}</div>
+        `;
+        btn.onclick = () => selectSpot(idx);
+        spotsTabsContainer.appendChild(btn);
+      });
+    }
+
+    function selectSpot(index) {
+      activeSpotIndex = index;
+      const spot = SPOTS[index];
+
+      audio.pause();
+      iconPlay.classList.remove('hidden');
+      iconPause.classList.add('hidden');
+      progressBarFill.style.width = '0%';
+
+      playerSpotTitle.textContent = spot.title;
+      scriptTextContent.textContent = `"${spot.script}"`;
+      paginationText.textContent = `${spot.id} de ${SPOTS.length}`;
+
+      if (spot.hasAudio && spot.audioUrl) {
+        audio.src = spot.audioUrl;
+        audio.load();
+        btnPlay.disabled = false;
+        btnPlay.classList.remove('opacity-50', 'cursor-not-allowed');
+        playerSpotBadge.className = "text-[10px] font-mono bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 px-2 py-0.5 rounded flex items-center gap-1 font-bold";
+        playerSpotBadge.innerHTML = `<span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> Áudio Disponível`;
+        playerSpotStatusText.textContent = "Clique no play para ouvir o áudio produzido";
+        if (btnDownload) btnDownload.style.display = 'flex';
+      } else {
+        audio.src = "";
+        btnPlay.disabled = true;
+        btnPlay.classList.add('opacity-50', 'cursor-not-allowed');
+        playerSpotBadge.className = "text-[10px] font-mono bg-zinc-500/20 text-zinc-400 border border-zinc-500/30 px-2 py-0.5 rounded flex items-center gap-1 font-bold";
+        playerSpotBadge.innerHTML = `<span class="w-1.5 h-1.5 rounded-full bg-zinc-400"></span> Em Produção`;
+        playerSpotStatusText.textContent = "Roteiro aprovado pronto para gravação em estúdio";
+        playerTimeDisplay.textContent = `00:00 / ${formatTime(spot.durationSec)}`;
+        if (btnDownload) btnDownload.style.display = 'none';
+      }
+
+      if (index === 0) {
+        btnPrevSpot.className = "font-mono text-zinc-600 cursor-not-allowed";
+        btnPrevSpot.onclick = null;
+      } else {
+        btnPrevSpot.className = "font-mono hover:text-white transition-colors cursor-pointer";
+        btnPrevSpot.onclick = () => selectSpot(index - 1);
+      }
+
+      if (index === SPOTS.length - 1) {
+        btnNextSpot.className = "font-mono text-zinc-600 cursor-not-allowed";
+        btnNextSpot.onclick = null;
+      } else {
+        btnNextSpot.className = "font-mono hover:text-white transition-colors cursor-pointer";
+        btnNextSpot.onclick = () => selectSpot(index + 1);
+      }
+
+      renderTabs();
+    }
+
+    // Controle Play / Pause
+    btnPlay.addEventListener('click', () => {
+      const spot = SPOTS[activeSpotIndex];
+      if (!spot.hasAudio) return;
+
+      if (audio.paused) {
+        audio.play().then(() => {
+          iconPlay.classList.add('hidden');
+          iconPause.classList.remove('hidden');
+        }).catch(err => console.error("Erro ao tocar áudio:", err));
+      } else {
+        audio.pause();
+        iconPlay.classList.remove('hidden');
+        iconPause.classList.add('hidden');
+      }
+    });
+
+    // Atualização de tempo e barra de progresso
+    audio.addEventListener('timeupdate', () => {
+      if (audio.duration) {
+        const pct = (audio.currentTime / audio.duration) * 100;
+        progressBarFill.style.width = `${pct}%`;
+        playerTimeDisplay.textContent = `${formatTime(audio.currentTime)} / ${formatTime(audio.duration)}`;
+      }
+    });
+
+    audio.addEventListener('ended', () => {
+      iconPlay.classList.remove('hidden');
+      iconPause.classList.add('hidden');
+      progressBarFill.style.width = '0%';
+    });
+
+    progressBarContainer.addEventListener('click', (e) => {
+      if (!audio.duration) return;
+      const rect = progressBarContainer.getBoundingClientRect();
+      const pos = (e.clientX - rect.left) / rect.width;
+      audio.currentTime = pos * audio.duration;
+    });
+
+    if (btnMute) {
+      btnMute.addEventListener('click', () => {
+        audio.muted = !audio.muted;
+        btnMute.classList.toggle('opacity-50', audio.muted);
+      });
+    }
+
+    if (btnDownload) {
+      btnDownload.addEventListener('click', () => {
+        const spot = SPOTS[activeSpotIndex];
+        if (spot.hasAudio && spot.audioUrl) {
+          const a = document.createElement('a');
+          a.href = spot.audioUrl;
+          a.download = 'spot1-marvel.mp3';
+          a.click();
+        }
+      });
+    }
+
+    if (btnCopyScript) {
+      btnCopyScript.addEventListener('click', () => {
+        const spot = SPOTS[activeSpotIndex];
+        navigator.clipboard.writeText(spot.script);
+        copyTextLabel.textContent = "Copiado!";
+        setTimeout(() => copyTextLabel.textContent = "Copiar Texto", 2000);
+      });
+    }
+
+    // Inicializar na primeira carga
+    selectSpot(0);
   </script>
 </body>
 </html>

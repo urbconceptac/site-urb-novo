@@ -1,716 +1,458 @@
-<!DOCTYPE html>
-<html lang="pt-BR" class="scroll-smooth">
+<!doctype html>
+<html lang="pt-BR" class="dark">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Proposta Comercial de Áudio • Cruzeiro Motors Yamaha</title>
-  <meta name="description" content="Proposta comercial estratégica de spots de rádio para a Cruzeiro Motors Center Yamaha no Mês do Cliente." />
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Urb Concept — Estúdio de Branding e Audiovisual</title>
+<meta name="description" content="Identidade visual e produção audiovisual sob medida para o seu negócio. Resposta e orçamento rápido pelo WhatsApp." />
+<meta property="og:title" content="Urb Concept — Estúdio de Branding e Audiovisual" />
+<meta property="og:description" content="Branding sistêmico, direção de arte e produção audiovisual com rigor técnico. Fale no WhatsApp." />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="icon" href="favicon.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&family=Roboto+Mono:wght@400;500&display=swap" />
 
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-8ZYSJN6PGS"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8ZYSJN6PGS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-    gtag('config', 'G-8ZYSJN6PGS');
-  </script>
+  gtag('config', 'G-8ZYSJN6PGS');
+</script>
 
-  <meta property="og:title" content="Proposta Comercial de Áudio • Cruzeiro Motors Yamaha" />
-  <meta property="og:description" content="Proposta comercial estratégica de spots de rádio para a Cruzeiro Motors Center Yamaha no Mês do Cliente." />
-  <meta property="og:type" content="website" />
-  
-  <!-- Tailwind CSS via CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
-
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
-            mono: ['"JetBrains Mono"', 'monospace'],
-          },
-          colors: {
-            brand: '#e60012',
-          }
-        }
-      }
-    }
-  </script>
-
-  <style>
-    body {
-      background-color: #0c0d10;
-      color: #f4f4f5;
-      font-family: 'Plus Jakarta Sans', sans-serif;
-    }
-    ::selection {
-      background-color: #e60012;
-      color: #ffffff;
-    }
-    /* Custom scrollbar */
-    ::-webkit-scrollbar {
-      width: 8px;
-    }
-    ::-webkit-scrollbar-track {
-      background: #0c0d10;
-    }
-    ::-webkit-scrollbar-thumb {
-      background: #27272a;
-      border-radius: 4px;
-    }
-    ::-webkit-scrollbar-thumb:hover {
-      background: #3f3f46;
-    }
-  </style>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        colors: {
+          background: "#0D0D0D",
+          foreground: "#FFFFFF",
+          surface: "#141414",
+          "surface-elevated": "#1A1A1A",
+          muted: "#A0A0A0",
+          subtle: "#666666",
+          border: "#262626",
+          whatsapp: "#25D366",
+          "whatsapp-foreground": "#0D0D0D",
+        },
+        fontFamily: {
+          sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+          mono: ['"Roboto Mono"', 'ui-monospace', 'monospace'],
+          display: ['"Space Grotesk"', 'Inter', 'sans-serif'],
+        },
+      },
+    },
+  };
+</script>
+<style>
+  html { scroll-behavior: smooth; color-scheme: dark; }
+  body { background: #0D0D0D; color: #fff; font-family: Inter, system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+  ::selection { background: #fff; color: #0D0D0D; }
+  .label-mono { font-family: "Roboto Mono", monospace; font-size: .6875rem; letter-spacing: .18em; text-transform: uppercase; color: #666; }
+  .btn-wa { background: #25D366; color: #0D0D0D; font-family: "Roboto Mono", monospace; font-size: .6875rem; letter-spacing: .18em; text-transform: uppercase; display: inline-flex; align-items: center; gap: .5rem; padding: .9rem 1.5rem; transition: opacity .2s; }
+  .btn-wa:hover { opacity: .9; }
+  .field { width: 100%; background: #1A1A1A; border: 1px solid #262626; padding: .75rem 1rem; font-size: .875rem; color: #fff; outline: none; }
+  .field:focus { border-color: #fff; }
+  .field::placeholder { color: #666; }
+  audio { width: 100%; }
+  [hidden] { display: none !important; }
+</style>
 </head>
-<body class="bg-[#0c0d10] text-zinc-100 min-h-screen antialiased">
+<body id="top">
 
-  <!-- Elemento de Áudio Nativo para o Spot 01 -->
-  <audio id="audioPlayer" src="/spot1-marvel.mp3" preload="auto"></audio>
+<!-- HEADER -->
+<header id="site-header" class="fixed inset-x-0 top-0 z-50 border-b border-transparent transition-colors">
+  <div class="mx-auto flex h-16 max-w-[1200px] items-center justify-between px-6">
+    <a href="#top" class="flex items-center">
+      <img id="header-logo" src="logo-urb.png" alt="Urb Concept" width="80" height="80" class="h-[72px] w-[72px] object-contain transition-all duration-300" />
+    </a>
+    <nav class="hidden items-center gap-8 md:flex">
+      <a href="#manifesto" class="font-mono text-[11px] uppercase tracking-[0.18em] text-muted transition-colors hover:text-white"><span class="text-subtle">01.</span> Manifesto</a>
+      <a href="#capacidades" class="font-mono text-[11px] uppercase tracking-[0.18em] text-muted transition-colors hover:text-white"><span class="text-subtle">02.</span> Capacidades</a>
+      <a href="#proof-of-concept" class="font-mono text-[11px] uppercase tracking-[0.18em] text-muted transition-colors hover:text-white"><span class="text-subtle">03.</span> Proof of Concept</a>
+      <a href="#processo" class="font-mono text-[11px] uppercase tracking-[0.18em] text-muted transition-colors hover:text-white"><span class="text-subtle">04.</span> Processo</a>
+    </nav>
+    <a class="btn-wa wa-link" href="#" target="_blank" rel="noreferrer noopener" style="padding:.6rem 1rem">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-4 w-4 shrink-0"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+      <span class="hidden sm:inline">Falar no WhatsApp</span><span class="sm:hidden">WhatsApp</span>
+    </a>
+  </div>
+</header>
 
-  <!-- ==================== HEADER ==================== -->
-  <header id="mainHeader" class="sticky top-0 z-50 bg-[#0c0d10]/95 backdrop-blur-md border-b border-white/10 transition-all duration-300">
-    <div id="headerContainer" class="max-w-6xl mx-auto px-4 sm:px-6 h-24 sm:h-28 flex items-center justify-between gap-4 transition-all duration-300">
-      
-      <!-- Lado Esquerdo: Logotipo da Produtora ampliado em 100% no topo -->
-      <div class="flex items-center">
-        <a href="#hero" class="flex items-center group py-1" aria-label="Início">
-          <img
-            id="headerLogo"
-            src="/logo-urb.png"
-            alt="URB"
-            class="h-20 w-auto object-contain transition-all duration-300 ease-out group-hover:opacity-90"
-            onerror="this.style.display='none'"
-          />
-        </a>
-      </div>
-
-      <!-- Navegação Interna -->
-      <nav class="hidden lg:flex items-center gap-6 text-xs font-medium text-zinc-400">
-        <a href="#hero" class="hover:text-white transition-colors">Início</a>
-        <a href="#proposta" class="hover:text-white transition-colors">Proposta</a>
-        <a href="#roteiros" class="hover:text-white transition-colors">Roteiros & Áudio</a>
-        <a href="#investimento" class="hover:text-white transition-colors">Investimento</a>
-      </nav>
-
-      <!-- Botão WhatsApp Topo -->
-      <div class="flex items-center gap-3">
-        <a
-          id="btnHeaderWhatsapp"
-          href="https://wa.me/5568999977094?text=Ol%C3%A1!%20Gostaria%20de%20aprovar%20a%20proposta%20comercial%20da%20Cruzeiro%20Motors%20Yamaha."
-          target="_blank"
-          rel="noopener noreferrer"
-          class="inline-flex items-center gap-2 bg-[#e60012] hover:bg-[#ff1a2b] text-white text-xs font-bold px-4 py-2.5 rounded-xl transition-all active:scale-95 shadow-md shadow-[#e60012]/25 uppercase tracking-wider"
-        >
-          <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
-            <path d="M12 2C6.48 2 2 6.48 2 12C2 13.85 2.5 15.58 3.38 17.07L2 22L7.07 20.66C8.52 21.51 10.2 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM16.63 16.27C16.44 16.8 15.51 17.26 15.04 17.31C14.65 17.35 14.15 17.36 12.38 16.63C10.13 15.69 8.68 13.4 8.56 13.25C8.45 13.1 7.63 12.01 7.63 10.88C7.63 9.75 8.2 9.2 8.43 8.96C8.63 8.75 8.94 8.66 9.23 8.66C9.33 8.66 9.42 8.66 9.5 8.67C9.74 8.68 9.86 8.7 10.02 9.08C10.22 9.56 10.71 10.75 10.77 10.87C10.83 10.99 10.89 11.14 10.81 11.3C10.74 11.46 10.68 11.53 10.56 11.66C10.44 11.8 10.33 11.9 10.2 12.06C10.07 12.21 9.94 12.36 10.09 12.62C10.24 12.87 10.76 13.72 11.53 14.4C12.52 15.28 13.33 15.56 13.62 15.68C13.86 15.78 14.07 15.75 14.23 15.57C14.43 15.34 14.7 14.95 14.93 14.62C15.11 14.36 15.34 14.4 15.58 14.49C15.82 14.58 17.11 15.22 17.37 15.35C17.63 15.48 17.8 15.54 17.86 15.65C17.92 15.76 17.92 16.27 16.63 16.27Z"/>
-          </svg>
-          <span class="hidden sm:inline">Aprovar Proposta</span>
-          <span class="sm:hidden">Aprovar</span>
-        </a>
-      </div>
+<main>
+  <!-- HERO -->
+  <section class="relative flex min-h-[92vh] items-end overflow-hidden pt-16">
+    <div class="absolute inset-0">
+      <img src="press-1.png" alt="Multidão de câmeras apontadas para uma única figura" width="1664" height="2496" class="h-full w-full object-cover opacity-70 grayscale" />
+      <div class="absolute inset-0" style="background: rgba(13,13,13,.6)"></div>
     </div>
-  </header>
-
-  <!-- ==================== HERO SECTION ==================== -->
-  <section id="hero" class="relative py-20 sm:py-28 border-b border-white/10 overflow-hidden bg-[#0c0d10]">
-    <!-- Background Imagem de Estúdio P&B -->
-    <div class="absolute inset-0 z-0 pointer-events-none overflow-hidden">
-      <img
-        src="/studio_microphone_classic.jpg"
-        alt="Studio"
-        class="w-full h-full object-cover object-center grayscale contrast-125 brightness-90 opacity-40 mix-blend-screen scale-105"
-        onerror="this.style.display='none'"
-      />
-      <div class="absolute inset-0 bg-gradient-to-b from-[#0c0d10]/80 via-[#0c0d10]/60 to-[#0c0d10]"></div>
-      <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_20%,#0c0d10_90%)]"></div>
-    </div>
-
-    <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 text-center space-y-10">
-      
-      <!-- Tag / Badge -->
-      <div class="inline-flex flex-wrap items-center justify-center gap-2 sm:gap-3 px-4 py-1.5 rounded-full border border-white/15 bg-black/60 backdrop-blur-md text-[11px] font-mono tracking-widest uppercase">
-        <span class="text-zinc-400">Proposta Comercial de Áudio</span>
-        <span class="text-zinc-600">•</span>
-        <span class="text-white font-bold">
-          Cruzeiro Motors <span class="text-[#e60012]">Yamaha</span>
-        </span>
-        <span class="text-zinc-600 hidden sm:inline">•</span>
-        <span class="text-zinc-400 hidden sm:inline font-mono">
-          Mês do Cliente 2026
-        </span>
-      </div>
-
-      <!-- Título Principal -->
-      <div class="space-y-4">
-        <h1 class="text-3xl sm:text-5xl md:text-6xl font-black text-white tracking-tight leading-[1.1]">
-          Criação & Produção de <br class="hidden sm:inline" />
-          <span class="text-[#e60012]">6 Textos de Áudio</span>
+    <div class="relative mx-auto grid w-full max-w-[1200px] gap-12 px-6 py-20 lg:grid-cols-12">
+      <div class="lg:col-span-8">
+        <p class="label-mono">URB CONCEPT — Estúdio Criativo Multidisciplinar</p>
+        <h1 class="mt-6 font-display text-3xl font-semibold leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl">
+          Identidade visual e produção audiovisual sob medida para o seu negócio. Resposta e orçamento rápido pelo WhatsApp.
         </h1>
-        <p class="text-base sm:text-lg text-zinc-300 max-w-2xl mx-auto font-normal leading-relaxed">
-          5 spots de 30 segundos e 1 spot master de 1 minuto. Material produzido em estúdio profissional, pronto para rodar durante todo o mês no rádio e em todas as mídias da sua loja.
+        <p class="mt-6 max-w-xl text-sm leading-relaxed text-muted sm:text-base">
+          Fale diretamente com o diretor de criação no WhatsApp e receba um diagnóstico em até 24h. Precisão técnica, narrativa e identidade funcional — sem clichês, sem excessos.
         </p>
-      </div>
-
-      <!-- 3 Blocos de Destaque -->
-      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-6 text-left">
-        <div class="bg-[#111318]/80 backdrop-blur-sm border border-white/10 p-5 rounded-2xl space-y-1 shadow-lg">
-          <span class="text-xs font-mono uppercase tracking-widest text-zinc-500">Volume</span>
-          <p class="text-xl font-bold text-white">6 Roteiros Inéditos</p>
-          <p class="text-xs text-zinc-400">5 de 30 segundos + 1 Master de 60 segundos.</p>
-        </div>
-
-        <div class="bg-[#111318]/80 backdrop-blur-sm border border-white/10 p-5 rounded-2xl space-y-1 shadow-lg">
-          <span class="text-xs font-mono uppercase tracking-widest text-zinc-500">Uso & Mídias</span>
-          <p class="text-xl font-bold text-white">100% Livre</p>
-          <p class="text-xs text-zinc-400">Rádio, carros de som, Instagram, TikTok e loja.</p>
-        </div>
-
-        <div class="bg-[#111318]/80 backdrop-blur-sm border border-white/10 p-5 rounded-2xl space-y-1 shadow-lg">
-          <span class="text-xs font-mono uppercase tracking-widest text-zinc-500">Investimento</span>
-          <p class="text-xl font-bold text-[#e60012]">R$ 750,00</p>
-          <p class="text-xs text-zinc-400">Pacote completo com texto, voz e masterização.</p>
-        </div>
+        <a class="btn-wa wa-link mt-10" href="#" target="_blank" rel="noreferrer noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-4 w-4"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+          Conversar via WhatsApp
+        </a>
       </div>
     </div>
   </section>
 
-  <!-- ==================== PROPOSTA ESTRATÉGICA ==================== -->
-  <section id="proposta" class="py-16 sm:py-20 border-b border-white/10 bg-[#0c0d10]">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 space-y-10">
-      <div class="space-y-3">
-        <span class="text-[11px] font-mono font-bold tracking-widest text-[#e60012] uppercase">
-          01 • Estrutura da Campanha
-        </span>
-        <h2 class="text-2xl sm:text-4xl font-bold text-white tracking-tight">
-          Por que 6 Roteiros Diferentes?
-        </h2>
-        <p class="text-sm sm:text-base text-zinc-400 max-w-2xl">
-          Evita o cansaço do ouvinte com a repetição da mesma mensagem, cobrindo todos os públicos e modelos estratégicos da Yamaha ao longo do mês.
-        </p>
+  <!-- MANIFESTO -->
+  <section id="manifesto" class="border-t border-border py-24">
+    <div class="mx-auto max-w-[1200px] px-6">
+      <div class="mb-10 flex items-center gap-4 border-b border-border pb-4"><span class="label-mono">01</span><span class="label-mono">Manifesto</span></div>
+      <div class="grid gap-12 lg:grid-cols-12">
+        <h2 class="font-display text-3xl font-semibold leading-tight tracking-tight sm:text-4xl lg:col-span-5">O mundo passa. A ideia fica.</h2>
+        <div class="space-y-6 text-sm leading-relaxed text-muted sm:text-base lg:col-span-7">
+          <p>Em um mercado saturado de ruído e execuções descartáveis, construímos ecossistemas visuais sólidos. A estética sem estratégia é passageira; a estrutura bem desenhada permanece.</p>
+          <p>Atuamos na interseção entre comunicação visual, direção de arte e linguagem audiovisual. Desenvolvemos soluções com rigor técnico e acabamento refinado para empresas e projetos que buscam autoridade real no mercado.</p>
+        </div>
       </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <div class="bg-[#111318] border border-white/10 p-6 rounded-2xl space-y-3">
-          <div class="flex items-center gap-2">
-            <span class="w-2 h-2 rounded-full bg-[#e60012]"></span>
-            <h3 class="text-lg font-bold text-white">5 Spots Rápidos (30s)</h3>
+      <div class="mt-16 grid gap-px border border-border bg-border md:grid-cols-3">
+        <figure class="flex flex-col bg-surface md:col-span-2">
+          <div class="relative h-[340px] overflow-hidden md:h-[560px]">
+            <img src="monk-crowd-new.png" alt="Figura serena em meio a uma multidão em movimento" width="768" height="1139" loading="lazy" decoding="async" class="h-full w-full object-cover grayscale" />
           </div>
-          <p class="text-xs sm:text-sm text-zinc-400 leading-relaxed">
-            Ideais para rádio diário e stories rápidos. Cada spot foca em um pilar: Edições Marvel, Facilidade de Financiamento, Troca com Avaliação Justa, Linha Urbana (Factor/Fazer) e Força Off-Road (Lander/Crosser).
-          </p>
-        </div>
-
-        <div class="bg-[#111318] border border-white/10 p-6 rounded-2xl space-y-3">
-          <div class="flex items-center gap-2">
-            <span class="w-2 h-2 rounded-full bg-[#e60012]"></span>
-            <h3 class="text-lg font-bold text-white">1 Spot Master (60s)</h3>
+          <figcaption class="flex items-center justify-between border-t border-border px-5 py-4"><span class="label-mono">Estudo 01 — Permanência</span><span class="label-mono">Ref. 002</span></figcaption>
+        </figure>
+        <figure class="flex flex-col bg-surface">
+          <div class="relative h-[420px] overflow-hidden md:h-[560px]">
+            <img src="unnamed-2.png" alt="Retrato em meio a uma multidão em movimento" width="566" height="1024" loading="lazy" decoding="async" class="h-full w-full object-cover grayscale" />
           </div>
-          <p class="text-xs sm:text-sm text-zinc-400 leading-relaxed">
-            O comercial âncora de 1 minuto completo. Reúne todas as vantagens do Mês do Cliente, as 3 lojas de Cruzeiro do Sul, condições bancárias e a grandiosidade da Yamaha.
-          </p>
-        </div>
+          <figcaption class="flex items-center justify-between border-t border-border px-5 py-4"><span class="label-mono">Estudo 02 — Atenção</span><span class="label-mono">Ref. 003</span></figcaption>
+        </figure>
       </div>
     </div>
   </section>
 
-  <!-- ==================== ROTEIROS & PLAYER INTERATIVO ==================== -->
-  <section id="roteiros" class="py-16 sm:py-20 border-b border-white/10">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 space-y-10">
-      
-      <!-- Cabeçalho Roteiros -->
-      <div class="space-y-3">
-        <span class="text-[11px] font-mono font-bold tracking-widest text-[#e60012] uppercase">
-          02 • Roteiros Escritos & Audição
-        </span>
-        <h2 class="text-2xl sm:text-4xl font-bold text-white tracking-tight">
-          Os 6 Textos Publicitários
-        </h2>
-        <p class="text-sm sm:text-base text-zinc-400 max-w-2xl">
-          Spot 01 produzido e disponível para audição e download. Os spots 02 a 06 com roteiros completos, prontos para produção em estúdio após aprovação.
-        </p>
-      </div>
-
-      <!-- Abas dos 6 Spots -->
-      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-2" id="spotsTabsContainer">
-        <!-- Renderizado dinamicamente via JS -->
-      </div>
-
-      <!-- Caixa Principal do Player e do Roteiro -->
-      <div class="bg-[#111318] border border-white/10 rounded-2xl overflow-hidden shadow-2xl">
-        
-        <!-- Player Integrado -->
-        <div class="bg-[#171922] p-4 sm:p-5 border-b border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
-          
-          <!-- Botão Play / Info -->
-          <div class="flex items-center gap-4 w-full sm:w-auto">
-            <button
-              id="btnPlay"
-              class="w-12 h-12 rounded-full bg-[#e60012] hover:bg-[#ff1a2b] text-white flex items-center justify-center shrink-0 transition-transform active:scale-95 shadow-md shadow-[#e60012]/30 cursor-pointer"
-              title="Tocar áudio"
-            >
-              <svg id="iconPlay" class="w-5 h-5 fill-current ml-0.5" viewBox="0 0 24 24">
-                <path d="M8 5v14l11-7z"/>
-              </svg>
-              <svg id="iconPause" class="w-5 h-5 fill-current hidden" viewBox="0 0 24 24">
-                <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>
-              </svg>
-            </button>
-
-            <div>
-              <div class="flex items-center gap-2">
-                <span id="playerSpotTitle" class="text-xs font-mono font-bold text-white uppercase">
-                  Spot 01 • Lançamentos Marvel & Exclusividade
-                </span>
-                <span id="playerSpotBadge" class="text-[10px] font-mono bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 px-2 py-0.5 rounded flex items-center gap-1 font-bold">
-                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
-                  Áudio Disponível
-                </span>
-              </div>
-              <p id="playerSpotStatusText" class="text-xs text-zinc-400 font-mono mt-0.5">
-                Clique no play para ouvir o áudio produzido
-              </p>
-            </div>
-          </div>
-
-          <!-- Equalizador, Tempo, Mudo e Download -->
-          <div class="flex items-center gap-3 w-full sm:w-auto justify-between sm:justify-end">
-            <!-- Equalizador -->
-            <div id="equalizer" class="flex items-end gap-1 h-5">
-              <span class="w-1 h-1 bg-zinc-700 rounded-full transition-all duration-150"></span>
-              <span class="w-1 h-1 bg-zinc-700 rounded-full transition-all duration-150"></span>
-              <span class="w-1 h-1 bg-zinc-700 rounded-full transition-all duration-150"></span>
-              <span class="w-1 h-1 bg-zinc-700 rounded-full transition-all duration-150"></span>
-              <span class="w-1 h-1 bg-zinc-700 rounded-full transition-all duration-150"></span>
-            </div>
-
-            <!-- Timer -->
-            <span id="playerTimeDisplay" class="text-xs font-mono font-bold text-zinc-400">
-              00:00 / 00:30
-            </span>
-
-            <!-- Mute Toggle -->
-            <button
-              id="btnMute"
-              class="p-2 rounded-lg text-xs font-mono border bg-white/5 border-white/15 text-zinc-200 hover:bg-white/10 transition-all"
-              title="Ativar/desativar som"
-            >
-              <svg id="iconVolume" class="w-4 h-4 text-zinc-300 fill-none stroke-current stroke-2" viewBox="0 0 24 24">
-                <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
-                <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
-              </svg>
-            </button>
-
-            <!-- Download Button -->
-            <button
-              id="btnDownload"
-              class="p-2 rounded-lg text-xs font-mono border bg-[#e60012]/15 hover:bg-[#e60012]/25 border-[#e60012]/30 text-red-400 active:scale-95 transition-all flex items-center gap-1 cursor-pointer"
-              title="Baixar arquivo de áudio spot1-marvel.mp3"
-            >
-              <svg class="w-4 h-4 fill-none stroke-current stroke-2" viewBox="0 0 24 24">
-                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                <polyline points="7 10 12 15 17 10"></polyline>
-                <line x1="12" y1="15" x2="12" y2="3"></line>
-              </svg>
-              <span id="btnDownloadLabel" class="text-[10px] hidden sm:inline font-bold uppercase">MP3</span>
-            </button>
-          </div>
-        </div>
-
-        <!-- Barra de Progresso Interativa -->
-        <div id="progressBarContainer" class="w-full bg-white/5 h-1.5 cursor-pointer relative">
-          <div id="progressBarFill" class="h-full bg-[#e60012] transition-all duration-100" style="width: 0%;"></div>
-        </div>
-
-        <!-- Conteúdo do Roteiro -->
-        <div class="p-6 sm:p-10 space-y-6">
-          <div class="flex items-center justify-between border-b border-white/5 pb-4">
-            <span id="scriptSectionHeader" class="text-[11px] font-mono text-zinc-500 uppercase tracking-widest flex items-center gap-2">
-              <svg class="w-3.5 h-3.5 text-zinc-400 fill-none stroke-current stroke-2" viewBox="0 0 24 24">
-                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                <polyline points="14 2 14 8 20 8"></polyline>
-                <line x1="16" y1="13" x2="8" y2="13"></line>
-                <line x1="16" y1="17" x2="8" y2="17"></line>
-                <polyline points="10 9 9 9 8 9"></polyline>
-              </svg>
-              Texto do Roteiro (30 segundos)
-            </span>
-
-            <button
-              id="btnCopyScript"
-              class="inline-flex items-center gap-1.5 text-xs font-mono text-zinc-400 hover:text-white transition-colors bg-white/5 hover:bg-white/10 px-3 py-1.5 rounded-lg border border-white/10 active:scale-95 cursor-pointer"
-            >
-              <svg class="w-3.5 h-3.5 fill-none stroke-current stroke-2" viewBox="0 0 24 24">
-                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-              </svg>
-              <span id="copyTextLabel">Copiar Texto</span>
-            </button>
-          </div>
-
-          <!-- Texto do Roteiro Ativo -->
-          <div class="max-w-2xl mx-auto py-2">
-            <p id="scriptTextContent" class="text-base sm:text-xl text-zinc-100 font-sans leading-relaxed tracking-normal selection:bg-[#e60012]">
-              "Atenção, Cruzeiro do Sul! A força da Marvel invadiu a Cruzeiro Motors Center Yamaha! Chegaram as edições exclusivas FZ15 ABS Deadpool e Crosser Z ABS Wolverine! Estilo lendário, parceria com a Iron Studios e alta performance. Motos à pronta entrega e com frete grátis! Corra para uma de nossas lojas no Centro, na Praça ou no Aeroporto Velho. Cruzeiro Motors Yamaha: o seu próximo nível sobre duas rodas!"
-            </p>
-          </div>
-
-          <!-- Navegação Anterior / Próximo -->
-          <div class="flex items-center justify-between pt-6 border-t border-white/5 text-xs text-zinc-400">
-            <button id="btnPrevSpot" class="font-mono text-zinc-600 cursor-not-allowed">
-              ← Anterior
-            </button>
-            <span id="paginationText" class="font-mono text-zinc-600">
-              1 de 6
-            </span>
-            <button id="btnNextSpot" class="font-mono hover:text-white transition-colors cursor-pointer">
-              Próximo (Spot 02) →
-            </button>
-          </div>
-        </div>
-      </div>
+  <!-- CAPACIDADES -->
+  <section id="capacidades" class="border-t border-border py-24">
+    <div class="mx-auto max-w-[1200px] px-6">
+      <div class="mb-10 flex items-center gap-4 border-b border-border pb-4"><span class="label-mono">02</span><span class="label-mono">Capacidades &amp; Serviços</span></div>
+      <div id="capacidades-grid" class="grid gap-px border border-border bg-border md:grid-cols-2"></div>
     </div>
   </section>
 
-  <!-- ==================== INVESTIMENTO ==================== -->
-  <section id="investimento" class="py-16 sm:py-24">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 space-y-10">
-      
-      <div class="text-center space-y-3">
-        <span class="text-[11px] font-mono font-bold tracking-widest text-[#e60012] uppercase">
-          03 • Proposta Comercial & Fechamento
-        </span>
-        <h2 class="text-2xl sm:text-4xl font-bold text-white tracking-tight">
-          Investimento Total do Pacote
-        </h2>
-        <p class="text-sm sm:text-base text-zinc-400 max-w-xl mx-auto">
-          Criação e produção completa dos 6 textos de áudio para o Mês do Cliente.
-        </p>
+  <!-- PROOF OF CONCEPT -->
+  <section id="proof-of-concept" class="border-t border-border py-24">
+    <div class="mx-auto max-w-[1200px] px-6">
+      <div class="mb-10 flex items-center gap-4 border-b border-border pb-4"><span class="label-mono">03</span><span class="label-mono">Proof of Concept</span></div>
+      <div class="grid gap-8 lg:grid-cols-12">
+        <h2 class="font-display text-3xl font-semibold tracking-tight sm:text-4xl lg:col-span-5">Marcas construídas com método.</h2>
+        <p class="text-sm leading-relaxed text-muted sm:text-base lg:col-span-7">Cada projeto abaixo parte de um diagnóstico de negócio e termina em um sistema aplicável. Selecione um case para ver as lâminas do projeto e a leitura técnica da entrega.</p>
       </div>
+      <div id="case-grid" class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3"></div>
+    </div>
+  </section>
 
-      <!-- Card de Fechamento -->
-      <div class="bg-[#111318] border border-white/15 rounded-3xl p-8 sm:p-12 text-center space-y-8 shadow-2xl relative overflow-hidden">
-        <div class="absolute -top-32 left-1/2 -translate-x-1/2 w-80 h-80 bg-[#e60012]/10 rounded-full blur-3xl pointer-events-none"></div>
+  <!-- METODOLOGIA -->
+  <section id="processo" class="border-t border-border py-24">
+    <div class="mx-auto max-w-[1200px] px-6">
+      <div class="mb-10 flex items-center gap-4 border-b border-border pb-4"><span class="label-mono">04</span><span class="label-mono">Metodologia</span></div>
+      <div id="processo-grid" class="grid gap-px border-t border-border sm:grid-cols-2 lg:grid-cols-4"></div>
+    </div>
+  </section>
 
-        <div class="space-y-2 relative z-10">
-          <span class="text-xs font-mono uppercase tracking-widest text-zinc-400">
-            Valor Total da Criação & Produção
-          </span>
-          <div class="text-5xl sm:text-7xl font-black text-white tracking-tight">
-            R$ 750,00
-          </div>
-          <p class="text-xs text-zinc-400 font-mono">
-            Pagamento único • Sem mensalidades adicionais
-          </p>
-        </div>
-
-        <div class="max-w-md mx-auto bg-white/[0.02] border border-white/10 rounded-2xl p-6 text-left space-y-3.5 text-xs sm:text-sm text-zinc-200 relative z-10">
-          <div class="flex items-center gap-3">
-            <svg class="w-4 h-4 text-[#e60012] shrink-0 fill-none stroke-current stroke-2" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
-            <span><strong>5 Spots de 30 Segundos</strong> (Giro temático diário)</span>
-          </div>
-          <div class="flex items-center gap-3">
-            <svg class="w-4 h-4 text-[#e60012] shrink-0 fill-none stroke-current stroke-2" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
-            <span><strong>1 Spot Master de 60 Segundos</strong> (1 minuto completo)</span>
-          </div>
-          <div class="flex items-center gap-3">
-            <svg class="w-4 h-4 text-[#e60012] shrink-0 fill-none stroke-current stroke-2" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
-            <span><strong>Produção e Masterização</strong> em estúdio profissional</span>
-          </div>
-          <div class="flex items-center gap-3">
-            <svg class="w-4 h-4 text-[#e60012] shrink-0 fill-none stroke-current stroke-2" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
-            <span><strong>Uso 100% livre</strong> durante todo o mês em todas as mídias</span>
-          </div>
-          <div class="flex items-center gap-3">
-            <svg class="w-4 h-4 text-[#e60012] shrink-0 fill-none stroke-current stroke-2" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
-            <span><strong>Entrega imediata dos arquivos MP3</strong> (320kbps)</span>
-          </div>
-        </div>
-
-        <!-- Botão WhatsApp Grande -->
-        <div class="pt-2 relative z-10 flex flex-col items-center gap-3">
-          <a
-            id="btnInvestmentWhatsapp"
-            href="https://wa.me/5568999977094?text=Ol%C3%A1!%20Gostaria%20de%20aprovar%20a%20proposta%20comercial%20da%20Cruzeiro%20Motors%20Yamaha."
-            target="_blank"
-            rel="noopener noreferrer"
-            class="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-[#e60012] hover:bg-[#ff1a2b] text-white font-bold px-10 py-4.5 rounded-xl text-sm sm:text-base uppercase tracking-wider transition-all active:scale-95 shadow-xl shadow-[#e60012]/30"
-          >
-            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
-              <path d="M12 2C6.48 2 2 6.48 2 12C2 13.85 2.5 15.58 3.38 17.07L2 22L7.07 20.66C8.52 21.51 10.2 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM16.63 16.27C16.44 16.8 15.51 17.26 15.04 17.31C14.65 17.35 14.15 17.36 12.38 16.63C10.13 15.69 8.68 13.4 8.56 13.25C8.45 13.1 7.63 12.01 7.63 10.88C7.63 9.75 8.2 9.2 8.43 8.96C8.63 8.75 8.94 8.66 9.23 8.66C9.33 8.66 9.42 8.66 9.5 8.67C9.74 8.68 9.86 8.7 10.02 9.08C10.22 9.56 10.71 10.75 10.77 10.87C10.83 10.99 10.89 11.14 10.81 11.3C10.74 11.46 10.68 11.53 10.56 11.66C10.44 11.8 10.33 11.9 10.2 12.06C10.07 12.21 9.94 12.36 10.09 12.62C10.24 12.87 10.76 13.72 11.53 14.4C12.52 15.28 13.33 15.56 13.62 15.68C13.86 15.78 14.07 15.75 14.23 15.57C14.43 15.34 14.7 14.95 14.93 14.62C15.11 14.36 15.34 14.4 15.58 14.49C15.82 14.58 17.11 15.22 17.37 15.35C17.63 15.48 17.8 15.54 17.86 15.65C17.92 15.76 17.92 16.27 16.63 16.27Z"/>
-            </svg>
-            <span>Aprovar Proposta no WhatsApp</span>
-            <svg class="w-4 h-4 fill-none stroke-current stroke-2" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+  <!-- LEAD CAPTURE -->
+  <section id="iniciar-projeto" class="border-t border-border py-24">
+    <div class="mx-auto max-w-[1200px] px-6">
+      <div class="mb-10 flex items-center gap-4 border-b border-border pb-4"><span class="label-mono">05</span><span class="label-mono">Lead Capture</span></div>
+      <div class="grid gap-12 lg:grid-cols-12">
+        <div class="lg:col-span-4">
+          <h2 class="font-display text-3xl font-semibold tracking-tight sm:text-4xl">Quer acelerar seu projeto?</h2>
+          <p class="mt-6 text-sm leading-relaxed text-muted">Atendimento 100% online. Deixe seu nome, WhatsApp e o serviço que precisa — ou inicie uma conversa sem compromisso direto no nosso WhatsApp.</p>
+          <a class="btn-wa wa-link mt-8" href="#" target="_blank" rel="noreferrer noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-4 w-4"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+            Iniciar conversa no WhatsApp
           </a>
-
-          <p class="text-xs text-zinc-500 font-mono">
-            Clique para abrir o WhatsApp e confirmar a aprovação imediata (+55 68 99997-7094).
-          </p>
+        </div>
+        <div class="lg:col-span-8">
+          <form id="lead-form" class="grid gap-6 border border-border bg-surface p-6 md:p-10">
+            <div class="grid gap-6 md:grid-cols-3">
+              <div>
+                <label class="label-mono mb-2 block" for="nome">Nome</label>
+                <input id="nome" name="nome" type="text" required class="field" placeholder="Seu nome" />
+              </div>
+              <div>
+                <label class="label-mono mb-2 block" for="telefone">WhatsApp / Telefone</label>
+                <input id="telefone" name="telefone" type="tel" required class="field" placeholder="(11) 99999-0000" />
+              </div>
+              <div>
+                <label class="label-mono mb-2 block" for="servico">Qual serviço precisa</label>
+                <select id="servico" name="servico" required class="field">
+                  <option value="" disabled selected>Selecione</option>
+                  <option>Design / Identidade Visual</option>
+                  <option>Produção de Vídeo</option>
+                  <option>Produção de Áudio / Rádio</option>
+                  <option>Projeto Integrado</option>
+                </select>
+              </div>
+            </div>
+            <button type="submit" class="btn-wa w-full justify-center md:w-auto">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-4 w-4"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+              Iniciar conversa no WhatsApp
+            </button>
+          </form>
         </div>
       </div>
     </div>
   </section>
+</main>
 
-  <!-- ==================== FOOTER ==================== -->
-  <footer class="py-12 border-t border-white/10 bg-[#0c0d10] text-zinc-500">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-6">
-      <div class="flex items-center">
-        <img src="/logo-urb.png" alt="URB" class="h-8 w-auto object-contain" onerror="this.style.display='none'" />
-      </div>
-
-      <div class="text-center sm:text-right space-y-1">
-        <div class="flex items-center justify-center sm:justify-end gap-2">
-          <span class="w-1.5 h-1.5 rounded-full bg-[#e60012]"></span>
-          <span class="font-mono text-xs font-bold text-zinc-300 uppercase tracking-wider">
-            Cruzeiro Motors Yamaha
-          </span>
-        </div>
-        <p class="text-[11px] font-mono text-zinc-500">
-          Proposta Comercial • 6 Textos de Áudio • Mês do Cliente 2026
-        </p>
+<!-- FOOTER -->
+<footer class="border-t border-border py-16">
+  <div class="mx-auto grid max-w-[1200px] gap-10 px-6 md:grid-cols-3">
+    <div><img src="logo-urb.png" alt="Símbolo Urb Concept" width="112" height="112" loading="lazy" class="h-24 w-24 object-contain" /></div>
+    <div>
+      <p class="label-mono">Localização</p>
+      <p class="mt-3 text-sm text-muted">Cruzeiro do Sul / AC e São Paulo / SP.</p>
+    </div>
+    <div>
+      <p class="label-mono">Contato</p>
+      <div class="mt-3 flex items-center gap-3">
+        <a href="https://instagram.com/urbconceptac" target="_blank" rel="noreferrer noopener" aria-label="Instagram @urbconceptac" title="Instagram @urbconceptac" class="flex h-11 w-11 items-center justify-center border border-border bg-surface text-muted transition-colors hover:border-white hover:text-white">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="h-5 w-5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><line x1="17.5" y1="6.5" x2="17.5" y2="6.5"/></svg>
+        </a>
+        <a href="https://wa.me/5511991573413" target="_blank" rel="noreferrer noopener" aria-label="WhatsApp" title="WhatsApp" class="flex h-11 w-11 items-center justify-center border border-border bg-surface text-muted transition-colors hover:border-white hover:text-white">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="h-5 w-5"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+        </a>
       </div>
     </div>
-  </footer>
+  </div>
+  <div class="mx-auto mt-12 max-w-[1200px] border-t border-border px-6 pt-6">
+    <p class="label-mono">© Urb Concept. Todos os direitos reservados.</p>
+  </div>
+</footer>
 
-  <!-- ==================== JAVASCRIPT LOCAL ==================== -->
-  <script>
-    // DADOS DOS 6 SPOTS
-    const SPOTS = [
-      {
-        id: 1,
-        title: "Spot 01 • Lançamentos Marvel & Exclusividade",
-        duration: "30 segundos",
-        durationSec: 30,
-        hasAudio: true,
-        audioUrl: "/spot1-marvel.mp3",
-        script: "Atenção, Cruzeiro do Sul! A força da Marvel invadiu a Cruzeiro Motors Center Yamaha! Chegaram as edições exclusivas FZ15 ABS Deadpool e Crosser Z ABS Wolverine! Estilo lendário, parceria com a Iron Studios e alta performance. Motos à pronta entrega e com frete grátis! Corra para uma de nossas lojas no Centro, na Praça ou no Aeroporto Velho. Cruzeiro Motors Yamaha: o seu próximo nível sobre duas rodas!"
-      },
-      {
-        id: 2,
-        title: "Spot 02 • Facilidade, Financiamento & Troca",
-        duration: "30 segundos",
-        durationSec: 30,
-        hasAudio: false,
-        script: "Mês do Cliente na Cruzeiro Motors Yamaha! Quer sair de moto nova sem complicação? Aqui você encontra aprovação facilitada de crédito, avaliação justa da sua usada na troca e planos de parcelamento que cabem no seu bolso. Não deixe para depois! Visite nossas lojas no Centro, Praça ou Aeroporto Velho e escolha sua Yamaha com frete grátis. Seu caminho começa aqui!"
-      },
-      {
-        id: 3,
-        title: "Spot 03 • Linha Urbana: Economia & Agilidade",
-        duration: "30 segundos",
-        durationSec: 30,
-        hasAudio: false,
-        script: "Economia e agilidade para o seu dia a dia! No Mês do Cliente Cruzeiro Motors Yamaha, a linha urbana Factor e Fazer está com condições imperdíveis. Perfeitas para o trabalho ou lazer, com a durabilidade que só a Yamaha oferece. Venha testar e comprovar! Lojas no Centro, Praça e Aeroporto Velho. Acelere sua rotina com a gente!"
-      },
-      {
-        id: 4,
-        title: "Spot 04 • Linha Trail: Aventura Off-Road",
-        duration: "30 segundos",
-        durationSec: 30,
-        hasAudio: false,
-        script: "Para quem encara qualquer terreno, o Mês do Cliente traz o melhor da linha Trail! Crosser e Lander com tecnologia, conforto e a resistência que você precisa para rodar na cidade ou na estrada de terra. Garanta a sua com frete grátis na Cruzeiro Motors Yamaha. Passe em uma de nossas três lojas em Cruzeiro do Sul e venha acelerar!"
-      },
-      {
-        id: 5,
-        title: "Spot 05 • Chamada Final de Vendas",
-        duration: "30 segundos",
-        durationSec: 30,
-        hasAudio: false,
-        script: "Atenção! As oportunidades do Mês do Cliente Cruzeiro Motors Yamaha estão acabando! É a sua chance de conquistar sua moto zero com pronta entrega, frete grátis e as melhores taxas da região. Não perca tempo! Visite a Cruzeiro Motors no Centro, na Praça ou no Aeroporto Velho. Venha fechar negócio hoje mesmo!"
-      },
-      {
-        id: 6,
-        title: "Spot Master • Mês do Cliente (60s)",
-        duration: "60 segundos",
-        durationSec: 60,
-        hasAudio: false,
-        script: "Setembro é o Mês do Cliente na Cruzeiro Motors Center Yamaha! Preparamos a maior oferta do ano para você realizar o sonho da moto zero. Chegaram as incríveis edições Marvel FZ15 Deadpool e Crosser Wolverine, além de toda a linha urbana e trail com pronta entrega e frete grátis! Condições facilitadas de financiamento, aceitamos sua usada na troca com excelente avaliação. Visite nossas unidades no Centro, na Praça e no Aeroporto Velho em Cruzeiro do Sul. Mês do Cliente Cruzeiro Motors Yamaha: a qualidade e o respeito que você merece!"
-      }
-    ];
+<!-- WHATSAPP FLOAT -->
+<a class="wa-link fixed bottom-5 right-5 z-[60] flex items-center gap-3 rounded-full px-4 py-3 font-mono text-[11px] uppercase tracking-[0.16em] shadow-lg transition-transform hover:scale-[1.03] sm:bottom-6 sm:right-6" style="background:#25D366;color:#0D0D0D" href="#" target="_blank" rel="noreferrer noopener" aria-label="Falar no WhatsApp" title="Falar no WhatsApp">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-6 w-6 shrink-0"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+  <span class="hidden sm:inline">Falar no WhatsApp</span>
+</a>
 
-    let currentSpotIndex = 0;
-    const audioPlayer = document.getElementById('audioPlayer');
+<!-- CASE DIALOG -->
+<div id="case-dialog" hidden class="fixed inset-0 z-[80] flex items-start justify-center overflow-y-auto bg-black/80 p-4 py-10">
+  <div id="case-dialog-panel" class="relative w-full max-w-4xl border border-border bg-surface"></div>
+</div>
 
-    // Inicialização da interface das abas
-    function renderTabs() {
-      const container = document.getElementById('spotsTabsContainer');
-      container.innerHTML = SPOTS.map((spot, idx) => {
-        const isActive = idx === currentSpotIndex;
-        return `
-          <button
-            onclick="switchSpot(${idx})"
-            class="p-3 rounded-xl text-left border transition-all cursor-pointer ${
-              isActive
-                ? 'bg-[#e60012]/10 border-[#e60012] text-white shadow-lg'
-                : 'bg-[#111318] border-white/10 text-zinc-400 hover:border-white/20 hover:text-zinc-200'
-            }"
-          >
-            <div class="flex items-center justify-between gap-1 mb-1">
-              <span class="text-[10px] font-mono font-bold ${isActive ? 'text-[#e60012]' : 'text-zinc-500'}">
-                SPOT 0${spot.id}
-              </span>
-              ${
-                spot.hasAudio
-                  ? '<span class="w-2 h-2 rounded-full bg-emerald-400"></span>'
-                  : '<span class="w-1.5 h-1.5 rounded-full bg-zinc-600"></span>'
-              }
-            </div>
-            <p class="text-xs font-bold truncate">${spot.title.split('•')[1] || spot.title}</p>
-            <span class="text-[10px] text-zinc-500 font-mono block mt-1">${spot.duration}</span>
-          </button>
-        `;
-      }).join('');
-    }
+<!-- TOAST -->
+<div id="toast" hidden class="fixed bottom-24 right-5 z-[90] max-w-xs border border-border bg-surface-elevated p-4 text-sm text-white shadow-lg sm:right-6"></div>
 
-    function switchSpot(index) {
-      currentSpotIndex = index;
-      const spot = SPOTS[index];
+<script>
+(function () {
+  "use strict";
 
-      // Atualiza textos da UI
-      document.getElementById('playerSpotTitle').innerText = spot.title;
-      document.getElementById('scriptTextContent').innerText = `"${spot.script}"`;
-      document.getElementById('paginationText').innerText = `${index + 1} de ${SPOTS.length}`;
-      document.getElementById('scriptSectionHeader').innerText = `Texto do Roteiro (${spot.duration})`;
+  /* ---------- WhatsApp ---------- */
+  var WHATSAPP_NUMBER = "5511991573413";
+  var DEFAULT_MESSAGE = "Olá! Vi o site da URB e gostaria de fazer um orçamento rápido para [Design / Vídeo / Marca].";
+  function whatsappLink(msg) {
+    return "https://api.whatsapp.com/send?phone=" + WHATSAPP_NUMBER + "&text=" + encodeURIComponent(msg || DEFAULT_MESSAGE);
+  }
+  Array.prototype.forEach.call(document.querySelectorAll(".wa-link"), function (a) {
+    a.href = whatsappLink();
+  });
 
-      // Status do Áudio
-      const badge = document.getElementById('playerSpotBadge');
-      const statusText = document.getElementById('playerSpotStatusText');
-      const btnDownload = document.getElementById('btnDownload');
+  /* ---------- Header scroll ---------- */
+  var header = document.getElementById("site-header");
+  var logo = document.getElementById("header-logo");
+  function onScroll() {
+    var s = window.scrollY > 12;
+    header.className = "fixed inset-x-0 top-0 z-50 border-b transition-colors " +
+      (s ? "border-border bg-background/90 backdrop-blur-md" : "border-transparent");
+    logo.className = "object-contain transition-all duration-300 " + (s ? "h-9 w-9" : "h-[72px] w-[72px]");
+  }
+  onScroll();
+  window.addEventListener("scroll", onScroll, { passive: true });
 
-      if (spot.hasAudio) {
-        badge.className = 'text-[10px] font-mono bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 px-2 py-0.5 rounded flex items-center gap-1 font-bold';
-        badge.innerHTML = '<span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>Áudio Disponível';
-        statusText.innerText = 'Clique no play para ouvir o áudio produzido';
-        btnDownload.style.display = 'inline-flex';
-        audioPlayer.src = spot.audioUrl;
-      } else {
-        badge.className = 'text-[10px] font-mono bg-amber-500/20 text-amber-400 border border-amber-500/30 px-2 py-0.5 rounded flex items-center gap-1 font-bold';
-        badge.innerHTML = '<span class="w-1.5 h-1.5 rounded-full bg-amber-400"></span>Aguardando Produção';
-        statusText.innerText = 'Roteiro pronto. Áudio em fase de aprovação/estúdio';
-        btnDownload.style.display = 'none';
-        audioPlayer.pause();
-        updatePlayState(false);
-      }
+  /* ---------- Conteúdo ---------- */
+  var capacidades = [
+    { index: "01", title: "Branding & Design Estratégico",
+      description: "Construção e evolução de identidades visuais sistêmicas. Não entregamos apenas logotipos, desenhamos marcas prontas para escalabilidade e aplicação multimeios.",
+      bullets: ["Sistemas de Identidade Visual & Diretrizes de Marca", "Design de Embalagens, Rótulos e Material Editorial", "Direção de Arte e Posicionamento Visual", "Design Digital e Interfaces de Alta Conversão"] },
+    { index: "02", title: "Produção Audiovisual & Áudio",
+      description: "Narrativas em vídeo e em áudio construídas com linguagem cinematográfica, planejamento técnico e foco em comunicação institucional, comercial e jornalística.",
+      bullets: ["Filmes Institucionais e Comerciais de Marca", "Produção de Áudio: Spots, Jingles e Locução Comercial", "Conteúdo para Rádio: Matérias, Reportagens e Programas", "Edição, Finalização e Pós-Produção", "Vinhetas, Motion Design e Aberturas"] },
+    { index: "03", title: "Projetos Especiais & Novos Negócios",
+      description: "Estruturação de ideias antes da execução criativa. Trabalhamos junto ao empreendedor para transformar intenção em modelo viável e comunicável.",
+      bullets: ["Ideação e Estruturação de Novos Negócios", "Naming, Arquitetura de Marca e Portfólio de Produtos", "Modelagem de Proposta de Valor e Posicionamento", "Materiais de Apresentação e Pitch para Investidores"] },
+    { index: "04", title: "Consultoria & Acompanhamento",
+      description: "Suporte contínuo para times internos manterem a coerência do sistema criado, evitando desgaste e improviso na aplicação da marca.",
+      bullets: ["Auditoria de Marca e Diagnóstico de Comunicação", "Diretrizes Editoriais e Calendário de Conteúdo", "Treinamento de Time Interno e Fornecedores", "Curadoria e Revisão de Peças em Produção"] }
+  ];
 
-      // Atualiza botões de navegação
-      const btnPrev = document.getElementById('btnPrevSpot');
-      const btnNext = document.getElementById('btnNextSpot');
+  var processo = [
+    { index: "01", title: "Diagnóstico & Alinhamento", description: "Imersão no negócio, análise de gargalos e definição clara de objetivos." },
+    { index: "02", title: "Arquitetura & Estratégia", description: "Desenvolvimento de conceitos, direção de arte e estrutura técnica da entrega." },
+    { index: "03", title: "Execução & Produção", description: "Rigor técnico no design e na captação/edição audiovisual." },
+    { index: "04", title: "Implantação", description: "Entrega de arquivos finais organizados, guias de aplicação e suporte de implementação." }
+  ];
 
-      if (index === 0) {
-        btnPrev.className = 'font-mono text-zinc-600 cursor-not-allowed';
-        btnPrev.onclick = null;
-      } else {
-        btnPrev.className = 'font-mono hover:text-white transition-colors cursor-pointer';
-        btnPrev.onclick = () => switchSpot(index - 1);
-      }
+  var cases = [
+    { id: "lobao-morais", client: "Lobão Morais Advogados", scope: "Branding / Identidade Verbal", year: "2025",
+      logo: "logo-lobao-white.png", logoIsWhite: true,
+      summary: "Reconstrução de identidade para uma banca de advocacia que precisava comunicar tradição sem parecer datada.",
+      challenge: "A marca anterior misturava referências clássicas e sinais gráficos genéricos do setor jurídico, dificultando o reconhecimento em ambientes digitais e a aplicação em papelaria e redes sociais.",
+      solution: "Desenvolvemos um sistema de identidade completo: logotipo tipográfico com estrutura moderna mantendo o padrão cromático de confiança, paleta institucional, hierarquia tipográfica, papelaria (cartão, timbrado, pasta) e diretrizes de aplicação para conteúdo digital e social.",
+      gallery: ["lb4.jpg", "lb9.jpg", "lb14.jpg", "lb15.jpg"], audio: [] },
+    { id: "drogaria-turquesa", client: "Drogaria Turquesa", scope: "Branding / Ambientação / Campanha", year: "2025",
+      logo: "logo-turquesa-white.png", logoIsWhite: true,
+      summary: "Identidade de varejo farmacêutico construída para se destacar em uma categoria dominada por verde e azul.",
+      challenge: "Criar uma marca de drogaria independente capaz de competir visualmente com redes nacionais, com aplicação imediata em fachada, uniformes, crachás e material de ponto de venda.",
+      solution: "Símbolo de cruz entrelaçada em turquesa e violeta, sistema cromático proprietário e kit completo de aplicação: fachada, ambientação interna, uniformes, crachás e cartazes promocionais de alto contraste.",
+      gallery: ["tq-fachada.jpg", "tq-interior.jpg", "tq4.jpg", "tq7.jpg", "tq-cartaz-a.jpg", "tq-cartaz-b.jpg"], audio: [] },
+    { id: "667-polpetteria", client: "667 Polpetteria", scope: "Packaging / Rótulos", year: "2025",
+      logo: "logo-polpetteria.png", logoIsWhite: false,
+      summary: "Linha de rótulos para os tapenades da casa. A marca já existia; o escopo aqui foi exclusivamente o rótulo do produto.",
+      challenge: "Levar um produto artesanal para a prateleira com presença visual e informação legal correta, respeitando a identidade já consolidada da casa e sem cair na estética genérica de produto gourmet.",
+      solution: "Rótulo em fundo escuro com detalhes dourados, hierarquia clara de sabor, ingredientes de destaque e gramatura, estrutura modular pronta para novos sabores da linha e adequação de conteúdo obrigatório para envase em vidro de 200g.",
+      gallery: ["rotulo-tapenades.jpg", "polpetteria-vitrine.jpg", "polpetteria-pote.jpg"], audio: [] },
+    { id: "toca-que-tem-historia", client: "Toca Que Tem História", scope: "Produção Original / Rádio & Áudio", year: "2026",
+      logo: null, logoIsWhite: true, icon: "wave",
+      summary: "Programa documental de rádio, produção original URB Concept: canções conhecidas como porta de entrada para histórias culturais, sociais e curiosidades pouco contadas.",
+      challenge: "Criar um formato autoral de áudio que não soasse institucional nem acadêmico, com nome coloquial e apelo amplo de gênero musical, sustentando episódios de pesquisa densa em linguagem falada.",
+      solution: "Naming, roteirização, pesquisa, locução e branding sonoro: vinheta de assinatura com scratch de vinil abrindo em batida lo-fi e corte seco — um selo de áudio, não trilha de fundo. Cinco episódios produzidos, com passagem de humanização de texto em cada roteiro.",
+      gallery: [], audio: [{ label: "Toca Que Tem História — Episódio 01", src: "tqth-ep1.mp3" }] },
+    { id: "a-cruzeirense-magazine", client: "A Cruzeirense Magazine", scope: "Roteiro / Spot / Edição de Áudio", year: "2026",
+      logo: "logo-cruzeirense-white.png", logoIsWhite: true,
+      summary: "Produção continuada de spots publicitários para rádio: roteiro, direção de locução, edição e mixagem.",
+      challenge: "Sustentar campanhas de varejo com trocas semanais de oferta mantendo reconhecimento imediato da marca no ar, dentro dos tempos comerciais de 30 e 45 segundos.",
+      solution: "Estrutura fixa de abertura e assinatura sonora com miolo variável por campanha, ritmo de leitura calibrado para rádio AM/FM e mixagem com compressão adequada à transmissão.",
+      gallery: ["logo-cruzeirense-color.png"],
+      audio: [{ label: "Spot — Julho / Semana 05", src: "spot-cruzeirense-julho.mp3" }, { label: "Spot — 8 do 8", src: "spot-cruzeirense-8do8.mp3" }] }
+  ];
 
-      if (index === SPOTS.length - 1) {
-        btnNext.className = 'font-mono text-zinc-600 cursor-not-allowed';
-        btnNext.innerText = 'Próximo →';
-        btnNext.onclick = null;
-      } else {
-        btnNext.className = 'font-mono hover:text-white transition-colors cursor-pointer';
-        btnNext.innerText = `Próximo (Spot 0${index + 2}) →`;
-        btnNext.onclick = () => switchSpot(index + 1);
-      }
+  function esc(s) {
+    return String(s == null ? "" : s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+  }
 
-      renderTabs();
-    }
+  var WAVE_SVG = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" class="h-14 w-14 opacity-80"><path d="M2 12h2M6 8v8M10 4v16M14 7v10M18 9v6M22 12h-2"/></svg>';
 
-    // Controles do Player de Áudio
-    const btnPlay = document.getElementById('btnPlay');
-    const iconPlay = document.getElementById('iconPlay');
-    const iconPause = document.getElementById('iconPause');
-    const progressBarFill = document.getElementById('progressBarFill');
-    const playerTimeDisplay = document.getElementById('playerTimeDisplay');
+  /* ---------- Render capacidades ---------- */
+  document.getElementById("capacidades-grid").innerHTML = capacidades.map(function (c) {
+    return '<article class="bg-surface p-8 md:p-10">' +
+      '<span class="label-mono">Bloco ' + esc(c.index) + '</span>' +
+      '<h3 class="mt-4 font-display text-xl font-semibold sm:text-2xl">' + esc(c.title) + '</h3>' +
+      '<p class="mt-4 text-sm leading-relaxed text-muted">' + esc(c.description) + '</p>' +
+      '<ul class="mt-8 space-y-px">' + c.bullets.map(function (b) {
+        return '<li class="flex gap-4 border-t border-border py-3 text-sm"><span class="text-subtle">—</span><span>' + esc(b) + '</span></li>';
+      }).join("") + '</ul></article>';
+  }).join("");
 
-    function updatePlayState(isPlaying) {
-      if (isPlaying) {
-        iconPlay.classList.add('hidden');
-        iconPause.classList.remove('hidden');
-      } else {
-        iconPlay.classList.remove('hidden');
-        iconPause.classList.add('hidden');
-      }
-    }
+  /* ---------- Render processo ---------- */
+  document.getElementById("processo-grid").innerHTML = processo.map(function (p) {
+    return '<div class="border-b border-border bg-surface p-8 lg:border-l">' +
+      '<span class="font-mono text-2xl text-subtle">' + esc(p.index) + '</span>' +
+      '<h3 class="mt-6 font-display text-base font-semibold">' + esc(p.title) + '</h3>' +
+      '<p class="mt-3 text-sm leading-relaxed text-muted">' + esc(p.description) + '</p></div>';
+  }).join("");
 
-    btnPlay.addEventListener('click', () => {
-      const spot = SPOTS[currentSpotIndex];
-      if (!spot.hasAudio) {
-        alert('Este roteiro aguarda aprovação para ser gravado em estúdio!');
-        return;
-      }
+  /* ---------- Render cases ---------- */
+  var grid = document.getElementById("case-grid");
+  grid.innerHTML = cases.map(function (c, i) {
+    var mark = (c.icon === "wave" || !c.logo)
+      ? '<div class="flex flex-col items-center gap-3">' + WAVE_SVG + '<span class="label-mono">Produção de Áudio</span></div>'
+      : '<img src="' + esc(c.logo) + '" alt="Logomarca ' + esc(c.client) + '" loading="lazy" decoding="async" class="max-h-24 w-full object-contain transition-opacity group-hover:opacity-100 ' +
+        (c.logoIsWhite ? 'opacity-80' : 'opacity-70 grayscale brightness-[1.8] contrast-125') + '" />';
+    return '<button type="button" data-case="' + i + '" class="group relative flex aspect-[4/3] w-full flex-col justify-between border border-border bg-surface p-6 text-left transition-colors hover:border-white/40 hover:bg-surface-elevated">' +
+      '<div class="flex items-start justify-between"><span class="label-mono">' + esc(c.year || "—") + '</span>' +
+      '<span class="label-mono opacity-0 transition-opacity group-hover:opacity-100">Abrir ↗</span></div>' +
+      '<div class="flex flex-1 items-center justify-center px-2">' + mark + '</div>' +
+      '<div class="border-t border-border pt-4"><p class="font-display text-sm font-semibold">' + esc(c.client) + '</p>' +
+      '<p class="label-mono mt-1">' + esc(c.scope) + '</p></div>' +
+      '<span class="pointer-events-none absolute left-3 top-3 h-2 w-2 border-l border-t border-border"></span>' +
+      '<span class="pointer-events-none absolute bottom-3 right-3 h-2 w-2 border-b border-r border-border"></span></button>';
+  }).join("");
 
-      if (audioPlayer.paused) {
-        audioPlayer.play();
-        updatePlayState(true);
-      } else {
-        audioPlayer.pause();
-        updatePlayState(false);
-      }
-    });
+  /* ---------- Dialog ---------- */
+  var dialog = document.getElementById("case-dialog");
+  var panel = document.getElementById("case-dialog-panel");
 
-    audioPlayer.addEventListener('timeupdate', () => {
-      if (audioPlayer.duration) {
-        const pct = (audioPlayer.currentTime / audioPlayer.duration) * 100;
-        progressBarFill.style.width = `${pct}%`;
+  function openCase(c) {
+    var gallery = (c.gallery && c.gallery.length)
+      ? '<div class="grid gap-px bg-border md:grid-cols-2">' + c.gallery.map(function (src, i) {
+          return '<div class="relative bg-surface-elevated"><img src="' + esc(src) + '" alt="' + esc(c.client) + ' — lâmina ' + (i + 1) + '" loading="lazy" decoding="async" class="h-full w-full object-cover" />' +
+            '<span class="label-mono absolute bottom-3 left-3 bg-background/80 px-2 py-1">' + (i + 1 < 10 ? "0" : "") + (i + 1) + '</span></div>';
+        }).join("") + '</div>' : "";
 
-        const curMin = Math.floor(audioPlayer.currentTime / 60).toString().padStart(2, '0');
-        const curSec = Math.floor(audioPlayer.currentTime % 60).toString().padStart(2, '0');
-        const durMin = Math.floor(audioPlayer.duration / 60).toString().padStart(2, '0');
-        const durSec = Math.floor(audioPlayer.duration % 60).toString().padStart(2, '0');
+    var audio = (c.audio && c.audio.length)
+      ? '<div class="border-t border-border p-6 md:p-8"><p class="label-mono">Faixas</p><div class="mt-4 space-y-4">' +
+        c.audio.map(function (t) {
+          return '<div class="border border-border bg-surface-elevated p-4"><div class="flex items-center gap-3">' +
+            '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="h-4 w-4"><path d="M2 12h2M6 8v8M10 4v16M14 7v10M18 9v6M22 12h-2"/></svg>' +
+            '<span class="font-mono text-[11px] uppercase tracking-[0.14em]">' + esc(t.label) + '</span></div>' +
+            '<audio controls preload="none" src="' + esc(t.src) + '" class="mt-3 w-full"></audio></div>';
+        }).join("") + '</div></div>' : "";
 
-        playerTimeDisplay.innerText = `${curMin}:${curSec} / ${durMin}:${durSec}`;
-      }
-    });
+    panel.innerHTML =
+      '<button type="button" id="case-close" aria-label="Fechar" class="absolute right-4 top-4 z-10 flex h-9 w-9 items-center justify-center border border-border bg-background text-muted transition-colors hover:text-white">✕</button>' +
+      '<div class="max-h-[85vh] overflow-y-auto">' +
+        '<div class="border-b border-border p-6 md:p-8"><span class="label-mono">' + esc(c.scope) + (c.year ? " — " + esc(c.year) : "") + '</span>' +
+        '<h2 class="mt-3 font-display text-2xl font-semibold tracking-tight sm:text-3xl">' + esc(c.client) + '</h2>' +
+        '<p class="mt-4 max-w-2xl text-sm leading-relaxed text-muted">' + esc(c.summary) + '</p></div>' +
+        gallery + audio +
+        '<div class="grid gap-8 border-t border-border p-6 md:grid-cols-2 md:p-8">' +
+          '<div><p class="label-mono">Desafio</p><p class="mt-3 text-sm leading-relaxed text-muted">' + esc(c.challenge) + '</p></div>' +
+          '<div><p class="label-mono">Solução</p><p class="mt-3 text-sm leading-relaxed text-muted">' + esc(c.solution) + '</p></div>' +
+        '</div>' +
+      '</div>';
 
-    audioPlayer.addEventListener('ended', () => {
-      updatePlayState(false);
-      progressBarFill.style.width = '0%';
-    });
+    dialog.hidden = false;
+    document.body.style.overflow = "hidden";
+    document.getElementById("case-close").addEventListener("click", closeCase);
+  }
 
-    // Mute Button
-    document.getElementById('btnMute').addEventListener('click', () => {
-      audioPlayer.muted = !audioPlayer.muted;
-    });
+  function closeCase() {
+    dialog.hidden = true;
+    panel.innerHTML = "";
+    document.body.style.overflow = "";
+  }
 
-    // Download Button
-    document.getElementById('btnDownload').addEventListener('click', () => {
-      const spot = SPOTS[currentSpotIndex];
-      if (spot.hasAudio && spot.audioUrl) {
-        const a = document.createElement('a');
-        a.href = spot.audioUrl;
-        a.download = `spot${spot.id}-cruzeiro-motors.mp3`;
-        a.click();
-      }
-    });
+  grid.addEventListener("click", function (e) {
+    var btn = e.target.closest("[data-case]");
+    if (btn) openCase(cases[Number(btn.getAttribute("data-case"))]);
+  });
+  dialog.addEventListener("click", function (e) { if (e.target === dialog) closeCase(); });
+  document.addEventListener("keydown", function (e) { if (e.key === "Escape" && !dialog.hidden) closeCase(); });
 
-    // Copiar Texto do Roteiro
-    document.getElementById('btnCopyScript').addEventListener('click', () => {
-      const text = SPOTS[currentSpotIndex].script;
-      navigator.clipboard.writeText(text).then(() => {
-        const label = document.getElementById('copyTextLabel');
-        label.innerText = 'Copiado!';
-        setTimeout(() => { label.innerText = 'Copiar Texto'; }, 2000);
-      });
-    });
+  /* ---------- Toast ---------- */
+  var toast = document.getElementById("toast");
+  var toastTimer;
+  function showToast(title, desc) {
+    toast.innerHTML = '<p class="font-mono text-[11px] uppercase tracking-[0.16em]">' + esc(title) + '</p>' +
+      '<p class="mt-2 text-xs text-muted">' + esc(desc) + '</p>';
+    toast.hidden = false;
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function () { toast.hidden = true; }, 5000);
+  }
 
-    // Barra de progresso clicável
-    document.getElementById('progressBarContainer').addEventListener('click', (e) => {
-      if (!audioPlayer.duration) return;
-      const rect = e.currentTarget.getBoundingClientRect();
-      const pos = (e.clientX - rect.left) / rect.width;
-      audioPlayer.currentTime = pos * audioPlayer.duration;
-    });
-
-    // Inicialização do App
-    switchSpot(0);
-  </script>
+  /* ---------- Lead form ---------- */
+  document.getElementById("lead-form").addEventListener("submit", function (e) {
+    e.preventDefault();
+    var form = e.currentTarget;
+    var get = function (n) { return String(form.elements[n].value || "").trim(); };
+    var message = [
+      "Olá! Vi o site da URB e gostaria de fazer um orçamento rápido para " + get("servico") + ".",
+      "",
+      "Nome: " + get("nome"),
+      "WhatsApp: " + get("telefone")
+    ].join("\n");
+    window.open(whatsappLink(message), "_blank", "noopener,noreferrer");
+    showToast("Conversa aberta no WhatsApp", "A mensagem já vai preenchida. Basta enviar.");
+    form.reset();
+  });
+})();
+</script>
 </body>
 </html>

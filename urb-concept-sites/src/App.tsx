@@ -17,13 +17,16 @@ import { Footer } from './components/Footer';
 import { FloatingWhatsApp } from './components/FloatingWhatsApp';
 
 export default function App() {
-  const [whatsappNumber, setWhatsappNumber] = useState<string>('5511999998888');
+  const [whatsappNumber, setWhatsappNumber] = useState<string>('5511991573413');
 
-  // Load custom WhatsApp number if saved previously
+  // Load custom WhatsApp number if saved previously, migrating from older placeholder defaults
   useEffect(() => {
     const saved = localStorage.getItem('urb_whatsapp_number');
-    if (saved && saved.length >= 10) {
+    if (saved && saved.length >= 10 && saved !== '5511999998888' && saved !== '5511999999999') {
       setWhatsappNumber(saved);
+    } else {
+      setWhatsappNumber('5511991573413');
+      localStorage.setItem('urb_whatsapp_number', '5511991573413');
     }
   }, []);
 

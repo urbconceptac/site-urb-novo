@@ -11,9 +11,9 @@ export const CapacidadesSection: React.FC = () => {
     },
     {
       icon: ShieldCheck,
-      title: 'Autoridade Visual Instantânea',
+      title: 'Design Sob Medida e Flexibilidade Total',
       description:
-        'Visual escuro refinado, tipografia editorial moderna e acabamento de alto padrão para posicionar a sua empresa como a opção número 1 indiscutível da sua cidade e região.',
+        'Esqueça layouts engessados. Criamos um sistema modular onde você define a cara do seu site. Escolha entre diagramações profissionais e alterne cores, mídias ou blocos com um clique. A identidade visual perfeita e o controle absoluto do design ficam inteiramente nas suas mãos, adaptando-se a qualquer momento do seu negócio.',
     },
     {
       icon: Zap,

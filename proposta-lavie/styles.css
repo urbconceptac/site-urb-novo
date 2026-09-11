@@ -1,6 +1,5 @@
 /* =========================================
-   LAVIE CLEAN — EDITORIAL PREMIUM v9
-   + Quem Somos com layout integrado
+   LAVIE CLEAN — EDITORIAL PREMIUM v10
    ========================================= */
 
 @import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300&display=swap');
@@ -187,7 +186,7 @@ p {
 .section-head .lead { max-width: 44ch; }
 
 /* =========================================
-   HEADER — 3 BLOCOS INDEPENDENTES
+   HEADER
    ========================================= */
 .navbar-wrap {
     position: fixed;
@@ -393,7 +392,7 @@ p {
 }
 
 /* =========================================
-   FAIXA DE DIFERENCIAIS — BLOCO DARK
+   FAIXA DE DIFERENCIAIS
    ========================================= */
 .features-dark {
     background-color: var(--dark-green);
@@ -955,65 +954,75 @@ p {
 .section-dark .testimonial .author { color: var(--beige-accent); }
 
 /* =========================================
-   QUEM SOMOS — LAYOUT INTEGRADO
+   QUEM SOMOS — SEÇÃO UNIFICADA (2 COLUNAS)
    ========================================= */
-
-/* Hero institucional mais compacto */
-.qs-hero {
+.qs-hero-split {
     padding-top: 190px;
-    padding-bottom: 30px;
+    padding-bottom: 0;
+    overflow: hidden;
 }
 
-/* Seção editorial: sem padding próprio, imagem colada no bloco verde abaixo */
-.qs-editorial {
-    padding: 0;
-    overflow: hidden; /* previne scroll horizontal */
-}
-
-.qs-editorial-grid {
+.qs-hero-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 60px;
-    align-items: stretch; /* ambos os lados esticam até a altura total */
-    min-height: 0;
+    align-items: stretch;
 }
 
-.qs-text {
-    align-self: center; /* texto centralizado verticalmente em relação à imagem */
-    padding: 20px 0 60px;
+.qs-hero-text {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding-bottom: 0;
 }
 
-.qs-text h2 {
+.qs-hero-text h1 {
+    font-weight: 300;
+    margin-bottom: 1.25rem;
+}
+
+.qs-hero-text h1 .bold { font-weight: 800; }
+
+.qs-hero-text .lead {
+    margin-bottom: 1.25rem;
+    font-size: 1.15rem;
+    line-height: 1.6;
+    max-width: 100%;
+}
+
+.qs-eyebrow-spacer {
+    margin-top: 3.5rem;
+}
+
+.qs-hero-text h2 {
     font-weight: 300;
     margin-bottom: 1.25rem;
     line-height: 1.05;
 }
 
-.qs-text h2 .bold { font-weight: 800; }
+.qs-hero-text h2 .bold { font-weight: 800; }
 
-.qs-text .lead { margin-bottom: 1rem; }
-.qs-text .lead:last-child { margin-bottom: 0; }
+.qs-hero-text .lead:last-child { margin-bottom: 0; }
 
-/* Visual: imagem sempre colada na base do container */
-.qs-visual {
+/* Coluna da imagem: alinhada à base, colada no bloco verde */
+.qs-hero-visual {
     display: flex;
-    align-items: flex-end;   /* força a imagem pro fundo */
+    align-items: flex-end;
     justify-content: center;
-    line-height: 0;          /* remove o "gap fantasma" de linha */
+    align-self: stretch;
+    line-height: 0;
     font-size: 0;
-    align-self: stretch;     /* estica até a altura total do grid */
+    overflow: hidden;
 }
 
-.qs-visual img {
+.qs-hero-visual img {
     width: 100%;
+    max-width: 100%;
     height: auto;
     display: block;
+    object-fit: contain;
+    object-position: bottom center;
     margin: 0;
-    padding: 0;
-    /* sem filtro, sem sombra, sem borda */
 }
 
 /* =========================================
@@ -1038,7 +1047,7 @@ p {
     .navbar { padding: 10px 24px; }
     .nav-links { gap: 24px; }
 
-    .qs-editorial-grid { gap: 40px; }
+    .qs-hero-grid { gap: 40px; }
 }
 
 @media (max-width: 768px) {
@@ -1113,17 +1122,17 @@ p {
     .plan-card { padding: 32px 26px; }
     .plan-name { font-size: 1.4rem; }
 
-    /* Quem Somos mobile: imagem colada no verde, texto acima */
-    .qs-hero { padding-top: 130px; padding-bottom: 20px; }
-    .qs-editorial-grid {
+    /* Quem Somos: empilha texto em cima, imagem embaixo */
+    .qs-hero-split { padding-top: 130px; padding-bottom: 0; }
+    .qs-hero-grid {
         grid-template-columns: 1fr;
         gap: 0;
     }
-    .qs-text {
-        padding: 0 0 40px;
-        align-self: auto;
-    }
-    .qs-visual {
+    .qs-hero-text { padding-bottom: 40px; }
+    .qs-eyebrow-spacer { margin-top: 2.5rem; }
+    .qs-hero-text h1 { font-size: clamp(2rem, 8vw, 2.8rem); }
+    .qs-hero-text h2 { font-size: clamp(1.6rem, 7vw, 2.2rem); }
+    .qs-hero-visual {
         align-self: auto;
         width: 100%;
     }
@@ -1133,6 +1142,6 @@ p {
     .brand-seal { width: 68px; height: 68px; padding: 5px; }
     .hero { padding-top: 120px; }
     .page-hero { padding-top: 120px; }
-    .qs-hero { padding-top: 120px; }
+    .qs-hero-split { padding-top: 120px; }
     .footer-brand img { height: 100px; }
 }

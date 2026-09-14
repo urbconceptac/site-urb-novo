@@ -1209,23 +1209,25 @@
         font-size: 0.8rem !important;
       }
 
-      /* Altura ideal da Hero */
+      /* Altura ideal da Hero sem barras pretas */
       .hero-container {
         height: 100vh !important;
         min-height: 580px !important;
       }
 
-      /* GARANTE QUE O VÍDEO SE ENCAIXE MOSTRANDO O CARRO (CONTAIN ESCALADO) */
+      /* ENQUADRAMENTO PERFEITO PARA EXIBIR O CARRO NO CELULAR SEM CORTAR A TELA */
       .hero-bg-video {
         width: 100% !important;
         height: 100% !important;
-        object-fit: contain !important;
-        background-color: #0b0b0b !important;
+        min-width: 100% !important;
+        min-height: 100% !important;
+        object-fit: cover !important;
+        object-position: 82% center !important;
       }
 
-      /* Título posicionado mais acima */
+      /* Título posicionado mais acima (subiu) */
       .hero-content {
-        top: 46% !important;
+        top: 44% !important;
         left: 5% !important;
         right: 5% !important;
         max-width: 92% !important;
@@ -1293,7 +1295,7 @@
   <!-- HERO SECTION COM VÍDEO -->
   <div class="hero-container">
     <video autoplay muted loop playsinline class="hero-bg-video">
-      <source src="assets/images/Vintage_car_in_desert_landscape_20260914135623.mp4?v=final" type="video/mp4">
+      <source src="assets/images/Vintage_car_in_desert_landscape_20260914135623.mp4?v=car-fix" type="video/mp4">
       Seu navegador não suporta vídeos em HTML5.
     </video>
 

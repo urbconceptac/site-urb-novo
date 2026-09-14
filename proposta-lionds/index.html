@@ -1123,7 +1123,7 @@
     }
 
     @media (max-width: 1024px) {
-      .about-top-grid, .services-grid, .method-grid {
+      .about-top-grid, .services-section, .method-grid {
         grid-template-columns: 1fr;
       }
       .about-grid {
@@ -1215,12 +1215,12 @@
         min-height: 580px !important;
       }
 
-      /* ENQUADRAMENTO FORÇADO NO CANTO INFERIOR DIREITO (ONDE ESTÁ O CARRO) */
+      /* GARANTE QUE O VÍDEO SE ENCAIXE MOSTRANDO O CARRO (CONTAIN ESCALADO) */
       .hero-bg-video {
-        width: 135% !important;
-        height: 135% !important;
-        object-fit: cover !important;
-        object-position: right bottom !important;
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: contain !important;
+        background-color: #0b0b0b !important;
       }
 
       /* Título posicionado mais acima */
@@ -1293,7 +1293,7 @@
   <!-- HERO SECTION COM VÍDEO -->
   <div class="hero-container">
     <video autoplay muted loop playsinline class="hero-bg-video">
-      <source src="assets/images/Vintage_car_in_desert_landscape_20260914135623.mp4?v=2" type="video/mp4">
+      <source src="assets/images/Vintage_car_in_desert_landscape_20260914135623.mp4?v=final" type="video/mp4">
       Seu navegador não suporta vídeos em HTML5.
     </video>
 

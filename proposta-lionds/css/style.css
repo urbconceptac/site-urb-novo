@@ -22,3 +22,48 @@
   -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
+
+/* =================================================================
+   AJUSTES GLOBAIS E RESPONSIVIDADE MOBILE
+=================================================================== */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Títulos principais para não estourarem no celular */
+h1, .hero-title, .main-title {
+  word-break: break-word;
+}
+
+@media (max-width: 768px) {
+  /* Reduz e ajusta o padding do menu fixo em telas menores */
+  .site-header {
+    padding: 20px 5% !important;
+  }
+
+  .site-header.scrolled {
+    padding: 15px 5% !important;
+  }
+
+  /* Evita que o texto gigante quebre o layout da tela do celular */
+  h1, .hero-title, .main-title {
+    font-size: 2.2rem !important;
+    line-height: 1.15 !important;
+  }
+
+  /* Força elementos gráficos ou blocos de fundo a respeitarem a largura da tela */
+  .hero-graphic, .background-shape, .orange-box, img {
+    position: relative !important;
+    right: auto !important;
+    left: auto !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    transform: none !important;
+  }
+}

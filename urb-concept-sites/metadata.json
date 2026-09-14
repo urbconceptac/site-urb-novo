@@ -1,0 +1,6 @@
+{
+  "name": "URB Concept",
+  "description": "Estrutura digital completa para negócios locais transformarem visitantes do Google e Redes Sociais em clientes no WhatsApp 1x1.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

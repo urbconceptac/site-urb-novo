@@ -1181,37 +1181,9 @@
     }
 
     @media (max-width: 520px) {
-      /* Header compacto e elegante sem tarja preta gigante no topo */
+      /* REMOVE TOTALMENTE O MENU DO TOPO NO CELULAR */
       .site-header {
-        padding: 8px 4% !important;
-      }
-      .site-header.scrolled {
-        padding: 6px 4% !important;
-      }
-
-      /* Logo e botão do WhatsApp proporcionais */
-      .brand-logo {
-        width: 50px !important;
-      }
-      .header-right .btn-action {
-        padding: 5px 8px !important;
-        font-size: 0.65rem !important;
-      }
-      .header-right .btn-action i {
-        font-size: 0.75rem !important;
-      }
-
-      /* Menu central compacto */
-      .nav-toggle {
-        width: 24px !important;
-        height: 24px !important;
-      }
-      .nav-line {
-        height: 18px !important;
-        width: 2px !important;
-      }
-      .main-nav {
-        padding: 0 5px !important;
+        display: none !important;
       }
 
       /* Altura total da Hero e enquadramento puxado para o carro */
@@ -1223,28 +1195,28 @@
         object-position: 78% bottom !important;
       }
 
-      /* Título grande e impactante */
+      /* Título grande, imponente e centralizado no espaço útil */
       .hero-content {
-        top: 60% !important;
-        left: 5% !important;
-        right: 5% !important;
-        max-width: 92% !important;
+        top: 50% !important;
+        left: 6% !important;
+        right: 6% !important;
+        max-width: 88% !important;
         transform: translateY(-50%) !important;
       }
       .hero-content h1 {
-        font-size: 3.2rem !important;
+        font-size: 3.4rem !important;
         line-height: 0.95 !important;
         letter-spacing: 1px !important;
-        margin-bottom: 12px !important;
+        margin-bottom: 15px !important;
       }
       .hero-content p {
-        font-size: 0.85rem !important;
+        font-size: 0.9rem !important;
         line-height: 1.4 !important;
-        margin-bottom: 16px !important;
+        margin-bottom: 20px !important;
       }
       .btn-hero-large {
-        padding: 10px 20px !important;
-        font-size: 0.8rem !important;
+        padding: 12px 24px !important;
+        font-size: 0.85rem !important;
       }
 
       .footer-bottom-bar {
@@ -1687,6 +1659,7 @@
     /* ================= HEADER SCROLL ================= */
     window.addEventListener('scroll', function() {
       const header = document.getElementById('siteHeader');
+      if (!header) return;
       if (window.scrollY > 30) {
         header.classList.add('scrolled');
       } else {
@@ -1697,6 +1670,7 @@
     /* ================= HERO LIGHT FLASH ================= */
     const heroLight = document.getElementById('heroLight');
     function randomLightFlash() {
+      if (!heroLight) return;
       const randomOpacity = (Math.random() * 0.6 + 0.3).toFixed(2);
       heroLight.style.opacity = randomOpacity;
       const randomDelay = Math.random() * 2000 + 1000;
@@ -1757,20 +1731,24 @@
       navLinesAnimator.classList.add('is-looping');
     }
 
-    navToggle.addEventListener('click', function (e) {
-      e.stopPropagation();
-      isMenuOpen ? closeMenu() : openMenu();
-    });
-
-    navMenuWrapper.querySelectorAll('a').forEach(function (link) {
-      link.addEventListener('click', function () {
-        closeMenu();
+    if (navToggle) {
+      navToggle.addEventListener('click', function (e) {
+        e.stopPropagation();
+        isMenuOpen ? closeMenu() : openMenu();
       });
-    });
+    }
+
+    if (navMenuWrapper) {
+      navMenuWrapper.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', function () {
+          closeMenu();
+        });
+      });
+    }
 
     document.addEventListener('click', function (e) {
       if (!isMenuOpen) return;
-      if (navMenuWrapper.contains(e.target) || navToggle.contains(e.target)) return;
+      if (navMenuWrapper && (navMenuWrapper.contains(e.target) || navToggle.contains(e.target))) return;
       closeMenu();
     });
 
@@ -1805,6 +1783,7 @@
     let autoPlayInterval = null;
 
     function renderPartnersCarousel() {
+      if (!partnersTrack) return;
       partnersTrack.innerHTML = '';
       partnerGroups.forEach(group => {
         const slideGroupDiv = document.createElement('div');
@@ -1823,6 +1802,7 @@
     }
 
     function updateCarouselPosition() {
+      if (!partnersTrack) return;
       partnersTrack.style.transform = `translateX(-${currentSlide * 100}%)`;
     }
 
@@ -1848,23 +1828,29 @@
       }
     }
 
-    nextBtn.addEventListener('click', () => {
-      stopAutoPlay();
-      nextSlideAction();
-    });
+    if (nextBtn) {
+      nextBtn.addEventListener('click', () => {
+        stopAutoPlay();
+        nextSlideAction();
+      });
+    }
 
-    prevBtn.addEventListener('click', () => {
-      stopAutoPlay();
-      prevSlideAction();
-    });
+    if (prevBtn) {
+      prevBtn.addEventListener('click', () => {
+        stopAutoPlay();
+        prevSlideAction();
+      });
+    }
 
-    carouselContainer.addEventListener('mouseenter', () => {
-      stopAutoPlay();
-    });
+    if (carouselContainer) {
+      carouselContainer.addEventListener('mouseenter', () => {
+        stopAutoPlay();
+      });
 
-    carouselContainer.addEventListener('mouseleave', () => {
-      startAutoPlay();
-    });
+      carouselContainer.addEventListener('mouseleave', () => {
+        startAutoPlay();
+      });
+    }
 
     renderPartnersCarousel();
     startAutoPlay();

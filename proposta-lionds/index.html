@@ -22,6 +22,7 @@
 
     body, html {
       width: 100%;
+      max-width: 100%;
       background-color: #0b0b0b;
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
       overflow-x: hidden;
@@ -82,7 +83,7 @@
 
     .site-header.scrolled {
       padding: 22px 7%;
-      background: transparent;
+      background: rgba(11, 11, 11, 0.85);
       backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(12px);
       border-bottom: 1px solid rgba(255, 255, 255, 0.08);
@@ -880,7 +881,7 @@
       font-size: 1rem;
     }
 
-    /* ================= SEÇÃO CTA FINAL DE ALTO IMPACTO (VÍDEO DO ASTRONAUTA + FILTRO EQUILIBRADO) ================= */
+    /* ================= SEÇÃO CTA FINAL DE ALTO IMPACTO ================= */
     .cta-final-section {
       position: relative;
       width: 100%;
@@ -892,7 +893,6 @@
       background-color: #0b0b0b;
     }
 
-    /* Vídeo de Fundo do Astronauta */
     .cta-bg-video {
       position: absolute;
       top: 50%;
@@ -907,7 +907,6 @@
       pointer-events: none;
     }
 
-    /* Filtro equilibrado para o vídeo do CTA (permite ver a imagem perfeitamente e garante contraste impecável na fonte) */
     .cta-video-filter {
       position: absolute;
       inset: 0;
@@ -1116,7 +1115,7 @@
       color: #ff5500;
     }
 
-    /* ================= RESPONSIVIDADE ================= */
+    /* ================= RESPONSIVIDADE & CORREÇÕES MOBILE ================= */
     @media (max-width: 1200px) {
       .cases-grid-reveal {
         grid-template-columns: repeat(2, 1fr);
@@ -1183,18 +1182,39 @@
 
     @media (max-width: 520px) {
       .site-header {
-        padding: 22px 5%;
+        padding: 15px 4% !important;
       }
       .site-header.scrolled {
-        padding: 16px 5%;
+        padding: 12px 4% !important;
       }
-      .btn-action {
-        padding: 10px 16px;
-        font-size: 0.8rem;
+
+      /* Reduz logo e botão do topo para não estourar no celular */
+      .brand-logo {
+        width: 65px !important;
       }
-      .btn-action i {
-        font-size: 1rem;
+      .header-right .btn-action {
+        padding: 8px 12px !important;
+        font-size: 0.72rem !important;
       }
+      .header-right .btn-action i {
+        font-size: 0.85rem !important;
+      }
+
+      /* Corrige o título gigante que estourava a tela */
+      .hero-content {
+        left: 5% !important;
+        right: 5% !important;
+        max-width: 90% !important;
+      }
+      .hero-content h1 {
+        font-size: 3.1rem !important;
+        line-height: 1.05 !important;
+        letter-spacing: 1px !important;
+      }
+      .hero-content p {
+        font-size: 0.95rem !important;
+      }
+
       .footer-bottom-bar {
         flex-direction: column;
         align-items: center;
@@ -1238,7 +1258,7 @@
     </div>
   </header>
 
-  <!-- HERO SECTION COM VÍDEO (FILTRO ESCURO REMOVIDO) -->
+  <!-- HERO SECTION COM VÍDEO -->
   <div class="hero-container">
     <video autoplay muted loop playsinline class="hero-bg-video">
       <source src="assets/images/Vintage_car_in_desert_landscape_20260914135623.mp4" type="video/mp4">
@@ -1559,18 +1579,15 @@
     </div>
   </section>
 
-  <!-- SEÇÃO CTA FINAL DE ALTO IMPACTO (VÍDEO DO ASTRONAUTA + FILTRO EQUILIBRADO) -->
+  <!-- SEÇÃO CTA FINAL DE ALTO IMPACTO -->
   <section class="cta-final-section">
-    <!-- VÍDEO DO ASTRONAUTA NO FUNDO -->
     <video autoplay muted loop playsinline class="cta-bg-video">
       <source src="assets/images/Astronaut_in_orange_suit_1080p_20260914160903.mp4" type="video/mp4">
       Seu navegador não suporta vídeos em HTML5.
     </video>
 
-    <!-- Filtro equilibrado (0.45 de opacidade escura) para exibir o vídeo nitidamente e dar contraste ideal ao texto -->
     <div class="cta-video-filter"></div>
 
-    <!-- Grid estrutural de linhas (Aero Hero 3) -->
     <div class="cta-grid-overlay">
       <div class="cta-grid-col" style="grid-column: span 1;"></div>
       <div class="cta-grid-col" style="grid-column: span 3;"></div>
@@ -1579,7 +1596,6 @@
       <div class="cta-grid-col" style="grid-column: span 1;"></div>
     </div>
 
-    <!-- Conteúdo do CTA Final focado em Conversão WhatsApp -->
     <div class="cta-content-wrapper">
       <h2>PRONTO PARA ESCALAR SEU SOFTWARE?</h2>
       <p>Transformamos ideias de alta complexidade em arquiteturas digitais robustas, seguras e prontas para o futuro. Inicie a conversa direto com nossos engenheiros.</p>

@@ -1215,12 +1215,15 @@
         min-height: 580px !important;
       }
 
-      /* Enquadramento do vídeo fortemente deslocado para a direita (carro visível) */
+      /* ENQUADRAMENTO FORÇADO NO CANTO INFERIOR DIREITO (ONDE ESTÁ O CARRO) */
       .hero-bg-video {
-        object-position: 88% center !important;
+        width: 135% !important;
+        height: 135% !important;
+        object-fit: cover !important;
+        object-position: right bottom !important;
       }
 
-      /* Título posicionado mais acima (subiu) */
+      /* Título posicionado mais acima */
       .hero-content {
         top: 46% !important;
         left: 5% !important;
@@ -1290,7 +1293,7 @@
   <!-- HERO SECTION COM VÍDEO -->
   <div class="hero-container">
     <video autoplay muted loop playsinline class="hero-bg-video">
-      <source src="assets/images/Vintage_car_in_desert_landscape_20260914135623.mp4" type="video/mp4">
+      <source src="assets/images/Vintage_car_in_desert_landscape_20260914135623.mp4?v=2" type="video/mp4">
       Seu navegador não suporta vídeos em HTML5.
     </video>
 

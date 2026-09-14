@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 450" width="100%" height="100%">
+  <!-- Blue background block -->
+  <rect width="300" height="380" fill="#135182"/>
+  <!-- Green bottom block -->
+  <rect y="380" width="300" height="70" fill="#5CB826"/>
+  <!-- Architectural Gateway Outline -->
+  <path d="M 60 180 L 60 300 M 90 180 L 90 300 M 210 180 L 210 300 M 240 180 L 240 300 M 50 180 L 250 180 L 250 160 L 150 120 L 50 160 Z" fill="none" stroke="#FFFFFF" stroke-width="3"/>
+  <circle cx="150" cy="145" r="8" fill="none" stroke="#FFFFFF" stroke-width="2"/>
+  <line x1="70" y1="210" x2="230" y2="210" stroke="#FFFFFF" stroke-width="2"/>
+  <!-- Text -->
+  <text x="150" y="255" font-family="Arial, sans-serif" font-weight="bold" font-size="28" fill="#FFFFFF" text-anchor="middle">PEDRINHAS</text>
+  <text x="150" y="295" font-family="Arial, sans-serif" font-weight="bold" font-size="32" fill="#5CB826" text-anchor="middle">PAULISTA</text>
+  <text x="150" y="420" font-family="Arial, sans-serif" font-size="26" fill="#135182" text-anchor="middle" font-weight="bold">Cidade de Atitude</text>
+</svg>

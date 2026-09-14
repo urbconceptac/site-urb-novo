@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 550 140" width="100%" height="100%">
+  <!-- Green Square with Vertical Stripes -->
+  <rect width="130" height="130" fill="#8CC63F"/>
+  <line x1="20" y1="0" x2="10" y2="130" stroke="#3D2314" stroke-width="8"/>
+  <line x1="50" y1="0" x2="40" y2="130" stroke="#FFFFFF" stroke-width="6"/>
+  <line x1="85" y1="0" x2="75" y2="130" stroke="#3D2314" stroke-width="12"/>
+  <line x1="115" y1="0" x2="105" y2="130" stroke="#3D2314" stroke-width="6"/>
+  <!-- SIDER Text -->
+  <text x="155" y="85" font-family="Arial, sans-serif" font-weight="bold" font-size="70" fill="#4A3123" letter-spacing="4">SIDER</text>
+  <!-- SHOPPING Text -->
+  <text x="158" y="123" font-family="Arial, sans-serif" font-weight="bold" font-size="28" fill="#4A3123" letter-spacing="14">SHOPPING</text>
+</svg>

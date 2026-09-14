@@ -1,0 +1,117 @@
+:root {
+  --bg-black: #08080a;
+  --orange-neon: #ff5500;
+  --orange-glow: rgba(255, 85, 0, 0.6);
+  --text-white: #f5f5f7;
+  --text-dim: #a1a1a6;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-black);
+  color: var(--text-white);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  overflow-x: hidden;
+}
+
+.hero {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 8%;
+  overflow: hidden;
+}
+
+/* Carregamento da imagem de fundo */
+.hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../assets/images/hero-lionds-future.jpg');
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+}
+
+/* Efeito de brilho acendendo a área do monólito */
+.monolith-glow {
+  position: absolute;
+  top: 18%;
+  left: 50.5%;
+  width: 15.5%;
+  height: 61%;
+  background: var(--orange-neon);
+  mix-blend-mode: color-dodge;
+  opacity: 0.85;
+  z-index: 2;
+  border-radius: 4px;
+  animation: pulse 3.5s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.4;
+    filter: drop-shadow(0 0 25px var(--orange-glow));
+  }
+  50% {
+    opacity: 0.95;
+    filter: drop-shadow(0 0 60px var(--orange-neon));
+  }
+  100% {
+    opacity: 0.4;
+    filter: drop-shadow(0 0 25px var(--orange-glow));
+  }
+}
+
+.hero-content {
+  position: relative;
+  z-index: 3;
+  max-width: 580px;
+}
+
+.headline {
+  font-size: 3.5rem;
+  font-weight: 800;
+  letter-spacing: -1.5px;
+  line-height: 1.05;
+  margin-bottom: 24px;
+  text-transform: uppercase;
+  color: var(--text-white);
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+}
+
+.subheadline {
+  font-size: 1.15rem;
+  color: var(--text-dim);
+  line-height: 1.6;
+  margin-bottom: 40px;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+}
+
+.btn-cta {
+  display: inline-block;
+  padding: 18px 36px;
+  background-color: var(--orange-neon);
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  letter-spacing: 1.5px;
+  border-radius: 4px;
+  box-shadow: 0 0 25px var(--orange-glow);
+  transition: all 0.3s ease;
+}
+
+.btn-cta:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 40px var(--orange-neon);
+}

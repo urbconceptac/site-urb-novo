@@ -1181,12 +1181,35 @@
     }
 
     @media (max-width: 520px) {
-      /* REMOVE TOTALMENTE O MENU DO TOPO NO CELULAR */
+      /* Header compacto mantendo apenas logo à esquerda e botão do whats à direita */
       .site-header {
+        padding: 10px 4% !important;
+        background: transparent !important;
+      }
+      .site-header.scrolled {
+        padding: 8px 4% !important;
+        background: rgba(11, 11, 11, 0.85) !important;
+        backdrop-filter: blur(10px) !important;
+      }
+
+      /* Oculta apenas o menu suspenso central no celular */
+      .main-nav {
         display: none !important;
       }
 
-      /* Altura total da Hero e enquadramento puxado para o carro */
+      /* Tamanho proporcional da logo e botão de contato no topo */
+      .brand-logo {
+        width: 65px !important;
+      }
+      .header-right .btn-action {
+        padding: 6px 12px !important;
+        font-size: 0.7rem !important;
+      }
+      .header-right .btn-action i {
+        font-size: 0.8rem !important;
+      }
+
+      /* Altura ideal da Hero e enquadramento puxado para o carro */
       .hero-container {
         height: 100vh !important;
         min-height: 580px !important;
@@ -1195,28 +1218,28 @@
         object-position: 78% bottom !important;
       }
 
-      /* Título grande, imponente e centralizado no espaço útil */
+      /* Título grande e impactante */
       .hero-content {
-        top: 50% !important;
-        left: 6% !important;
-        right: 6% !important;
-        max-width: 88% !important;
+        top: 60% !important;
+        left: 5% !important;
+        right: 5% !important;
+        max-width: 92% !important;
         transform: translateY(-50%) !important;
       }
       .hero-content h1 {
-        font-size: 3.4rem !important;
+        font-size: 3.2rem !important;
         line-height: 0.95 !important;
         letter-spacing: 1px !important;
-        margin-bottom: 15px !important;
+        margin-bottom: 12px !important;
       }
       .hero-content p {
-        font-size: 0.9rem !important;
+        font-size: 0.85rem !important;
         line-height: 1.4 !important;
-        margin-bottom: 20px !important;
+        margin-bottom: 16px !important;
       }
       .btn-hero-large {
-        padding: 12px 24px !important;
-        font-size: 0.85rem !important;
+        padding: 10px 20px !important;
+        font-size: 0.8rem !important;
       }
 
       .footer-bottom-bar {
@@ -1237,7 +1260,7 @@
       </a>
     </div>
 
-    <!-- ÁREA CENTRAL: BOTÃO "+" + PAINEL SUSPENSO -->
+    <!-- ÁREA CENTRAL: MENU SUSPENSO (Oculto no celular via CSS) -->
     <nav class="main-nav" id="mainNav">
       <div class="nav-menu-wrapper" id="navMenuWrapper">
         <div class="nav-links-bg"></div>
@@ -1714,21 +1737,27 @@
 
     function openMenu() {
       isMenuOpen = true;
-      navLinesAnimator.classList.remove('is-looping');
-      navMenuWrapper.classList.add('is-open');
-      navToggle.setAttribute('aria-expanded', 'true');
-      navToggle.setAttribute('aria-label', 'Fechar menu');
+      if (navLinesAnimator) navLinesAnimator.classList.remove('is-looping');
+      if (navMenuWrapper) navMenuWrapper.classList.add('is-open');
+      if (navToggle) {
+        navToggle.setAttribute('aria-expanded', 'true');
+        navToggle.setAttribute('aria-label', 'Fechar menu');
+      }
     }
 
     function closeMenu() {
       isMenuOpen = false;
-      navMenuWrapper.classList.remove('is-open');
-      navToggle.setAttribute('aria-expanded', 'false');
-      navToggle.setAttribute('aria-label', 'Abrir menu');
+      if (navMenuWrapper) navMenuWrapper.classList.remove('is-open');
+      if (navToggle) {
+        navToggle.setAttribute('aria-expanded', 'false');
+        navToggle.setAttribute('aria-label', 'Abrir menu');
+      }
       
-      navLinesAnimator.classList.remove('is-looping');
-      void navLinesAnimator.offsetWidth;
-      navLinesAnimator.classList.add('is-looping');
+      if (navLinesAnimator) {
+        navLinesAnimator.classList.remove('is-looping');
+        void navLinesAnimator.offsetWidth;
+        navLinesAnimator.classList.add('is-looping');
+      }
     }
 
     if (navToggle) {

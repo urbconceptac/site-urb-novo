@@ -9,23 +9,21 @@
   justify-content: space-between;
   align-items: center;
   z-index: 1000;
-  background: transparent; /* Totalmente transparente no topo */
+  background: transparent;
   border-bottom: 1px solid transparent;
-  transition: all 0.4s ease; /* Transição suave ao rolar */
+  transition: all 0.4s ease;
 }
 
-/* Estado ativado via JS quando a página começa a subir/descer */
+/* Estado ativado via JS ao rolar a página */
 .site-header.scrolled {
   padding: 22px 7%;
-  background: rgba(11, 11, 11, 0.75); /* Fundo escuro leve */
-  backdrop-filter: blur(12px);         /* Efeito de Blur solicitado */
+  background: rgba(11, 11, 11, 0.75);
+  backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-/* =================================================================
-   AJUSTES GLOBAIS E RESPONSIVIDADE MOBILE
-=================================================================== */
+/* ================= RESET E CONFIGURAÇÕES GLOBAIS ================= */
 * {
   box-sizing: border-box;
 }
@@ -36,28 +34,44 @@ html, body {
   overflow-x: hidden;
 }
 
-/* Títulos principais para não estourarem no celular */
 h1, .hero-title, .main-title {
   word-break: break-word;
 }
 
+/* ================= RESPONSIVIDADE MOBILE (CELULAR) ================= */
 @media (max-width: 768px) {
-  /* Reduz e ajusta o padding do menu fixo em telas menores */
+  /* Encolhe o padding lateral do menu para aproveitar a tela do celular */
   .site-header {
-    padding: 20px 5% !important;
-  }
-
-  .site-header.scrolled {
     padding: 15px 5% !important;
   }
 
-  /* Evita que o texto gigante quebre o layout da tela do celular */
+  .site-header.scrolled {
+    padding: 12px 5% !important;
+  }
+
+  /* Reduz o tamanho da logo para não ficar gigantesca */
+  .site-header img, 
+  .site-header svg, 
+  .site-header .logo {
+    max-height: 24px !important;
+    width: auto !important;
+  }
+
+  /* Diminui o botão do WhatsApp ou CTA no topo */
+  .site-header .btn, 
+  .site-header a[class*="btn"],
+  .site-header .whatsapp-btn {
+    padding: 6px 12px !important;
+    font-size: 0.75rem !important;
+  }
+
+  /* Corrige o tamanho do título principal para não estourar a largura */
   h1, .hero-title, .main-title {
-    font-size: 2.2rem !important;
+    font-size: 2.1rem !important;
     line-height: 1.15 !important;
   }
 
-  /* Força elementos gráficos ou blocos de fundo a respeitarem a largura da tela */
+  /* Impede que blocos de fundo e caixas laranjas vazem para fora da tela */
   .hero-graphic, .background-shape, .orange-box, img {
     position: relative !important;
     right: auto !important;

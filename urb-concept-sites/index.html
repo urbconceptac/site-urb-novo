@@ -117,7 +117,84 @@
     }
   </style>
 </head>
-<body class="bg-[#080808] text-white selection:bg-[#00FF66] selection:text-black antialiased">
+<body class="bg-[#080808] text-white selection:bg-[#00FF66] selection:text-black antialiased relative">
+
+  <!-- MEGA MENU OVERLAY (MOBILE: 100% Verde Sólido, Links em Preto) -->
+  <div
+    id="mobile-mega-menu"
+    style="background-color: #00FF66 !important;"
+    class="fixed inset-0 w-full h-[100dvh] z-[99999] text-black flex flex-col justify-between p-6 sm:p-10 transition-all duration-300 opacity-0 pointer-events-none -translate-y-4"
+  >
+    <!-- Topo do Menu Mobile -->
+    <div class="flex items-center justify-between border-b border-black/20 pb-4">
+      <span class="text-xs font-mono font-bold tracking-widest text-black uppercase">MENU // NAVEGAÇÃO</span>
+      <button
+        id="btn-close-menu"
+        type="button"
+        aria-label="Fechar Menu"
+        class="flex items-center justify-center w-11 h-11 rounded-full border border-black/25 bg-black/10 text-black hover:bg-black/20 active:scale-95 transition-all"
+      >
+        <i class="fa-solid fa-xmark text-xl"></i>
+      </button>
+    </div>
+
+    <!-- Lista de Links Pretos -->
+    <ul class="flex flex-col gap-4 sm:gap-6 my-auto py-4">
+      <li>
+        <a href="#problema" class="mobile-nav-link flex items-center justify-between text-2xl sm:text-3xl font-heading font-extrabold text-black hover:opacity-75 transition-opacity">
+          <span>Problema</span>
+          <span class="text-xs font-mono font-bold text-black/60">(01)</span>
+        </a>
+      </li>
+      <li>
+        <a href="#capacidades" class="mobile-nav-link flex items-center justify-between text-2xl sm:text-3xl font-heading font-extrabold text-black hover:opacity-75 transition-opacity">
+          <span>Capacidades</span>
+          <span class="text-xs font-mono font-bold text-black/60">(02)</span>
+        </a>
+      </li>
+      <li>
+        <a href="#portfolio" class="mobile-nav-link flex items-center justify-between text-2xl sm:text-3xl font-heading font-extrabold text-black hover:opacity-75 transition-opacity">
+          <span>Casos de Sucesso</span>
+          <span class="text-xs font-mono font-bold text-black/60">(03)</span>
+        </a>
+      </li>
+      <li>
+        <a href="#processo" class="mobile-nav-link flex items-center justify-between text-2xl sm:text-3xl font-heading font-extrabold text-black hover:opacity-75 transition-opacity">
+          <span>Metodologia</span>
+          <span class="text-xs font-mono font-bold text-black/60">(04)</span>
+        </a>
+      </li>
+      <li>
+        <a href="#investimento" class="mobile-nav-link flex items-center justify-between text-2xl sm:text-3xl font-heading font-extrabold text-black hover:opacity-75 transition-opacity">
+          <span>Investimento</span>
+          <span class="text-xs font-mono font-bold text-black/60">(05)</span>
+        </a>
+      </li>
+      <li>
+        <a href="#faq" class="mobile-nav-link flex items-center justify-between text-2xl sm:text-3xl font-heading font-extrabold text-black hover:opacity-75 transition-opacity">
+          <span>Dúvidas Frequentes</span>
+          <span class="text-xs font-mono font-bold text-black/60">(06)</span>
+        </a>
+      </li>
+    </ul>
+
+    <!-- Rodapé do Menu Mobile -->
+    <div class="border-t border-black/20 pt-4 flex flex-col gap-3">
+      <a
+        href="https://wa.me/5511991573413?text=Ol%C3%A1!%20Vim%20pelo%20menu%20do%20site%20e%20gostaria%20de%20conversar."
+        target="_blank"
+        rel="noopener noreferrer"
+        class="w-full flex items-center justify-center gap-2 py-3.5 rounded bg-black text-[#00FF66] font-heading font-bold text-xs uppercase tracking-wider shadow-lg active:scale-95 transition-transform"
+      >
+        <i class="fa-brands fa-whatsapp text-base"></i>
+        <span>Iniciar Conversa no WhatsApp</span>
+      </a>
+      <div class="flex items-center justify-between text-[11px] font-mono text-black/80 font-medium">
+        <span>URB CONCEPT © 2026</span>
+        <a href="mailto:contato@urbconcept.com.br" class="hover:underline">contato@urbconcept.com.br</a>
+      </div>
+    </div>
+  </div>
 
   <!-- HEADER -->
   <header class="fixed top-0 left-0 w-full z-50 bg-[#080808]/95 backdrop-blur-md border-b border-[#222222]/80 transition-all duration-300" id="main-header">
@@ -195,84 +272,11 @@
           id="btn-open-menu"
           type="button"
           aria-label="Abrir Menu"
-          class="lg:hidden flex flex-col justify-center items-center gap-1.5 w-10 h-10 rounded-lg bg-[#141414] border border-[#262626] cursor-pointer"
+          class="lg:hidden flex flex-col justify-center items-center gap-1.5 w-10 h-10 rounded-lg bg-[#141414] border border-[#262626] cursor-pointer active:scale-95 transition-transform"
         >
           <span class="hamburger-line"></span>
           <span class="hamburger-line"></span>
         </button>
-      </div>
-    </div>
-
-    <!-- MEGA MENU OVERLAY (Mobile - Fundo Verde Neon Sólido, Links Pretos de Alto Contraste) -->
-    <div
-      id="mobile-mega-menu"
-      class="fixed inset-0 z-50 bg-[#00FF66] text-black flex flex-col justify-between p-6 sm:p-10 transition-all duration-300 opacity-0 pointer-events-none -translate-y-4"
-    >
-      <div class="flex items-center justify-between border-b border-black/15 pb-6">
-        <span class="text-xs font-mono font-bold tracking-widest text-black/70 uppercase">Menu // Navegação</span>
-        <button
-          id="btn-close-menu"
-          type="button"
-          aria-label="Fechar Menu"
-          class="flex items-center justify-center w-10 h-10 rounded-full border border-black/20 bg-black/10 text-black hover:bg-black/20 transition-colors"
-        >
-          <i class="fa-solid fa-xmark text-lg"></i>
-        </button>
-      </div>
-
-      <ul class="flex flex-col gap-5 my-auto py-6">
-        <li>
-          <a href="#problema" class="mobile-nav-link flex items-center justify-between text-2xl sm:text-3xl font-heading font-extrabold text-black hover:opacity-75 transition-opacity">
-            <span>Problema</span>
-            <span class="text-xs font-mono font-bold text-black/60">(01)</span>
-          </a>
-        </li>
-        <li>
-          <a href="#capacidades" class="mobile-nav-link flex items-center justify-between text-2xl sm:text-3xl font-heading font-extrabold text-black hover:opacity-75 transition-opacity">
-            <span>Capacidades</span>
-            <span class="text-xs font-mono font-bold text-black/60">(02)</span>
-          </a>
-        </li>
-        <li>
-          <a href="#portfolio" class="mobile-nav-link flex items-center justify-between text-2xl sm:text-3xl font-heading font-extrabold text-black hover:opacity-75 transition-opacity">
-            <span>Casos de Sucesso</span>
-            <span class="text-xs font-mono font-bold text-black/60">(03)</span>
-          </a>
-        </li>
-        <li>
-          <a href="#processo" class="mobile-nav-link flex items-center justify-between text-2xl sm:text-3xl font-heading font-extrabold text-black hover:opacity-75 transition-opacity">
-            <span>Metodologia</span>
-            <span class="text-xs font-mono font-bold text-black/60">(04)</span>
-          </a>
-        </li>
-        <li>
-          <a href="#investimento" class="mobile-nav-link flex items-center justify-between text-2xl sm:text-3xl font-heading font-extrabold text-black hover:opacity-75 transition-opacity">
-            <span>Investimento</span>
-            <span class="text-xs font-mono font-bold text-black/60">(05)</span>
-          </a>
-        </li>
-        <li>
-          <a href="#faq" class="mobile-nav-link flex items-center justify-between text-2xl sm:text-3xl font-heading font-extrabold text-black hover:opacity-75 transition-opacity">
-            <span>Dúvidas Frequentes</span>
-            <span class="text-xs font-mono font-bold text-black/60">(06)</span>
-          </a>
-        </li>
-      </ul>
-
-      <div class="border-t border-black/15 pt-6 flex flex-col gap-4">
-        <a
-          href="https://wa.me/5511991573413?text=Ol%C3%A1!%20Vim%20pelo%20menu%20do%20site%20e%20gostaria%20de%20conversar."
-          target="_blank"
-          rel="noopener noreferrer"
-          class="w-full flex items-center justify-center gap-2 py-3.5 rounded bg-black text-[#00FF66] font-heading font-bold text-xs uppercase tracking-wider hover:bg-neutral-900 transition-colors shadow-lg"
-        >
-          <i class="fa-brands fa-whatsapp text-base"></i>
-          <span>Iniciar Conversa no WhatsApp</span>
-        </a>
-        <div class="flex items-center justify-between text-[11px] font-mono text-black/75">
-          <span>URB CONCEPT © 2026</span>
-          <a href="mailto:contato@urbconcept.com.br" class="hover:underline">contato@urbconcept.com.br</a>
-        </div>
       </div>
     </div>
   </header>
@@ -947,7 +951,7 @@
       }
     });
 
-    // Controle do Mega Menu Mobile (Fundo Verde Neon / Links Pretos)
+    // Controle do Mega Menu Mobile (Tela Cheia Verde Sólido)
     (function () {
       const btnOpen = document.getElementById('btn-open-menu');
       const btnClose = document.getElementById('btn-close-menu');
@@ -1039,6 +1043,7 @@
         const width = section.offsetWidth;
         const height = section.offsetHeight;
 
+        // Fundo base uniforme
         ctx.fillStyle = "#080808";
         ctx.fillRect(0, 0, width, height);
 
@@ -1069,6 +1074,7 @@
             const charIndex = Math.floor(val * CHAR_LENGTH);
             const char = CHAR_RAMP[Math.max(0, Math.min(CHAR_LENGTH - 1, charIndex))];
 
+            // Cinza suave calibrado para contraste sem ofuscar textos
             const alpha = 0.08 + val * 0.20;
             ctx.fillStyle = `rgba(185, 185, 195, ${alpha})`;
 

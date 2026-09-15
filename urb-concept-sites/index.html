@@ -85,207 +85,198 @@
     ::-webkit-scrollbar-thumb:hover {
       background: #00FF66;
     }
+    .button-clip {
+      position: relative;
+      overflow: hidden;
+      height: 1.25rem;
+      line-height: 1.25rem;
+    }
+    .button-text {
+      display: block;
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .button-text-hover {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      color: #00FF66;
+    }
+    .group:hover .button-text {
+      transform: translateY(-100%);
+    }
+    .group:hover .button-text-hover {
+      transform: translateY(-100%);
+    }
+    .hamburger-line {
+      width: 22px;
+      height: 2px;
+      background-color: #FFFFFF;
+      transition: all 0.3s ease;
+    }
   </style>
 </head>
 <body class="bg-[#080808] text-white selection:bg-[#00FF66] selection:text-black antialiased">
 
-<!-- ==================== HEADER COM NAVBAR & MEGA MENU MOBILE ==================== -->
-<style>
-  /* Efeito de clip hover nos links desktop */
-  .button-clip {
-    position: relative;
-    overflow: hidden;
-    height: 1.25rem;
-    line-height: 1.25rem;
-  }
-  .button-text {
-    display: block;
-    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-  }
-  .button-text-hover {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-    color: #00FF66;
-  }
-  .group:hover .button-text {
-    transform: translateY(-100%);
-  }
-  .group:hover .button-text-hover {
-    transform: translateY(-100%);
-  }
-
-  /* Linhas do botão hambúrguer mobile */
-  .hamburger-line {
-    width: 22px;
-    height: 2px;
-    background-color: #FFFFFF;
-    transition: all 0.3s ease;
-  }
-</style>
-
-<header class="fixed top-0 left-0 w-full z-50 bg-[#080808]/95 backdrop-blur-md border-b border-[#222222]/80 transition-all duration-300" id="main-header">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between" id="header-container">
-    
-    <!-- Logo -->
-    <a href="https://www.urbconcept.com.br/" class="flex items-center group py-1 shrink-0" title="URB Concept">
-      <img src="public/logo-urb.png" alt="URB Concept" class="h-10 sm:h-12 w-auto object-contain transition-all duration-300 group-hover:opacity-80" id="header-logo" onerror="this.src='/logo-urb.png'" />
-    </a>
-
-    <!-- Nav Desktop (Estilo Elysium com números sobrescritos e efeito clip) -->
-    <nav class="hidden lg:flex items-center gap-8 text-xs font-mono uppercase tracking-widest text-[#A1A1AA]">
-      <a href="#problema" class="group flex items-center gap-1.5 hover:text-white transition-colors">
-        <div class="button-clip">
-          <span class="button-text">Problema</span>
-          <span class="button-text-hover">Problema</span>
-        </div>
-        <sup class="text-[#00FF66] text-[10px]">(1)</sup>
+  <!-- HEADER -->
+  <header class="fixed top-0 left-0 w-full z-50 bg-[#080808]/95 backdrop-blur-md border-b border-[#222222]/80 transition-all duration-300" id="main-header">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between" id="header-container">
+      
+      <!-- Logo -->
+      <a href="https://www.urbconcept.com.br/" class="flex items-center group py-1 shrink-0" title="URB Concept">
+        <img src="public/logo-urb.png" alt="URB Concept" class="h-10 sm:h-12 w-auto object-contain transition-all duration-300 group-hover:opacity-80" id="header-logo" onerror="this.src='/logo-urb.png'" />
       </a>
 
-      <a href="#capacidades" class="group flex items-center gap-1.5 hover:text-white transition-colors">
-        <div class="button-clip">
-          <span class="button-text">Capacidades</span>
-          <span class="button-text-hover">Capacidades</span>
-        </div>
-        <sup class="text-[#00FF66] text-[10px]">(2)</sup>
-      </a>
-
-      <a href="#portfolio" class="group flex items-center gap-1.5 hover:text-white transition-colors">
-        <div class="button-clip">
-          <span class="button-text">Casos</span>
-          <span class="button-text-hover">Casos</span>
-        </div>
-        <sup class="text-[#00FF66] text-[10px]">(3)</sup>
-      </a>
-
-      <a href="#processo" class="group flex items-center gap-1.5 hover:text-white transition-colors">
-        <div class="button-clip">
-          <span class="button-text">Processo</span>
-          <span class="button-text-hover">Processo</span>
-        </div>
-        <sup class="text-[#00FF66] text-[10px]">(4)</sup>
-      </a>
-
-      <a href="#investimento" class="group flex items-center gap-1.5 hover:text-white transition-colors">
-        <div class="button-clip">
-          <span class="button-text">Investimento</span>
-          <span class="button-text-hover">Investimento</span>
-        </div>
-        <sup class="text-[#00FF66] text-[10px]">(5)</sup>
-      </a>
-
-      <a href="#faq" class="group flex items-center gap-1.5 hover:text-white transition-colors">
-        <div class="button-clip">
-          <span class="button-text">FAQ</span>
-          <span class="button-text-hover">FAQ</span>
-        </div>
-        <sup class="text-[#00FF66] text-[10px]">(6)</sup>
-      </a>
-    </nav>
-
-    <!-- Direita: CTA WhatsApp (Desktop) + Botão Sanduíche (Apenas Mobile) -->
-    <div class="flex items-center gap-4">
-      <a
-        href="https://wa.me/5511991573413?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20URB%20Concept%20e%20quero%20um%20diagn%C3%B3stico."
-        target="_blank"
-        rel="noopener noreferrer"
-        class="hidden sm:inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#00FF66] text-black font-heading font-bold text-xs uppercase tracking-wider hover:bg-[#00e65c] transition-all"
-      >
-        <i class="fa-brands fa-whatsapp text-sm"></i>
-        <span>WhatsApp</span>
-      </a>
-
-      <!-- Botão Sanduíche (Aparece apenas em telas menores que lg) -->
-      <button
-        id="btn-open-menu"
-        type="button"
-        aria-label="Abrir Menu"
-        class="lg:hidden flex flex-col justify-center items-center gap-1.5 w-10 h-10 rounded-lg bg-[#141414] border border-[#262626] cursor-pointer"
-      >
-        <span class="hamburger-line"></span>
-        <span class="hamburger-line"></span>
-      </button>
-    </div>
-  </div>
-
-  <!-- MEGA MENU OVERLAY (Mobile) -->
-  <div
-    id="mobile-mega-menu"
-    class="fixed inset-0 z-50 bg-[#080808]/98 backdrop-blur-xl flex flex-col justify-between p-6 sm:p-10 transition-all duration-300 opacity-0 pointer-events-none -translate-y-4"
-  >
-    <!-- Topo do Menu Mobile -->
-    <div class="flex items-center justify-between border-b border-[#222222] pb-6">
-      <span class="text-xs font-mono tracking-widest text-[#A1A1AA] uppercase">Menu // Navegação</span>
-      <button
-        id="btn-close-menu"
-        type="button"
-        aria-label="Fechar Menu"
-        class="flex items-center justify-center w-10 h-10 rounded-full border border-[#262626] bg-[#141414] text-white hover:border-[#00FF66] transition-colors"
-      >
-        <i class="fa-solid fa-xmark text-base"></i>
-      </button>
-    </div>
-
-    <!-- Lista de Links com animação de hover e numeração -->
-    <ul class="flex flex-col gap-5 my-auto py-6">
-      <li>
-        <a href="#problema" class="mobile-nav-link flex items-center justify-between text-2xl sm:text-3xl font-heading font-bold text-white hover:text-[#00FF66] transition-colors">
-          <span>Problema</span>
-          <span class="text-xs font-mono text-[#00FF66]">(01)</span>
+      <!-- Nav Desktop -->
+      <nav class="hidden lg:flex items-center gap-8 text-xs font-mono uppercase tracking-widest text-[#A1A1AA]">
+        <a href="#problema" class="group flex items-center gap-1.5 hover:text-white transition-colors">
+          <div class="button-clip">
+            <span class="button-text">Problema</span>
+            <span class="button-text-hover">Problema</span>
+          </div>
+          <sup class="text-[#00FF66] text-[10px]">(1)</sup>
         </a>
-      </li>
-      <li>
-        <a href="#capacidades" class="mobile-nav-link flex items-center justify-between text-2xl sm:text-3xl font-heading font-bold text-white hover:text-[#00FF66] transition-colors">
-          <span>Capacidades</span>
-          <span class="text-xs font-mono text-[#00FF66]">(02)</span>
-        </a>
-      </li>
-      <li>
-        <a href="#portfolio" class="mobile-nav-link flex items-center justify-between text-2xl sm:text-3xl font-heading font-bold text-white hover:text-[#00FF66] transition-colors">
-          <span>Casos de Sucesso</span>
-          <span class="text-xs font-mono text-[#00FF66]">(03)</span>
-        </a>
-      </li>
-      <li>
-        <a href="#processo" class="mobile-nav-link flex items-center justify-between text-2xl sm:text-3xl font-heading font-bold text-white hover:text-[#00FF66] transition-colors">
-          <span>Metodologia</span>
-          <span class="text-xs font-mono text-[#00FF66]">(04)</span>
-        </a>
-      </li>
-      <li>
-        <a href="#investimento" class="mobile-nav-link flex items-center justify-between text-2xl sm:text-3xl font-heading font-bold text-white hover:text-[#00FF66] transition-colors">
-          <span>Investimento</span>
-          <span class="text-xs font-mono text-[#00FF66]">(05)</span>
-        </a>
-      </li>
-      <li>
-        <a href="#faq" class="mobile-nav-link flex items-center justify-between text-2xl sm:text-3xl font-heading font-bold text-white hover:text-[#00FF66] transition-colors">
-          <span>Dúvidas Frequentes</span>
-          <span class="text-xs font-mono text-[#00FF66]">(06)</span>
-        </a>
-      </li>
-    </ul>
 
-    <!-- Rodapé do Menu Mobile -->
-    <div class="border-t border-[#222222] pt-6 flex flex-col gap-4">
-      <a
-        href="https://wa.me/5511991573413?text=Ol%C3%A1!%20Vim%20pelo%20menu%20do%20site%20e%20gostaria%20de%20conversar."
-        target="_blank"
-        rel="noopener noreferrer"
-        class="w-full flex items-center justify-center gap-2 py-3.5 rounded bg-[#00FF66] text-black font-heading font-bold text-xs uppercase tracking-wider"
-      >
-        <i class="fa-brands fa-whatsapp text-base"></i>
-        <span>Iniciar Conversa no WhatsApp</span>
-      </a>
-      <div class="flex items-center justify-between text-[11px] font-mono text-[#A1A1AA]">
-        <span>URB CONCEPT © 2026</span>
-        <a href="mailto:contato@urbconcept.com.br" class="hover:text-white">contato@urbconcept.com.br</a>
+        <a href="#capacidades" class="group flex items-center gap-1.5 hover:text-white transition-colors">
+          <div class="button-clip">
+            <span class="button-text">Capacidades</span>
+            <span class="button-text-hover">Capacidades</span>
+          </div>
+          <sup class="text-[#00FF66] text-[10px]">(2)</sup>
+        </a>
+
+        <a href="#portfolio" class="group flex items-center gap-1.5 hover:text-white transition-colors">
+          <div class="button-clip">
+            <span class="button-text">Casos</span>
+            <span class="button-text-hover">Casos</span>
+          </div>
+          <sup class="text-[#00FF66] text-[10px]">(3)</sup>
+        </a>
+
+        <a href="#processo" class="group flex items-center gap-1.5 hover:text-white transition-colors">
+          <div class="button-clip">
+            <span class="button-text">Processo</span>
+            <span class="button-text-hover">Processo</span>
+          </div>
+          <sup class="text-[#00FF66] text-[10px]">(4)</sup>
+        </a>
+
+        <a href="#investimento" class="group flex items-center gap-1.5 hover:text-white transition-colors">
+          <div class="button-clip">
+            <span class="button-text">Investimento</span>
+            <span class="button-text-hover">Investimento</span>
+          </div>
+          <sup class="text-[#00FF66] text-[10px]">(5)</sup>
+        </a>
+
+        <a href="#faq" class="group flex items-center gap-1.5 hover:text-white transition-colors">
+          <div class="button-clip">
+            <span class="button-text">FAQ</span>
+            <span class="button-text-hover">FAQ</span>
+          </div>
+          <sup class="text-[#00FF66] text-[10px]">(6)</sup>
+        </a>
+      </nav>
+
+      <!-- Direita: CTA WhatsApp + Botão Sanduíche Mobile -->
+      <div class="flex items-center gap-4">
+        <a
+          href="https://wa.me/5511991573413?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20URB%20Concept%20e%20quero%20um%20diagn%C3%B3stico."
+          target="_blank"
+          rel="noopener noreferrer"
+          class="hidden sm:inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#00FF66] text-black font-heading font-bold text-xs uppercase tracking-wider hover:bg-[#00e65c] transition-all"
+        >
+          <i class="fa-brands fa-whatsapp text-sm"></i>
+          <span>WhatsApp</span>
+        </a>
+
+        <button
+          id="btn-open-menu"
+          type="button"
+          aria-label="Abrir Menu"
+          class="lg:hidden flex flex-col justify-center items-center gap-1.5 w-10 h-10 rounded-lg bg-[#141414] border border-[#262626] cursor-pointer"
+        >
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
       </div>
     </div>
-  </div>
-</header>
+
+    <!-- MEGA MENU OVERLAY (Mobile) -->
+    <div
+      id="mobile-mega-menu"
+      class="fixed inset-0 z-50 bg-[#080808]/98 backdrop-blur-xl flex flex-col justify-between p-6 sm:p-10 transition-all duration-300 opacity-0 pointer-events-none -translate-y-4"
+    >
+      <div class="flex items-center justify-between border-b border-[#222222] pb-6">
+        <span class="text-xs font-mono tracking-widest text-[#A1A1AA] uppercase">Menu // Navegação</span>
+        <button
+          id="btn-close-menu"
+          type="button"
+          aria-label="Fechar Menu"
+          class="flex items-center justify-center w-10 h-10 rounded-full border border-[#262626] bg-[#141414] text-white hover:border-[#00FF66] transition-colors"
+        >
+          <i class="fa-solid fa-xmark text-base"></i>
+        </button>
+      </div>
+
+      <ul class="flex flex-col gap-5 my-auto py-6">
+        <li>
+          <a href="#problema" class="mobile-nav-link flex items-center justify-between text-2xl sm:text-3xl font-heading font-bold text-white hover:text-[#00FF66] transition-colors">
+            <span>Problema</span>
+            <span class="text-xs font-mono text-[#00FF66]">(01)</span>
+          </a>
+        </li>
+        <li>
+          <a href="#capacidades" class="mobile-nav-link flex items-center justify-between text-2xl sm:text-3xl font-heading font-bold text-white hover:text-[#00FF66] transition-colors">
+            <span>Capacidades</span>
+            <span class="text-xs font-mono text-[#00FF66]">(02)</span>
+          </a>
+        </li>
+        <li>
+          <a href="#portfolio" class="mobile-nav-link flex items-center justify-between text-2xl sm:text-3xl font-heading font-bold text-white hover:text-[#00FF66] transition-colors">
+            <span>Casos de Sucesso</span>
+            <span class="text-xs font-mono text-[#00FF66]">(03)</span>
+          </a>
+        </li>
+        <li>
+          <a href="#processo" class="mobile-nav-link flex items-center justify-between text-2xl sm:text-3xl font-heading font-bold text-white hover:text-[#00FF66] transition-colors">
+            <span>Metodologia</span>
+            <span class="text-xs font-mono text-[#00FF66]">(04)</span>
+          </a>
+        </li>
+        <li>
+          <a href="#investimento" class="mobile-nav-link flex items-center justify-between text-2xl sm:text-3xl font-heading font-bold text-white hover:text-[#00FF66] transition-colors">
+            <span>Investimento</span>
+            <span class="text-xs font-mono text-[#00FF66]">(05)</span>
+          </a>
+        </li>
+        <li>
+          <a href="#faq" class="mobile-nav-link flex items-center justify-between text-2xl sm:text-3xl font-heading font-bold text-white hover:text-[#00FF66] transition-colors">
+            <span>Dúvidas Frequentes</span>
+            <span class="text-xs font-mono text-[#00FF66]">(06)</span>
+          </a>
+        </li>
+      </ul>
+
+      <div class="border-t border-[#222222] pt-6 flex flex-col gap-4">
+        <a
+          href="https://wa.me/5511991573413?text=Ol%C3%A1!%20Vim%20pelo%20menu%20do%20site%20e%20gostaria%20de%20conversar."
+          target="_blank"
+          rel="noopener noreferrer"
+          class="w-full flex items-center justify-center gap-2 py-3.5 rounded bg-[#00FF66] text-black font-heading font-bold text-xs uppercase tracking-wider"
+        >
+          <i class="fa-brands fa-whatsapp text-base"></i>
+          <span>Iniciar Conversa no WhatsApp</span>
+        </a>
+        <div class="flex items-center justify-between text-[11px] font-mono text-[#A1A1AA]">
+          <span>URB CONCEPT © 2026</span>
+          <a href="mailto:contato@urbconcept.com.br" class="hover:text-white">contato@urbconcept.com.br</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
   <!-- HERO SECTION -->
   <section class="pt-28 pb-16 md:pt-36 md:pb-24 relative overflow-hidden border-b border-[#222222]">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -549,12 +540,14 @@
         <!-- CASE 1: LionDS -->
         <div class="bg-[#121212] border border-[#222222] rounded-xl overflow-hidden group hover:border-[#00FF66]/50 transition-all flex flex-col justify-between">
           <div>
-            <div class="aspect-[16/10] overflow-hidden bg-[#080808] relative border-b border-[#1c1c1c] flex items-center justify-center p-8">
-              <div class="text-center">
-                <span class="font-heading font-extrabold text-2xl tracking-wider text-white group-hover:text-[#00FF66] transition-colors">LionDS</span>
-                <p class="text-[11px] font-mono text-[#A1A1AA] mt-1">Sistemas & Tecnologia</p>
-              </div>
-              <div class="absolute top-3 left-3 bg-black/80 px-2.5 py-0.5 rounded text-[10px] font-mono text-white border border-white/10">
+            <div class="aspect-[16/10] overflow-hidden bg-[#080808] relative border-b border-[#1c1c1c]">
+              <img 
+                src="public/portfolio-img1.jpg" 
+                alt="LionDS — Sistemas & Tecnologia" 
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                onerror="this.src='/portfolio-img1.jpg'"
+              />
+              <div class="absolute top-3 left-3 bg-black/80 backdrop-blur-sm px-2.5 py-0.5 rounded text-[10px] font-mono text-white border border-white/10">
                 Software & B2B
               </div>
             </div>
@@ -591,12 +584,14 @@
         <!-- CASE 2: Lavie Clean -->
         <div class="bg-[#121212] border border-[#222222] rounded-xl overflow-hidden group hover:border-[#00FF66]/50 transition-all flex flex-col justify-between">
           <div>
-            <div class="aspect-[16/10] overflow-hidden bg-[#080808] relative border-b border-[#1c1c1c] flex items-center justify-center p-8">
-              <div class="text-center">
-                <span class="font-heading font-extrabold text-2xl tracking-wider text-white group-hover:text-[#00FF66] transition-colors">Lavie Clean</span>
-                <p class="text-[11px] font-mono text-[#A1A1AA] mt-1">Higiene & Bem-Estar</p>
-              </div>
-              <div class="absolute top-3 left-3 bg-black/80 px-2.5 py-0.5 rounded text-[10px] font-mono text-white border border-white/10">
+            <div class="aspect-[16/10] overflow-hidden bg-[#080808] relative border-b border-[#1c1c1c]">
+              <img 
+                src="public/portfolio-img2.jpg" 
+                alt="Lavie Clean — Presença Digital" 
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                onerror="this.src='/portfolio-img2.jpg'"
+              />
+              <div class="absolute top-3 left-3 bg-black/80 backdrop-blur-sm px-2.5 py-0.5 rounded text-[10px] font-mono text-white border border-white/10">
                 Presença Digital
               </div>
             </div>
@@ -633,12 +628,14 @@
         <!-- CASE 3: Gameca -->
         <div class="bg-[#121212] border border-[#222222] rounded-xl overflow-hidden group hover:border-[#00FF66]/50 transition-all flex flex-col justify-between">
           <div>
-            <div class="aspect-[16/10] overflow-hidden bg-[#080808] relative border-b border-[#1c1c1c] flex items-center justify-center p-8">
-              <div class="text-center">
-                <span class="font-heading font-extrabold text-2xl tracking-wider text-white group-hover:text-[#00FF66] transition-colors">Gameca</span>
-                <p class="text-[11px] font-mono text-[#A1A1AA] mt-1">Laboratório & Produto Próprio</p>
-              </div>
-              <div class="absolute top-3 left-3 bg-black/80 px-2.5 py-0.5 rounded text-[10px] font-mono text-white border border-white/10">
+            <div class="aspect-[16/10] overflow-hidden bg-[#080808] relative border-b border-[#1c1c1c]">
+              <img 
+                src="public/portfolio-img3.jpg" 
+                alt="Gameca — Laboratório & Produto Próprio" 
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                onerror="this.src='/portfolio-img3.jpg'"
+              />
+              <div class="absolute top-3 left-3 bg-black/80 backdrop-blur-sm px-2.5 py-0.5 rounded text-[10px] font-mono text-white border border-white/10">
                 Iniciativa Autoral
               </div>
             </div>
@@ -728,7 +725,7 @@
     </div>
   </section>
 
- <!-- 05. INVESTIMENTO (PLANO ÚNICO) -->
+  <!-- 05. INVESTIMENTO (PLANO ÚNICO) -->
   <section id="investimento" class="py-20 border-b border-[#222222] bg-[#0a0a0a] relative">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       <div class="max-w-2xl mb-12 text-left">
@@ -804,7 +801,7 @@
     </div>
   </section>
 
-  <!-- 06. FAQ ATUALIZADO -->
+  <!-- 06. FAQ -->
   <section id="faq" class="py-20 border-b border-[#222222] relative">
     <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-left mb-12">
@@ -869,6 +866,7 @@
       </div>
     </div>
   </section>
+
   <!-- RODAPÉ -->
   <footer class="py-12 bg-[#080808] text-[#A1A1AA] text-xs font-mono border-t border-[#222222]">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
@@ -932,6 +930,32 @@
         logo.classList.add('h-10', 'sm:h-12');
       }
     });
+
+    (function () {
+      const btnOpen = document.getElementById('btn-open-menu');
+      const btnClose = document.getElementById('btn-close-menu');
+      const mobileMenu = document.getElementById('mobile-mega-menu');
+      const links = document.querySelectorAll('.mobile-nav-link');
+
+      function openMenu() {
+        mobileMenu.classList.remove('opacity-0', 'pointer-events-none', '-translate-y-4');
+        mobileMenu.classList.add('opacity-100', 'pointer-events-auto', 'translate-y-0');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeMenu() {
+        mobileMenu.classList.remove('opacity-100', 'pointer-events-auto', 'translate-y-0');
+        mobileMenu.classList.add('opacity-0', 'pointer-events-none', '-translate-y-4');
+        document.body.style.overflow = '';
+      }
+
+      if (btnOpen) btnOpen.addEventListener('click', openMenu);
+      if (btnClose) btnClose.addEventListener('click', closeMenu);
+
+      links.forEach(link => {
+        link.addEventListener('click', closeMenu);
+      });
+    })();
   </script>
 
 </body>

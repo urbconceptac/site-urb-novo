@@ -278,10 +278,10 @@
   </header>
 
   <!-- HERO SECTION COM BACKGROUND ASCII DISCRETO & INTERATIVO -->
-  <section id="hero-section" class="pt-28 pb-16 md:pt-36 md:pb-24 relative overflow-hidden border-b border-[#222222] bg-[#111113]">
+  <section id="hero-section" class="pt-28 pb-16 md:pt-36 md:pb-24 relative overflow-hidden border-b border-[#222222] bg-[#080808]">
     
-    <!-- Canvas ASCII Background Procedural Monocromático Interativo -->
-    <canvas id="ascii-canvas" class="absolute inset-0 w-full h-full pointer-events-none z-0 block"></canvas>
+    <!-- Canvas ASCII Background Procedural Cinza Técnico Interativo -->
+    <canvas id="ascii-canvas-hero" class="absolute inset-0 w-full h-full pointer-events-none z-0 block"></canvas>
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pointer-events-auto">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
@@ -375,19 +375,19 @@
 
       <!-- Barra de Métricas -->
       <div class="mt-14 pt-8 border-t border-[#1e1e1e] grid grid-cols-2 md:grid-cols-4 gap-4">
-        <div class="bg-[#121212]/80 backdrop-blur-sm border border-[#222222] p-4 rounded-lg">
+        <div class="bg-[#121212]/90 border border-[#222222] p-4 rounded-lg">
           <div class="text-xl sm:text-2xl font-heading font-bold text-white">Carregamento Leve</div>
           <div class="text-xs text-[#A1A1AA] font-mono mt-1">Otimizado para celulares</div>
         </div>
-        <div class="bg-[#121212]/80 backdrop-blur-sm border border-[#222222] p-4 rounded-lg">
+        <div class="bg-[#121212]/90 border border-[#222222] p-4 rounded-lg">
           <div class="text-xl sm:text-2xl font-heading font-bold text-[#00FF66]">+ Conversão</div>
           <div class="text-xs text-[#A1A1AA] font-mono mt-1">Fluxo sem ruído visual</div>
         </div>
-        <div class="bg-[#121212]/80 backdrop-blur-sm border border-[#222222] p-4 rounded-lg">
+        <div class="bg-[#121212]/90 border border-[#222222] p-4 rounded-lg">
           <div class="text-xl sm:text-2xl font-heading font-bold text-white">Zero Mensalidade</div>
           <div class="text-xs text-[#A1A1AA] font-mono mt-1">Sem taxas recorrentes</div>
         </div>
-        <div class="bg-[#121212]/80 backdrop-blur-sm border border-[#222222] p-4 rounded-lg">
+        <div class="bg-[#121212]/90 border border-[#222222] p-4 rounded-lg">
           <div class="text-xl sm:text-2xl font-heading font-bold text-white">Fluxo Direto</div>
           <div class="text-xs text-[#A1A1AA] font-mono mt-1">Alinhamento ágil por etapa</div>
         </div>
@@ -729,9 +729,13 @@
     </div>
   </section>
 
-  <!-- 05. INVESTIMENTO (PLANO ÚNICO) -->
-  <section id="investimento" class="py-20 border-b border-[#222222] bg-[#0a0a0a] relative">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+  <!-- 05. INVESTIMENTO (COM BACKGROUND ASCII E CARD SÓLIDO) -->
+  <section id="investimento" class="py-20 border-b border-[#222222] relative overflow-hidden bg-[#080808]">
+    
+    <!-- Canvas ASCII Background Procedural Cinza Técnico para Investimento -->
+    <canvas id="ascii-canvas-investimento" class="absolute inset-0 w-full h-full pointer-events-none z-0 block"></canvas>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pointer-events-auto">
       <div class="max-w-2xl mb-12 text-left">
         <div class="text-xs font-mono font-bold tracking-widest text-[#00FF66] uppercase mb-2">
           05. INVESTIMENTO
@@ -745,7 +749,8 @@
       </div>
 
       <div class="max-w-xl mx-auto">
-        <div class="bg-[#121212] rounded-2xl p-8 border-2 border-[#00FF66] shadow-[0_0_30px_rgba(0,255,102,0.12)] relative">
+        <!-- Card 100% Sólido e Isolado com bg-[#121212] sem transparência -->
+        <div class="bg-[#121212] rounded-2xl p-8 border-2 border-[#00FF66] shadow-[0_20px_50px_rgba(0,0,0,0.95)] relative z-20">
           <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2 mb-4 pb-4 border-b border-[#222222]">
             <div>
               <span class="text-[11px] font-mono uppercase tracking-wider text-[#00FF66] block mb-1">Presença Digital Completa</span>
@@ -964,43 +969,50 @@
       });
     })();
 
-    // Background Canvas ASCII Monocromático e Interativo (Mouse/Touch)
-    (function () {
-      const canvas = document.getElementById('ascii-canvas');
-      if (!canvas) return;
-      const ctx = canvas.getContext('2d');
-      const heroSection = document.getElementById('hero-section');
+    // Função unificada para inicializar os fundos ASCII (Hero e Investimento)
+    function setupAsciiCanvas(canvasId, sectionId) {
+      const canvas = document.getElementById(canvasId);
+      const section = document.getElementById(sectionId);
+      if (!canvas || !section) return;
 
+      const ctx = canvas.getContext('2d');
       const CHAR_RAMP = " .:-=+*#%@";
       const CHAR_LENGTH = CHAR_RAMP.length;
       const CELL_SIZE = 14; 
       let cols = 0;
       let rows = 0;
-      let time = 0;
+      let time = Math.random() * 100;
 
-      // Posição do cursor / toque normalizada (0 a 1)
       let targetMouseX = 0.5;
       let targetMouseY = 0.5;
       let mouseX = 0.5;
       let mouseY = 0.5;
 
       function updatePointer(clientX, clientY) {
-        if (!heroSection) return;
-        const rect = heroSection.getBoundingClientRect();
+        const rect = section.getBoundingClientRect();
         targetMouseX = Math.max(0, Math.min(1, (clientX - rect.left) / rect.width));
         targetMouseY = Math.max(0, Math.min(1, (clientY - rect.top) / rect.height));
       }
 
-      window.addEventListener('mousemove', (e) => updatePointer(e.clientX, e.clientY));
+      window.addEventListener('mousemove', (e) => {
+        const rect = section.getBoundingClientRect();
+        if (e.clientY >= rect.top - 100 && e.clientY <= rect.bottom + 100) {
+          updatePointer(e.clientX, e.clientY);
+        }
+      });
+
       window.addEventListener('touchmove', (e) => {
         if (e.touches.length > 0) {
-          updatePointer(e.touches[0].clientX, e.touches[0].clientY);
+          const rect = section.getBoundingClientRect();
+          if (e.touches[0].clientY >= rect.top - 100 && e.touches[0].clientY <= rect.bottom + 100) {
+            updatePointer(e.touches[0].clientX, e.touches[0].clientY);
+          }
         }
       }, { passive: true });
 
       function resize() {
-        const width = heroSection ? heroSection.offsetWidth : window.innerWidth;
-        const height = heroSection ? heroSection.offsetHeight : window.innerHeight;
+        const width = section.offsetWidth;
+        const height = section.offsetHeight;
         const dpr = window.devicePixelRatio || 1;
 
         canvas.width = width * dpr;
@@ -1019,32 +1031,30 @@
       resize();
 
       function render() {
-        const width = heroSection ? heroSection.offsetWidth : window.innerWidth;
-        const height = heroSection ? heroSection.offsetHeight : window.innerHeight;
+        const width = section.offsetWidth;
+        const height = section.offsetHeight;
 
-        // Fundo sutil para contraste dos caracteres monocromáticos
-        ctx.fillStyle = "#111113";
+        // Fundo base uniforme
+        ctx.fillStyle = "#080808";
         ctx.fillRect(0, 0, width, height);
 
         time += 0.015;
 
-        // Interpolação suave para o movimento do mouse/touch
-        mouseX += (targetMouseX - mouseX) * 0.05;
-        mouseY += (targetMouseY - mouseY) * 0.05;
+        mouseX += (targetMouseX - mouseX) * 0.06;
+        mouseY += (targetMouseY - mouseY) * 0.06;
 
         for (let y = 0; y < rows; y++) {
           for (let x = 0; x < cols; x++) {
             const nx = x / cols;
             const ny = y / rows;
 
-            // Influência do mouse/dedo criando uma distorção interativa
             const dx = nx - mouseX;
             const dy = ny - mouseY;
             const distMouse = Math.sqrt(dx * dx + dy * dy);
-            const mouseRipple = Math.sin(distMouse * 14 - time * 2.5) * 0.45;
+            const mouseRipple = Math.sin(distMouse * 12 - time * 2.2) * 0.4;
 
-            const v1 = Math.sin(nx * 5 + time * 0.7 + mouseX * 2);
-            const v2 = Math.cos(ny * 5 - time * 0.5 + mouseY * 2);
+            const v1 = Math.sin(nx * 5 + time * 0.7 + mouseX * 1.5);
+            const v2 = Math.cos(ny * 5 - time * 0.5 + mouseY * 1.5);
             const v3 = Math.sin((nx + ny) * 6 + time);
             const distCenter = Math.sqrt((nx - 0.5) ** 2 + (ny - 0.5) ** 2);
             const v4 = Math.sin(distCenter * 10 - time * 1.2);
@@ -1055,9 +1065,10 @@
             const charIndex = Math.floor(val * CHAR_LENGTH);
             const char = CHAR_RAMP[Math.max(0, Math.min(CHAR_LENGTH - 1, charIndex))];
 
-            // Variação estritamente monocromática escura: do preto 80% (alpha 0.20) até preto 50% (alpha 0.50)
-            const alpha = 0.20 + val * 0.30;
-            ctx.fillStyle = `rgba(0, 0, 0, ${alpha})`;
+            // Equilíbrio de contraste: cinza prateado suave (RGB 180, 180, 185) com opacidade calibrada
+            // Visível e elegante sem competir com a leitura branca dos títulos
+            const alpha = 0.08 + val * 0.20;
+            ctx.fillStyle = `rgba(185, 185, 195, ${alpha})`;
 
             ctx.fillText(char, x * CELL_SIZE, y * CELL_SIZE);
           }
@@ -1067,7 +1078,10 @@
       }
 
       render();
-    })();
+    }
+
+    setupAsciiCanvas('ascii-canvas-hero', 'hero-section');
+    setupAsciiCanvas('ascii-canvas-investimento', 'investimento');
   </script>
 
 </body>

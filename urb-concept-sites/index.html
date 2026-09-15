@@ -340,32 +340,37 @@
           <div class="relative w-full max-w-[420px] aspect-square flex items-center justify-center">
             <div class="absolute w-[280px] h-[280px] rounded-full bg-[#00FF66]/10 blur-[90px] -z-10 pointer-events-none"></div>
             
+            <!-- Imagem do personagem central mantida -->
             <img src="public/hero-character.png" alt="URB Concept" class="w-full h-auto object-contain relative z-10 max-h-[380px]" onerror="this.src='/hero-character.png'" />
             
-            <div class="absolute top-2 right-0 z-20 inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#121212]/90 border border-[#282828] shadow-lg backdrop-blur-md">
-              <div class="w-6 h-6 rounded-full bg-[#00FF66]/15 flex items-center justify-center text-[#00FF66]">
+            <!-- Selo 1: Performance / Carregamento Rápido -->
+            <div class="absolute top-2 right-0 z-20 inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-[#121212]/95 border border-[#282828] shadow-lg backdrop-blur-md">
+              <div class="w-6 h-6 rounded-full bg-[#00FF66]/15 flex items-center justify-center text-[#00FF66] shrink-0">
                 <i class="fa-solid fa-bolt text-xs"></i>
               </div>
-              <div class="text-left font-mono">
-                <span class="text-[9px] text-[#A1A1AA] uppercase tracking-wider block">Performance</span>
-                <span class="text-xs font-heading font-bold text-white leading-tight">Carregamento Rápido</span>
+              <div class="text-left font-mono flex flex-col justify-center leading-none space-y-0.5">
+                <span class="text-[9px] text-[#A1A1AA] uppercase tracking-wider block leading-none">Performance</span>
+                <span class="text-xs font-heading font-bold text-white leading-tight block">Carregamento Rápido</span>
               </div>
             </div>
 
+            <!-- Selo 2: Atendimento WhatsApp / Canal Direto de Conversão em 2 linhas compactas -->
             <a
               href="https://wa.me/5511991573413?text=Ol%C3%A1!%20Gostaria%20de%20tirar%20uma%20d%C3%BAvida%20sobre%20cria%C3%A7%C3%A3o%20de%20sites."
               target="_blank"
               rel="noopener noreferrer"
-              class="absolute -bottom-2 left-1/2 -translate-x-1/2 z-20 inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-[#121212]/90 border border-[#282828] hover:border-[#00FF66]/50 shadow-xl backdrop-blur-md transition-all group"
+              class="absolute -bottom-2 left-1/2 -translate-x-1/2 z-20 inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-[#121212]/95 border border-[#282828] hover:border-[#00FF66]/50 shadow-xl backdrop-blur-md transition-all group whitespace-nowrap"
             >
-              <div class="w-7 h-7 rounded-full bg-[#00FF66] text-black flex items-center justify-center font-bold">
+              <div class="w-7 h-7 rounded-full bg-[#00FF66] text-black flex items-center justify-center font-bold shrink-0">
                 <i class="fa-brands fa-whatsapp text-sm"></i>
               </div>
-              <div class="text-left font-mono">
-                <span class="text-xs font-heading font-bold text-white block leading-tight group-hover:text-[#00FF66] transition-colors">
+              <div class="text-left font-mono flex flex-col justify-center leading-none space-y-0.5">
+                <span class="text-xs font-heading font-bold text-white leading-tight block group-hover:text-[#00FF66] transition-colors">
                   Atendimento WhatsApp
                 </span>
-                <span class="text-[10px] text-[#00FF66]">Canal direto de conversão</span>
+                <span class="text-[10px] text-[#00FF66] block leading-none">
+                  Canal Direto de Conversão.
+                </span>
               </div>
             </a>
           </div>
@@ -1065,7 +1070,7 @@
             const charIndex = Math.floor(val * CHAR_LENGTH);
             const char = CHAR_RAMP[Math.max(0, Math.min(CHAR_LENGTH - 1, charIndex))];
 
-            // Equilíbrio de contraste: cinza prateado suave (RGB 180, 180, 185) com opacidade calibrada
+            // Cinza prateado suave (RGB 185, 185, 195) com opacidade calibrada
             // Visível e elegante sem competir com a leitura branca dos títulos
             const alpha = 0.08 + val * 0.20;
             ctx.fillStyle = `rgba(185, 185, 195, ${alpha})`;

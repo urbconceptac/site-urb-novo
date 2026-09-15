@@ -277,13 +277,20 @@
     </div>
   </header>
 
-  <!-- HERO SECTION -->
-  <section class="pt-28 pb-16 md:pt-36 md:pb-24 relative overflow-hidden border-b border-[#222222]">
+  <!-- HERO SECTION COM BACKGROUND ASCII ANIMADO -->
+  <section id="hero-section" class="pt-28 pb-16 md:pt-36 md:pb-24 relative overflow-hidden border-b border-[#222222]">
+    
+    <!-- Canvas ASCII Background Procedural -->
+    <canvas id="ascii-canvas" class="absolute inset-0 w-full h-full pointer-events-none z-0 block"></canvas>
+    
+    <!-- Vinheta de contraste para manter a legibilidade dos textos sobre os caracteres -->
+    <div class="absolute inset-0 bg-gradient-to-r from-[#080808]/90 via-[#080808]/75 to-[#080808]/85 pointer-events-none z-[1]"></div>
+
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
         
         <div class="lg:col-span-7 text-left space-y-5">
-          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#121212] border border-[#222222] text-[10px] font-mono tracking-widest text-[#00FF66] uppercase">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#121212]/90 border border-[#222222] text-[10px] font-mono tracking-widest text-[#00FF66] uppercase backdrop-blur-sm">
             <span class="w-1.5 h-1.5 rounded-full bg-[#00FF66]"></span>
             URB CONCEPT // PRESENÇA DIGITAL
           </div>
@@ -371,19 +378,19 @@
 
       <!-- Barra de Métricas -->
       <div class="mt-14 pt-8 border-t border-[#1e1e1e] grid grid-cols-2 md:grid-cols-4 gap-4">
-        <div class="bg-[#121212]/60 border border-[#222222] p-4 rounded-lg">
+        <div class="bg-[#121212]/75 backdrop-blur-sm border border-[#222222] p-4 rounded-lg">
           <div class="text-xl sm:text-2xl font-heading font-bold text-white">Carregamento Leve</div>
           <div class="text-xs text-[#A1A1AA] font-mono mt-1">Otimizado para celulares</div>
         </div>
-        <div class="bg-[#121212]/60 border border-[#222222] p-4 rounded-lg">
+        <div class="bg-[#121212]/75 backdrop-blur-sm border border-[#222222] p-4 rounded-lg">
           <div class="text-xl sm:text-2xl font-heading font-bold text-[#00FF66]">+ Conversão</div>
           <div class="text-xs text-[#A1A1AA] font-mono mt-1">Fluxo sem ruído visual</div>
         </div>
-        <div class="bg-[#121212]/60 border border-[#222222] p-4 rounded-lg">
+        <div class="bg-[#121212]/75 backdrop-blur-sm border border-[#222222] p-4 rounded-lg">
           <div class="text-xl sm:text-2xl font-heading font-bold text-white">Zero Mensalidade</div>
           <div class="text-xs text-[#A1A1AA] font-mono mt-1">Sem taxas recorrentes</div>
         </div>
-        <div class="bg-[#121212]/60 border border-[#222222] p-4 rounded-lg">
+        <div class="bg-[#121212]/75 backdrop-blur-sm border border-[#222222] p-4 rounded-lg">
           <div class="text-xl sm:text-2xl font-heading font-bold text-white">Fluxo Direto</div>
           <div class="text-xs text-[#A1A1AA] font-mono mt-1">Alinhamento ágil por etapa</div>
         </div>
@@ -570,12 +577,12 @@
 
           <div class="p-6 pt-0">
             <a
-              href="https://lionds.com.br/"
+              href="https://www.urbconcept.com.br/proposta-lionds/"
               target="_blank"
               rel="noopener noreferrer"
               class="w-full inline-flex items-center justify-center gap-2 py-2.5 rounded bg-[#181818] hover:bg-[#222222] text-white text-xs font-mono border border-[#2a2a2a] hover:border-[#00FF66]/40 transition-colors"
             >
-              <span>Ver Site LionDS</span>
+              <span>Ver Proposta LionDS</span>
               <i class="fa-solid fa-arrow-up-right-from-square text-[10px] text-[#00FF66]"></i>
             </a>
           </div>
@@ -903,6 +910,7 @@
 
   <!-- JAVASCRIPT -->
   <script>
+    // Controle do Acordeão FAQ
     function toggleFaq(button) {
       const content = button.nextElementSibling;
       const icon = button.querySelector('i');
@@ -915,6 +923,7 @@
       }
     }
 
+    // Ajuste de altura do header no Scroll
     window.addEventListener('scroll', () => {
       const container = document.getElementById('header-container');
       const logo = document.getElementById('header-logo');
@@ -931,6 +940,7 @@
       }
     });
 
+    // Controle do Mega Menu Mobile
     (function () {
       const btnOpen = document.getElementById('btn-open-menu');
       const btnClose = document.getElementById('btn-close-menu');
@@ -955,6 +965,79 @@
       links.forEach(link => {
         link.addEventListener('click', closeMenu);
       });
+    })();
+
+    // Background Canvas ASCII Procedural
+    (function () {
+      const canvas = document.getElementById('ascii-canvas');
+      if (!canvas) return;
+      const ctx = canvas.getContext('2d');
+
+      const CHAR_RAMP = " .:-=+*#%@";
+      const CHAR_LENGTH = CHAR_RAMP.length;
+      const CELL_SIZE = 14; 
+      let cols = 0;
+      let rows = 0;
+      let time = 0;
+
+      function resize() {
+        const heroSection = document.getElementById('hero-section');
+        const width = heroSection ? heroSection.offsetWidth : window.innerWidth;
+        const height = heroSection ? heroSection.offsetHeight : window.innerHeight;
+        const dpr = window.devicePixelRatio || 1;
+
+        canvas.width = width * dpr;
+        canvas.height = height * dpr;
+
+        ctx.scale(dpr, dpr);
+
+        cols = Math.ceil(width / CELL_SIZE);
+        rows = Math.ceil(height / CELL_SIZE);
+
+        ctx.font = `${CELL_SIZE}px "Courier New", monospace`;
+        ctx.textBaseline = "top";
+      }
+
+      window.addEventListener('resize', resize);
+      resize();
+
+      function render() {
+        const heroSection = document.getElementById('hero-section');
+        const width = heroSection ? heroSection.offsetWidth : window.innerWidth;
+        const height = heroSection ? heroSection.offsetHeight : window.innerHeight;
+
+        ctx.fillStyle = "#080808";
+        ctx.fillRect(0, 0, width, height);
+
+        time += 0.015;
+
+        for (let y = 0; y < rows; y++) {
+          for (let x = 0; x < cols; x++) {
+            const nx = x / cols;
+            const ny = y / rows;
+
+            const v1 = Math.sin(nx * 5 + time * 0.8);
+            const v2 = Math.cos(ny * 5 - time * 0.6);
+            const v3 = Math.sin((nx + ny) * 6 + time);
+            const dist = Math.sqrt((nx - 0.5) ** 2 + (ny - 0.5) ** 2);
+            const v4 = Math.sin(dist * 12 - time * 1.5);
+
+            let val = (v1 + v2 + v3 + v4 + 4) / 8;
+
+            const charIndex = Math.floor(val * CHAR_LENGTH);
+            const char = CHAR_RAMP[Math.max(0, Math.min(CHAR_LENGTH - 1, charIndex))];
+
+            const alpha = 0.08 + val * 0.35;
+            ctx.fillStyle = `rgba(0, 255, 102, ${alpha})`;
+
+            ctx.fillText(char, x * CELL_SIZE, y * CELL_SIZE);
+          }
+        }
+
+        requestAnimationFrame(render);
+      }
+
+      render();
     })();
   </script>
 

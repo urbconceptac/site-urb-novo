@@ -20,7 +20,7 @@
   <!-- GOOGLE FONTS -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700;800;900&display=swap" rel="stylesheet">
 
   <!-- FONTAWESOME -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -114,6 +114,67 @@
       height: 2px;
       background-color: #FFFFFF;
       transition: all 0.3s ease;
+    }
+
+    /* Estilos Customizados para o Card de Preço */
+    .pricing-card-shell {
+      background: #101010;
+      border: 1px solid #242424;
+      border-radius: 1.75rem;
+      padding: 2.25rem 1.5rem;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.9);
+      position: relative;
+    }
+    @media (min-width: 640px) {
+      .pricing-card-shell {
+        padding: 2.75rem 2.25rem;
+      }
+    }
+    .pricing-pill {
+      background: #161616;
+      border: 1px solid #252525;
+      border-radius: 9999px;
+      padding: 0.65rem 0.85rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: border-color 0.2s ease, background-color 0.2s ease;
+    }
+    .pricing-pill:hover {
+      border-color: rgba(0, 255, 102, 0.35);
+      background: #1b1b1b;
+    }
+    .pricing-cta-button {
+      background: #00FF66;
+      color: #000000;
+      border-radius: 9999px;
+      padding: 0.5rem 0.5rem 0.5rem 1.75rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      text-decoration: none;
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 800;
+      font-size: 0.875rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+    }
+    .pricing-cta-button:hover {
+      background: #00e65c;
+      transform: translateY(-1px);
+      box-shadow: 0 10px 25px rgba(0, 255, 102, 0.3);
+    }
+    .pricing-cta-arrow {
+      width: 2.5rem;
+      height: 2.5rem;
+      background: rgba(0, 0, 0, 0.15);
+      border-radius: 9999px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      color: #000000;
     }
   </style>
 </head>
@@ -738,14 +799,14 @@
     </div>
   </section>
 
-  <!-- 05. INVESTIMENTO (COM BACKGROUND ASCII E CARD SÓLIDO) -->
+  <!-- 05. INVESTIMENTO (NOVO CARD PROFISSIONAL R$ 1499) -->
   <section id="investimento" class="py-20 border-b border-[#222222] relative overflow-hidden bg-[#080808]">
     
     <!-- Canvas ASCII Background Procedural Cinza Técnico para Investimento -->
     <canvas id="ascii-canvas-investimento" class="absolute inset-0 w-full h-full pointer-events-none z-0 block"></canvas>
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pointer-events-auto">
-      <div class="max-w-2xl mb-12 text-left">
+      <div class="max-w-2xl mb-10 text-left">
         <div class="text-xs font-mono font-bold tracking-widest text-[#00FF66] uppercase mb-2">
           05. INVESTIMENTO
         </div>
@@ -758,62 +819,100 @@
       </div>
 
       <div class="max-w-xl mx-auto">
-        <!-- Card 100% Sólido e Isolado com bg-[#121212] sem transparência -->
-        <div class="bg-[#121212] rounded-2xl p-8 border-2 border-[#00FF66] shadow-[0_20px_50px_rgba(0,0,0,0.95)] relative z-20">
-          <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2 mb-4 pb-4 border-b border-[#222222]">
-            <div>
-              <span class="text-[11px] font-mono uppercase tracking-wider text-[#00FF66] block mb-1">Presença Digital Completa</span>
-              <h3 class="text-2xl font-heading font-bold text-white">Site One-Page de Alta Performance</h3>
-            </div>
-            <div class="text-left sm:text-right">
-              <span class="text-[11px] text-[#A1A1AA] font-mono block">Valor Único</span>
-              <div class="flex items-baseline gap-1">
-                <span class="text-sm text-[#00FF66]">R$</span>
-                <span class="text-4xl font-heading font-extrabold text-[#00FF66]">997</span>
-              </div>
-            </div>
+        <!-- Card Inspirado na Referência Visual (Sólido, Limpo e de Alto Impacto) -->
+        <div class="pricing-card-shell">
+          
+          <!-- Linha Verde Neon Superior -->
+          <div class="w-12 h-1 bg-[#00FF66] rounded-full mx-auto mb-6"></div>
+
+          <!-- Topo do Card -->
+          <div class="text-center mb-6">
+            <h3 class="text-xl sm:text-2xl font-heading font-extrabold text-white tracking-tight mb-1">
+              Site One-Page de Alta Performance
+            </h3>
+            <p class="text-xs text-[#A1A1AA] font-mono leading-relaxed max-w-sm mx-auto">
+              Estrutura exclusiva, leve e focada em conversão para WhatsApp.
+            </p>
           </div>
 
-          <p class="text-xs text-[#A1A1AA] mb-6 leading-relaxed">
-            Estrutura sob medida desenhada para o seu negócio: carregamento leve, visual autoral, posicionamento claro e integração direta com seu WhatsApp.
-          </p>
+          <!-- Preço em Destaque Monumental -->
+          <div class="text-center mb-7">
+            <span class="text-[11px] font-mono font-bold uppercase tracking-widest text-[#00FF66] block mb-1">
+              VALOR ÚNICO
+            </span>
+            <div class="flex items-center justify-center gap-1">
+              <span class="text-3xl sm:text-4xl font-heading font-black text-[#00FF66]">R$</span>
+              <span class="text-5xl sm:text-6xl font-heading font-black text-[#00FF66] tracking-tight leading-none">1499</span>
+            </div>
+            <span class="text-xs font-mono text-[#A1A1AA] block mt-2">
+              Pagamento único • Sem custos mensais recorrentes
+            </span>
+          </div>
 
-          <ul class="space-y-3 text-xs text-[#A1A1AA] mb-8">
-            <li class="flex items-start gap-2.5">
-              <i class="fa-solid fa-check text-[#00FF66] text-xs mt-0.5"></i>
-              <span class="text-white font-medium">Design exclusivo alinhado ao seu segmento (sem templates genéricos)</span>
-            </li>
-            <li class="flex items-start gap-2.5">
-              <i class="fa-solid fa-check text-[#00FF66] text-xs mt-0.5"></i>
-              <span>One-page com narrativa focada em conversão para o WhatsApp</span>
-            </li>
-            <li class="flex items-start gap-2.5">
-              <i class="fa-solid fa-check text-[#00FF66] text-xs mt-0.5"></i>
-              <span>Carregamento ultrarrápido otimizado para celulares</span>
-            </li>
-            <li class="flex items-start gap-2.5">
-              <i class="fa-solid fa-check text-[#00FF66] text-xs mt-0.5"></i>
-              <span>Conexão com seu domínio próprio (.com.br) e certificado SSL seguro</span>
-            </li>
-            <li class="flex items-start gap-2.5">
-              <i class="fa-solid fa-check text-[#00FF66] text-xs mt-0.5"></i>
-              <span>Configuração da infraestrutura de hospedagem sem custos recorrentes</span>
-            </li>
-            <li class="flex items-start gap-2.5">
-              <i class="fa-solid fa-check text-[#00FF66] text-xs mt-0.5"></i>
-              <span>Propriedade total dos arquivos e autonomia completa sobre o código</span>
-            </li>
-          </ul>
+          <!-- Botão CTA em Pílula com Seta Integrada -->
+          <div class="mb-8">
+            <a
+              href="https://wa.me/5511991573413?text=Ol%C3%A1!%20Gostaria%20de%20contratar%20o%20projeto%20One-Page%20por%20R%24%201499."
+              target="_blank"
+              rel="noopener noreferrer"
+              class="pricing-cta-button neon-pulse"
+            >
+              <span>Contratar Projeto</span>
+              <div class="pricing-cta-arrow">
+                <i class="fa-solid fa-arrow-right"></i>
+              </div>
+            </a>
+          </div>
 
-          <a
-            href="https://wa.me/5511991573413?text=Ol%C3%A1!%20Gostaria%20de%20iniciar%20meu%20site%20pelo%20plano%20de%20R%24%20997."
-            target="_blank"
-            rel="noopener noreferrer"
-            class="neon-pulse w-full flex items-center justify-center gap-2 font-heading font-bold text-xs uppercase tracking-wider py-4 rounded bg-[#00FF66] hover:bg-[#00e65c] text-black transition-all"
-          >
-            <span>Iniciar Projeto por R$ 997</span>
-            <i class="fa-solid fa-arrow-right text-[11px]"></i>
-          </a>
+          <!-- Título do Escopo -->
+          <div class="text-center mb-4">
+            <span class="text-[11px] font-mono font-semibold uppercase tracking-widest text-[#A1A1AA] block">
+              O QUE SERÁ ENTREGUE:
+            </span>
+          </div>
+
+          <!-- Grid de Cápsulas / Badges com Ícones Verdes -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 mb-6">
+            
+            <div class="pricing-pill">
+              <i class="fa-solid fa-circle-check text-[#00FF66] text-sm shrink-0"></i>
+              <span class="text-xs text-white font-medium">Projeto visual exclusivo</span>
+            </div>
+
+            <div class="pricing-pill">
+              <i class="fa-solid fa-circle-check text-[#00FF66] text-sm shrink-0"></i>
+              <span class="text-xs text-white font-medium">Foco em conversão Zap</span>
+            </div>
+
+            <div class="pricing-pill">
+              <i class="fa-solid fa-circle-check text-[#00FF66] text-sm shrink-0"></i>
+              <span class="text-xs text-white font-medium">Carregamento ultrarrápido</span>
+            </div>
+
+            <div class="pricing-pill">
+              <i class="fa-solid fa-circle-check text-[#00FF66] text-sm shrink-0"></i>
+              <span class="text-xs text-white font-medium">Configuração de domínio</span>
+            </div>
+
+            <div class="pricing-pill">
+              <i class="fa-solid fa-circle-check text-[#00FF66] text-sm shrink-0"></i>
+              <span class="text-xs text-white font-medium">Infra sem mensalidades</span>
+            </div>
+
+            <div class="pricing-pill">
+              <i class="fa-solid fa-circle-check text-[#00FF66] text-sm shrink-0"></i>
+              <span class="text-xs text-white font-medium">Autonomia total do código</span>
+            </div>
+
+          </div>
+
+          <!-- Nota de Rodapé e Alinhamento de Escopo -->
+          <div class="border-t border-[#222222] pt-4 text-center">
+            <p class="text-[11px] font-mono text-[#A1A1AA] leading-relaxed">
+              <span class="text-white font-semibold">Prazo estimado de entrega:</span> até 7 dias úteis após o envio do briefing. Custos de registro de domínio (.com.br) sob responsabilidade do cliente.
+            </p>
+          </div>
+
         </div>
       </div>
     </div>
@@ -834,6 +933,26 @@
       <div class="space-y-3">
         <div class="border border-[#222222] rounded-lg bg-[#121212] overflow-hidden">
           <button onclick="toggleFaq(this)" class="w-full p-5 text-left font-heading font-bold text-sm text-white flex justify-between items-center gap-4 hover:text-[#00FF66] transition-colors">
+            <span>Existe cobrança de mensalidade após a entrega?</span>
+            <i class="fa-solid fa-chevron-down text-xs text-[#A1A1AA] transition-transform duration-300"></i>
+          </button>
+          <div class="hidden px-5 pb-5 text-xs text-[#A1A1AA] leading-relaxed">
+            Não. O valor de R$ 1499 é único pelo desenvolvimento e configuração. Os arquivos, o código limpo e a estrutura são transferidos para você, sem taxas mensais de manutenção obrigatórias.
+          </div>
+        </div>
+
+        <div class="border border-[#222222] rounded-lg bg-[#121212] overflow-hidden">
+          <button onclick="toggleFaq(this)" class="w-full p-5 text-left font-heading font-bold text-sm text-white flex justify-between items-center gap-4 hover:text-[#00FF66] transition-colors">
+            <span>E se eu precisar de manutenção futura, alterações ou um blog com postagens?</span>
+            <i class="fa-solid fa-chevron-down text-xs text-[#A1A1AA] transition-transform duration-300"></i>
+          </button>
+          <div class="hidden px-5 pb-5 text-xs text-[#A1A1AA] leading-relaxed">
+            Nossa One-Page é entregue pronta e robusta para você não precisar pagar nada mensalmente. Trocas simples de textos ou contatos podem ser feitas diretamente com facilidade. Caso seu negócio precise de um sistema de blog, publicação frequente de artigos ou suporte sob demanda, oferecemos extensões pontuais sob medida, sem amarras.
+          </div>
+        </div>
+
+        <div class="border border-[#222222] rounded-lg bg-[#121212] overflow-hidden">
+          <button onclick="toggleFaq(this)" class="w-full p-5 text-left font-heading font-bold text-sm text-white flex justify-between items-center gap-4 hover:text-[#00FF66] transition-colors">
             <span>Como funciona a hospedagem e a criação de contas? Preciso passar meu e-mail pessoal?</span>
             <i class="fa-solid fa-chevron-down text-xs text-[#A1A1AA] transition-transform duration-300"></i>
           </button>
@@ -844,21 +963,11 @@
 
         <div class="border border-[#222222] rounded-lg bg-[#121212] overflow-hidden">
           <button onclick="toggleFaq(this)" class="w-full p-5 text-left font-heading font-bold text-sm text-white flex justify-between items-center gap-4 hover:text-[#00FF66] transition-colors">
-            <span>Existe cobrança de mensalidade após a entrega?</span>
+            <span>Qual é o prazo real de entrega do projeto?</span>
             <i class="fa-solid fa-chevron-down text-xs text-[#A1A1AA] transition-transform duration-300"></i>
           </button>
           <div class="hidden px-5 pb-5 text-xs text-[#A1A1AA] leading-relaxed">
-            Não. O valor de R$ 997 é único pelo desenvolvimento e configuração. Os arquivos e a estrutura são seus, sem taxas mensais de manutenção obrigatórias.
-          </div>
-        </div>
-
-        <div class="border border-[#222222] rounded-lg bg-[#121212] overflow-hidden">
-          <button onclick="toggleFaq(this)" class="w-full p-5 text-left font-heading font-bold text-sm text-white flex justify-between items-center gap-4 hover:text-[#00FF66] transition-colors">
-            <span>Como funciona a dinâmica de prazos?</span>
-            <i class="fa-solid fa-chevron-down text-xs text-[#A1A1AA] transition-transform duration-300"></i>
-          </button>
-          <div class="hidden px-5 pb-5 text-xs text-[#A1A1AA] leading-relaxed">
-            O fluxo é enxuto e estruturado em etapas. Assim que você valida a proposta visual e o conteúdo inicial, o projeto avança diretamente para a conexão de domínio e publicação. O tempo depende essencialmente da velocidade das trocas e aprovações.
+            O prazo estimado é de até 7 dias úteis a partir do envio das informações do briefing (logotipo, serviços e telefone). Enviamos um link de homologação para você testar no seu celular e, após sua validação, fazemos o apontamento no domínio oficial.
           </div>
         </div>
 
@@ -868,7 +977,7 @@
             <i class="fa-solid fa-chevron-down text-xs text-[#A1A1AA] transition-transform duration-300"></i>
           </button>
           <div class="hidden px-5 pb-5 text-xs text-[#A1A1AA] leading-relaxed">
-            Sim. Conectamos o novo site diretamente ao seu domínio existente. Caso ainda não tenha um, orientamos a compra oficial no Registro.br pelo valor de custo (R$ 40/ano), mantendo o domínio 100% no seu nome.
+            Sim. Conectamos o novo site diretamente ao seu domínio existente. Caso ainda não tenha um, orientamos a compra oficial no Registro.br pelo valor de custo (R$ 40/ano), mantendo o domínio 100% no seu nome e CPF/CNPJ.
           </div>
         </div>
 

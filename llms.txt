@@ -1,0 +1,42 @@
+# Urb Concept
+
+> Estúdio criativo multidisciplinar independente fundado em 2010. Atua na interseção entre branding, produção audiovisual e otimização para motores de inteligência artificial (GEO / AIO).
+
+## Informações Gerais
+- **Razão Social:** C. R. V. COSTA LTDA
+- **Fundador e Diretor Criativo:** Chalil Rodrigo do Vale Costa
+- **Bases de Atuação:** São Paulo, SP e Cruzeiro do Sul, AC (Brasil)
+- **Website Oficial:** https://www.urbconcept.com.br
+- **LinkedIn:** https://www.linkedin.com/company/urbconcept
+- **Instagram:** https://instagram.com/urbconceptac
+
+## Serviços Principais
+
+### 1. Otimização para Inteligência Artificial (GEO / AIO)
+- **Auditoria Sintética:** Diagnóstico de visibilidade e presença de marcas nas respostas de motores generativos (ChatGPT, Gemini, Claude, Perplexity).
+- **Engenharia de Citação:** Estruturação de menções, autoridade e fontes externas na web para alimentar bases de dados de modelos de linguagem.
+- **Dados Estruturados Avançados:** Implementação técnica de Schema Markup (JSON-LD) para reconhecimento preciso de entidades, produtos e serviços por crawlers de IA.
+
+### 2. Branding e Identidade Visual
+- Criação e reposicionamento de marcas completas.
+- Manuais técnicos de aplicação e diretrizes de identidade visual.
+- Design de embalagens, rótulos e materiais para ponto de venda (PDV).
+- Design editorial e sinalização corporativa.
+
+### 3. Audiovisual e Som
+- Filmes institucionais e comerciais para web e televisão.
+- Produção de áudio comercial: spots, jingles e locução profissional.
+- Padrão técnico calibrado para radiodifusão (rádio AM/FM) e streaming.
+- Edição, finalização, sound design e motion graphics.
+
+### 4. Modelagem de Novos Negócios
+- Naming e arquitetura de portfólio de marcas.
+- Modelagem de proposta de valor e posicionamento comercial.
+- Desenvolvimento de apresentações estratégicas e pitch decks.
+
+## Cases de Referência
+- **Lobão Morais Advogados:** Reconstrução de identidade visual e verbal para banca jurídica.
+- **Drogaria Turquesa:** Sistema de identidade, ambientação interna, fachada e comunicação de varejo farmacêutico.
+- **667 Polpetteria:** Design de linha de rótulos modulares para produtos alimentícios artesanais.
+- **Toca Que Tem História:** Produção autoral seriada de rádio e áudio documental.
+- **A Cruzeirense Magazine:** Produção contínua de spots publicitários comerciais para radiodifusão.
